@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Map } from './components/map/map.js';
+import Map from './components/map/map.js';
 import PermanentDrawer from './components/leftMenu/leftMenu';
 import { Navbar } from './components/navbar/navbar';
 import './app.css';
