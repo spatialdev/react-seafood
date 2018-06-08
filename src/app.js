@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Map from './components/map/map.js';
+import RightMenu from './components/rightMenu/rightMenu';
 import PersistentDrawer from './components/leftMenuTopNav/leftMenu';
 import './app.css';
 import polygons from './data/polygons_2017.geojson';
@@ -32,6 +33,8 @@ class App extends Component {
     return (
       <div className="App">
         <PersistentDrawer clickedMenuItem={this.handleMenuData} polygonData={polygonData}/>
+
+        <RightMenu/>
         <Map/>
       </div>
     );

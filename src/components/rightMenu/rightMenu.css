@@ -1,0 +1,6 @@
+.RightMenu {
+    position: absolute;
+    right: 20px;
+    z-index: 9999;
+    top: 85px;
+}
