@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { isBrowser } from 'react-device-detect';
 import classNames from 'classnames';
@@ -84,19 +84,7 @@ const styles = theme => ({
   },
 });
 
-const items_1 = [
-  { id: 0, title: 'Item 1' },
-  { id: 1, title: 'Item 2' },
-  { id: 2, title: 'Item 3' }
-];
-
-const items_2 = [
-  { id: 3, title: 'Item 4' },
-  { id: 4, title: 'Item 5' },
-  { id: 5, title: 'Item 6' }
-];
-
-class PersistentDrawer extends React.Component {
+class PersistentDrawer extends Component {
   state = {
     open: isBrowser,
     anchor: 'left',
@@ -114,9 +102,24 @@ class PersistentDrawer extends React.Component {
     this.props.clickedMenuItem(itemId);
   };
 
+  filterLeftMenuItems = (data) => {
+    let leftPanelData = [];
+    const items = data.features;
+    items.forEach((vendor) => {
+      if (vendor.properties.left_panel) {
+        leftPanelData.push(vendor);
+      }
+    });
+    return leftPanelData;
+  };
+
   render() {
-    const { classes } = this.props;
+    const { classes, polygonData } = this.props;
+    console.log(this.props);
     const { anchor, open } = this.state;
+
+    const menuItems = this.filterLeftMenuItems(polygonData);
+    console.log(menuItems);
 
     const drawer = (
       <Drawer
@@ -134,22 +137,16 @@ class PersistentDrawer extends React.Component {
         </div>
         <Divider/>
         <List>
-          {items_1.map((item) => {
-            return (<ListItem button key={item.id} onClick={() => this.handleClickedItem(item.id)}>
-              <ListItemText primary={item.title}/>
-            </ListItem>);
-          })}
-          <Divider/>
-          {items_2.map((item) => {
-            return (<ListItem button key={item.id} onClick={() => this.handleClickedItem(item.id)}>
-              <ListItemText primary={item.title}/>
-            </ListItem>);
+          {menuItems.map((item) => {
+            return (
+              <ListItem button key={item.properties.id} onClick={() => this.handleClickedItem(item.properties.id)}>
+                <ListItemText primary={item.properties.name}/>
+              </ListItem>);
           })}
         </List>
         <Divider/>
       </Drawer>
     );
-
 
     return (
       <div className={classes.root}>
