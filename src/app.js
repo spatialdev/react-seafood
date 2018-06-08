@@ -3,11 +3,21 @@ import Map from './components/map/map.js';
 import RightMenu from './components/rightMenu/rightMenu';
 import PersistentDrawer from './components/leftMenuTopNav/leftMenu';
 import './app.css';
+import polygons from './data/polygons_2017.geojson';
+import axios from 'axios';
 
 class App extends Component {
   state = {
     clickedMenuItem: null,
+    polygonData: null,
   };
+
+  componentDidMount() {
+    return axios.get(polygons)
+      .then((res) => {
+        this.setState({ polygonData: res.data });
+      });
+  }
 
   handleMenuData = (itemId) => {
     this.setState({ clickedMenuItem: itemId }, () => {
@@ -16,11 +26,15 @@ class App extends Component {
   };
 
   render() {
-
+    const { polygonData } = this.state;
+    if (!polygonData) {
+      return <div>Loading...</div>;
+    }
     return (
       <div className="App">
+        <PersistentDrawer clickedMenuItem={this.handleMenuData} polygonData={polygonData}/>
+
         <RightMenu/>
-        <PersistentDrawer clickedMenuItem={this.handleMenuData}/>
         <Map/>
       </div>
     );
