@@ -129,10 +129,10 @@ class PersistentDrawer extends React.Component {
       >
         <div className={classes.drawerHeader}>
           <IconButton onClick={this.handleDrawerClose}>
-            <ChevronLeftIcon />
+            <ChevronLeftIcon/>
           </IconButton>
         </div>
-        <Divider />
+        <Divider/>
         <List>
           {items_1.map((item) => {
             return (<ListItem button key={item.id} onClick={() => this.handleClickedItem(item.id)}>
@@ -179,7 +179,7 @@ class PersistentDrawer extends React.Component {
               [classes[`contentShift-${anchor}`]]: open,
             })}
           >
-            <div className={classes.drawerHeader} />
+            <div className={classes.drawerHeader}/>
           </main>
         </div>
       </div>
