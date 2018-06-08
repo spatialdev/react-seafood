@@ -1,28 +1,24 @@
 import React, { Component } from 'react';
-import Drawer from '@material-ui/core/Drawer';
 import { Map } from './components/map/map.js';
+import PermanentDrawer from './components/leftMenu/leftMenu';
 import logo from './logo.svg';
 import './app.css';
 
 class App extends Component {
     state = {
-        open: true,
-        anchor: 'left',
+        navOpen: true,
     };
 
   render() {
-
-      const { anchor, open } = this.state;
+      const { navOpen } = this.state;
 
       return (
       <div className="App">
-          <Drawer
-              variant="persistent"
-              anchor={anchor}
-              open={open}
+          <PermanentDrawer
+              variant="permanent"
+              open={navOpen}
           >
-              cool stuff in here
-          </Drawer>
+          </PermanentDrawer>
 
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
@@ -38,5 +34,4 @@ class App extends Component {
     );
   }
 }
-
 export default App;
