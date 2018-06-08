@@ -11,16 +11,16 @@ import ListItemText from '@material-ui/core/ListItemText';
 export const mailFolderListItems = (
   <div>
     <ListItem button>
-      <ListItemText primary="Inbox" />
+      <ListItemText primary="Inbox"/>
     </ListItem>
     <ListItem button>
-      <ListItemText primary="Starred" />
+      <ListItemText primary="Starred"/>
     </ListItem>
     <ListItem button>
-      <ListItemText primary="Send mail" />
+      <ListItemText primary="Send mail"/>
     </ListItem>
     <ListItem button>
-      <ListItemText primary="Drafts" />
+      <ListItemText primary="Drafts"/>
     </ListItem>
   </div>
 );
@@ -28,13 +28,13 @@ export const mailFolderListItems = (
 export const otherMailFolderListItems = (
   <div>
     <ListItem button>
-      <ListItemText primary="All mail" />
+      <ListItemText primary="All mail"/>
     </ListItem>
     <ListItem button>
-      <ListItemText primary="Trash" />
+      <ListItemText primary="Trash"/>
     </ListItem>
     <ListItem button>
-      <ListItemText primary="Spam" />
+      <ListItemText primary="Spam"/>
     </ListItem>
   </div>
 );
@@ -44,6 +44,7 @@ const styles = theme => ({
     width: 240,
   },
 });
+
 class PermanentDrawer extends Component {
 
   render() {
@@ -56,9 +57,9 @@ class PermanentDrawer extends Component {
         }}
         anchor="left"
       >
-        <Divider />
+        <Divider/>
         <List>{mailFolderListItems}</List>
-        <Divider />
+        <Divider/>
         <List>{otherMailFolderListItems}</List>
       </Drawer>
     );
@@ -66,7 +67,8 @@ class PermanentDrawer extends Component {
 }
 
 PermanentDrawer.propTypes = {
-  classes: PropTypes.object.isRequired,};
+  classes: PropTypes.object.isRequired,
+};
 
 
 export default withStyles(styles)(PermanentDrawer);
