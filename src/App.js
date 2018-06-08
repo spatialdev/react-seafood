@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Drawer from '@material-ui/core/Drawer';
 import { Map } from './components/map/map.js';
+import { Navbar } from './components/navbar/navbar';
 import logo from './logo.svg';
 import './app.css';
 
@@ -23,14 +24,7 @@ class App extends Component {
           >
               cool stuff in here
           </Drawer>
-
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+          <Navbar></Navbar>
         <div className="Map">
             <Map></Map>
         </div>
