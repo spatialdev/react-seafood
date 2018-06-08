@@ -6,17 +6,22 @@ import './app.css';
 
 class App extends Component {
   state = {
-    navOpen: true,
+    clickedMenuItem: null,
   };
 
+   handleMenuData = (itemId) => {
+     this.setState({ clickedMenuItem: itemId }, () => {
+       console.log(this.state);
+     });
+   };
+
   render() {
-    const { navOpen } = this.state;
 
     return (
       <div className="App">
         <PermanentDrawer
           variant="permanent"
-          open={navOpen}
+          clickedMenuItem={this.handleMenuData}
         >
         </PermanentDrawer>
         <Navbar/>
