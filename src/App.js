@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Drawer from '@material-ui/core/Drawer';
-import { Map } from './Map.js';
+import { Map } from './components/map/map.js';
 import logo from './logo.svg';
-import './App.css';
+import './app.css';
 
 class App extends Component {
     state = {
