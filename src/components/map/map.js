@@ -70,11 +70,23 @@ class Map extends Component {
   // Render map pop up on click
   handleMapPopup (e, features) {
     const coordinates = e.lngLat;
+    const html = this.createPopupHTML(features[0].properties);
 
     new mapboxgl.Popup()
       .setLngLat(coordinates)
-      .setHTML(JSON.stringify(features[0].properties))
+      .setHTML(html)
       .addTo(this.map);
+  }
+
+  createPopupHTML(properties) {
+    return `
+        <p>
+            ${properties.id}</br>
+            ${properties.name}</br>
+            ${properties.type}
+        </p>
+
+       `
   }
 }
 
