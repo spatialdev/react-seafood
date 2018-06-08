@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import { BottomSheet } from 'material-ui-bottom-sheet'
 import mapboxgl from 'mapbox-gl'
 import windowSize from 'react-window-size';
 import './map.css';
