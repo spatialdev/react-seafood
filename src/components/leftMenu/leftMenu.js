@@ -24,8 +24,7 @@ class PermanentDrawer extends Component {
   };
 
   handleClickedItem = (itemId) => {
-    this.setState({ clickedMenuItem: itemId },
-      () => console.log(this.state.clickedMenuItem));
+    this.props.clickedMenuItem(itemId);
   };
 
   render() {
