@@ -6,6 +6,8 @@ import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
@@ -38,6 +40,9 @@ const styles = theme => ({
   },
   'appBarShift-right': {
     marginRight: drawerWidth,
+  },
+  flex: {
+    flex: 1,
   },
   menuButton: {
     marginLeft: 12,
@@ -170,6 +175,9 @@ class PersistentDrawer extends React.Component {
               >
                 <MenuIcon/>
               </IconButton>
+              <Typography variant="title" color="inherit" className={classes.flex}>
+                Ballard SeafoodFest
+              </Typography>
             </Toolbar>
           </AppBar>
           {drawer}
