@@ -8,11 +8,11 @@ class App extends Component {
     clickedMenuItem: null,
   };
 
-   handleMenuData = (itemId) => {
-     this.setState({ clickedMenuItem: itemId }, () => {
-       console.log(this.state);
-     });
-   };
+  handleMenuData = (itemId) => {
+    this.setState({ clickedMenuItem: itemId }, () => {
+      console.log(this.state);
+    });
+  };
 
   render() {
 
