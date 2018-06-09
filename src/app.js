@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
+import { Provider } from 'react-redux';
+import { store } from './redux/store'
 import Map from './components/map/map.js';
 import RightMenu from './components/rightMenu/rightMenu';
 import PersistentDrawer from './components/leftMenuTopNav/leftMenu';
 import './app.css';
-import polygons from './data/polygons_2017.geojson';
-import axios from 'axios';
 
 class App extends Component {
   state = {
@@ -12,12 +12,7 @@ class App extends Component {
     polygonData: null,
   };
 
-  componentDidMount() {
-    return axios.get(polygons)
-      .then((res) => {
-        this.setState({ polygonData: res.data });
-      });
-  }
+  componentDidMount() {}
 
   handleMenuData = (itemId) => {
     this.setState({ clickedMenuItem: itemId }, () => {
@@ -26,17 +21,14 @@ class App extends Component {
   };
 
   render() {
-    const { polygonData } = this.state;
-    if (!polygonData) {
-      return <div>Loading...</div>;
-    }
     return (
-      <div className="App">
-        <PersistentDrawer clickedMenuItem={this.handleMenuData} polygonData={polygonData}/>
-
-        <RightMenu/>
-        <Map/>
-      </div>
+      <Provider store={store}>
+        <div className="App">
+          <PersistentDrawer clickedMenuItem={this.handleMenuData} />
+          <RightMenu/>
+          <Map/>
+        </div>
+      </Provider>
     );
   }
 }

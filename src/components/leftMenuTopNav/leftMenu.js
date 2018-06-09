@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 import PropTypes from 'prop-types';
 import { isBrowser } from 'react-device-detect';
 import classNames from 'classnames';
@@ -118,6 +119,10 @@ class PersistentDrawer extends Component {
     return leftPanelData;
   };
 
+  componentDidUpdate() {
+    console.log(`updated state: ${this.props}`)
+  }
+
   render() {
     const { classes, polygonData } = this.props;
     console.log(this.props);
@@ -195,6 +200,14 @@ class PersistentDrawer extends Component {
 PersistentDrawer.propTypes = {
   classes: PropTypes.object.isRequired,
   theme: PropTypes.object.isRequired,
+  polygonData: PropTypes.object.isRequired
 };
 
-export default withStyles(styles, { withTheme: true })(PersistentDrawer);
+function mapStateToProps(state) {
+  return {
+    polygonData: state.polygonData,
+    active: state.active
+  };
+}
+
+export default connect(mapStateToProps)(withStyles(styles, { withTheme: true })(PersistentDrawer));
