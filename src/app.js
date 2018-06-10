@@ -4,6 +4,8 @@ import { store } from './redux/store'
 import Map from './components/map/map.js';
 import RightMenu from './components/rightMenu/rightMenu';
 import PersistentDrawer from './components/leftMenuTopNav/leftMenu';
+import {toggleRightMenu} from "./redux/actions";
+
 import './app.css';
 
 class App extends Component {
