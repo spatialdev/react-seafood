@@ -1,10 +1,17 @@
 import * as Constants from './constants'
 import polygonData from '../data/polygons_2017'
-
-const options = [];
+import { isBrowser } from 'react-device-detect';
 
 const initialState: State = {
-  polygonData
+  polygonData,
+  leftMenuOptions: {
+    anchor: 'left',
+    open : isBrowser
+  },
+  rightMenuOptions: {
+    anchor: 'right',
+    open: false
+  }
 };
 
 function reducer(state = initialState, action) {
@@ -12,6 +19,20 @@ function reducer(state = initialState, action) {
     case Constants.SET_POLYGON_DATA:
       return {
         ...state, polygonData
+      }
+    case Constants.TOGGLE_LEFT_MENU:
+      return {
+        ...state, leftMenuOptions: {
+          ...state.leftMenuOptions,
+          open: action.open
+        }
+      }
+    case Constants.TOGGLE_RIGHT_MENU:
+      return {
+        ...state, rightMenuOptions: {
+          ...state.rightMenuOptions,
+          open: action.open
+        }
       }
     default:
       return state;

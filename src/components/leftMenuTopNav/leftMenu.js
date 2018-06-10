@@ -16,6 +16,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import { toggleLeftMenu } from '../../redux/actions';
 
 const drawerWidth = 240;
 
@@ -91,17 +92,15 @@ const styles = theme => ({
 });
 
 class PersistentDrawer extends Component {
-  state = {
-    open: isBrowser,
-    anchor: 'left',
-  };
 
+  // Set leftMenuOptions.open state boolean to true
   handleDrawerOpen = () => {
-    this.setState({ open: true });
+    toggleLeftMenu(true);
   };
 
+  // Set leftMenuOptions.open state boolean to false
   handleDrawerClose = () => {
-    this.setState({ open: false });
+    toggleLeftMenu(false);
   };
 
   handleClickedItem = (itemId) => {
@@ -124,12 +123,9 @@ class PersistentDrawer extends Component {
   }
 
   render() {
-    const { classes, polygonData } = this.props;
-    console.log(this.props);
-    const { anchor, open } = this.state;
-
+    const { classes, polygonData, leftMenuOptions } = this.props;
+    const { anchor, open } = leftMenuOptions;
     const menuItems = this.filterLeftMenuItems(polygonData);
-    console.log(menuItems);
 
     const drawer = (
       <Drawer
@@ -200,13 +196,15 @@ class PersistentDrawer extends Component {
 PersistentDrawer.propTypes = {
   classes: PropTypes.object.isRequired,
   theme: PropTypes.object.isRequired,
-  polygonData: PropTypes.object.isRequired
+  polygonData: PropTypes.object.isRequired,
+  leftMenuOptions: PropTypes.object.isRequired
 };
 
 function mapStateToProps(state) {
   return {
     polygonData: state.polygonData,
-    active: state.active
+    active: state.active,
+    leftMenuOptions: state.leftMenuOptions
   };
 }
 

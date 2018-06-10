@@ -1,6 +1,16 @@
 .RightMenu {
     position: absolute;
-    right: 20px;
+    right: 0;
     z-index: 9999;
-    top: 85px;
+}
+
+.RightMenuButton {
+    position: relative;
+    right: 20px;
+    top: 40px;
+}
+
+/* Over write Drawer z-index to render on top of button and map */
+.RightMenuDrawer {
+    z-index: 10000 !important;
 }
