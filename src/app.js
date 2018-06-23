@@ -27,7 +27,7 @@ class App extends Component {
       <Provider store={store}>
         <div className="App">
           <PersistentDrawer clickedMenuItem={this.handleMenuData} />
-          <RightMenu/>
+          {/*<RightMenu/>*/}
           <Map/>
         </div>
       </Provider>
