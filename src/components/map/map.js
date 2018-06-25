@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import mapboxgl from 'mapbox-gl';
-import { inside, point, polygon } from '@turf/turf';
 import windowSize from 'react-window-size';
 import './map.css';
 
@@ -10,7 +9,7 @@ class Map extends Component {
 
   map;
 
-  geoLocate =  new mapboxgl.GeolocateControl({
+  geoLocate = new mapboxgl.GeolocateControl({
     positionOptions: {
       enableHighAccuracy: true
     },
@@ -110,7 +109,6 @@ class Map extends Component {
   handleGeolocation = (position) => {
     const proxied = this.geoLocate._updateCamera;
     this.geoLocate._updateCamera = () => {
-      console.log(position);
       // get geolocation
       const location = new mapboxgl.LngLat(position.coords.longitude, position.coords.latitude);
 
@@ -120,13 +118,12 @@ class Map extends Component {
         // if geolocation is within maxBounds
         if (location.longitude >= bounds.getWest() && location.longitude <= bounds.getEast() &&
           location.latitude >= bounds.getSouth && location.latitude <= bounds.getNorth) {
-          return proxied.apply( this, arguments );
+          return proxied.apply(this, arguments);
         } else {
-          console.log('geolocate is outside bounds');
           return null;
         }
       }
-      return proxied.apply( this, arguments );
+      return proxied.apply(this, arguments);
     };
   };
 }
