@@ -10,6 +10,13 @@ class Map extends Component {
 
   map;
 
+  geoLocate =  new mapboxgl.GeolocateControl({
+    positionOptions: {
+      enableHighAccuracy: true
+    },
+    trackUserLocation: true,
+  });
+
   state = {
     viewport: {
       latitude: 47.668667600018416,
@@ -18,7 +25,6 @@ class Map extends Component {
       bearing: 0,
       pitch: 0
     },
-    trackUserLocation: true,
   };
 
   // TODO
@@ -35,22 +41,16 @@ class Map extends Component {
       container: this.mapContainer,
       style: 'mapbox://styles/spatialdev/cj44jbnm59nnq2rmrzd5ozf36',
       center: [-122.38473415374757, 47.668667600018416],
-      // maxBounds: this.bounds,
+      maxBounds: this.bounds,
       zoom: 18
     });
 
-    const geoLocate = new mapboxgl.GeolocateControl({
-      positionOptions: {
-        enableHighAccuracy: true
-      },
-      trackUserLocation: this.state.trackUserLocation,
+    this.map.addControl(this.geoLocate);
+
+    navigator.geolocation.getCurrentPosition(position => {
+      this.handleGeolocation(position);
     });
 
-    this.map.addControl(geoLocate);
-
-    geoLocate.on('geolocate', (e) => {
-      this.handleGeolocation(e);
-    });
 
     this.map.on('load', () => {
     });
@@ -108,36 +108,26 @@ class Map extends Component {
   }
 
   handleGeolocation = (position) => {
-    if ('geolocation' in navigator) {
-      /* geolocation is available */
+    const proxied = this.geoLocate._updateCamera;
+    this.geoLocate._updateCamera = () => {
+      console.log(position);
+      // get geolocation
+      const location = new mapboxgl.LngLat(position.coords.longitude, position.coords.latitude);
 
-      navigator.geolocation.getCurrentPosition(position => {
+      const bounds = this.map.getMaxBounds();
 
-        let marker = (<div id="Dot"></div>);
-
-        let myMarkerLocation = new mapboxgl.Marker(marker)
-          .setLngLat([position.coords.longitude, position.coords.latitude])
-          .addTo(this.map);
-      });
-
-      // check if position is within the bounds of the map
-      let pt = point([position.coords.longitude, position.coords.latitude]);
-      let poly = polygon([[[-122.3892831802368, 47.66561856968346], [-122.37885475158693, 47.66561856968346], [-122.37885475158693, 47.671889841329026], [-122.3892831802368, 47.671889841329026], [-122.3892831802368, 47.66561856968346]]]);
-
-      let isInside = inside(pt, poly);
-
-      if (isInside) {
-        this.map.flyTo({
-          center: [position.coords.longitude, position.coords.latitude],
-          zoom: 19.7
-        });
-      } else {
-        alert('Location is outside Seafood Fest bounds. Try again.');
-        this.setState({ trackUserLocation: false });
+      if (bounds) {
+        // if geolocation is within maxBounds
+        if (location.longitude >= bounds.getWest() && location.longitude <= bounds.getEast() &&
+          location.latitude >= bounds.getSouth && location.latitude <= bounds.getNorth) {
+          return proxied.apply( this, arguments );
+        } else {
+          console.log('geolocate is outside bounds');
+          return null;
+        }
       }
-    } else {
-      alert('Location information is unavailable.');
-    }
+      return proxied.apply( this, arguments );
+    };
   };
 }
 
