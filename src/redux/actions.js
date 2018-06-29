@@ -21,3 +21,10 @@ export const toggleRightMenu = open => {
     open
   });
 }
+
+export const findMyLocation = action => {
+  store.dispatch({
+    type: action.type,
+    payload: action.payload
+  })
+}
