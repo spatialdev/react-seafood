@@ -5,7 +5,6 @@ import { store } from './redux/store'
 import Map from './components/map/map.js';
 import RightMenu from './components/rightMenu/rightMenu';
 import PersistentDrawer from './components/leftMenuTopNav/leftMenu';
-import {toggleRightMenu} from "./redux/actions";
 import { config } from './config';
 
 import './app.css';
@@ -19,7 +18,7 @@ class App extends Component {
   componentDidMount() {
 
     // Initialize Google Analytics
-    const { ga } = config
+    const { ga } = config;
     ReactGA.initialize(ga.id),{
       debug: true,
       titleCase: false,
@@ -41,7 +40,7 @@ class App extends Component {
       <Provider store={store}>
         <div className="App">
           <PersistentDrawer clickedMenuItem={this.handleMenuData} />
-          <RightMenu/>
+          {/*<RightMenu/>*/}
           <Map/>
         </div>
       </Provider>
