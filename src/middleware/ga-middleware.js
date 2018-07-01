@@ -1,6 +1,6 @@
 import { config } from '../config';
 import {
-  TOGGLE_RIGHT_MENU, TOGGLE_LEFT_MENU,
+  TOGGLE_RIGHT_DRAWER, TOGGLE_LEFT_DRAWER,
   FIND_MY_LOCATION_ERROR,
   FIND_MY_LOCATION_SUCCESS,
   FIND_MY_LOCATION_OUT_OF_BOUNDS,
@@ -15,7 +15,7 @@ const logger = store => next => action => {
   const { event } = config.ga;
 
   //TODO case statement ????
-  if (type === TOGGLE_RIGHT_MENU)
+  if (type === TOGGLE_RIGHT_DRAWER)
   {
     // Record right menu button click
     ReactGA.event({
@@ -24,7 +24,7 @@ const logger = store => next => action => {
       label: action.open ? 'open' : 'close'
     });
 
-  } else if (type === TOGGLE_LEFT_MENU) {
+  } else if (type === TOGGLE_LEFT_DRAWER) {
 
     // Record left menu button click
     ReactGA.event({
@@ -38,7 +38,7 @@ const logger = store => next => action => {
     || type === FIND_MY_LOCATION_OUT_OF_BOUNDS
     || type === FIND_MY_LOCATION_SELECT) {
 
-    // All geolocate event start with "FIND_MY_LOCATION_". The suffix corresponds to the action type in
+    // All geolocate events start with "FIND_MY_LOCATION_". The suffix corresponds to the action type in
     // config.js under ga.geoLocate
     let prefix = 'FIND_MY_LOCATION_';
     let locationAction = action.type.substr(prefix.length, action.type.length);

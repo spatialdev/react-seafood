@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
-import { toggleRightMenu } from "../../redux/actions";
+import { toggleRightDrawer } from "../../redux/actions";
 
-import './rightMenu.css';
+import './rightDrawer.css';
 
 const styles = theme => ({});
 
@@ -18,26 +18,26 @@ class RightMenu extends Component {
 
   render() {
 
-    const { rightMenuOptions } = this.props;
-    const { open, anchor } = rightMenuOptions;
+    const { rightDrawerOptions } = this.props;
+    const { open, anchor } = rightDrawerOptions;
 
     return (
       <div className="RightMenu">
         <div className="RightMenuButton" color="secondary">
-          <Button onClick={() => toggleRightMenu(!open)} variant="contained">Vendor List</Button>
+          <Button onClick={() => toggleRightDrawer(!open)} variant="contained">Vendor List</Button>
         </div>
         <SwipeableDrawer
           className="RightMenuDrawer"
           anchor={anchor}
           open={open}
-          onClose={() => toggleRightMenu(false)}
-          onOpen={() => toggleRightMenu(true)}
+          onClose={() => toggleRightDrawer(false)}
+          onOpen={() => toggleRightDrawer(true)}
         >
           <div
             tabIndex={0}
             role="button"
-            onClick={() => toggleRightMenu(false)}
-            onKeyDown={() => toggleRightMenu(false)}
+            onClick={() => toggleRightDrawer(false)}
+            onKeyDown={() => toggleRightDrawer(false)}
           >
             Really cool list here!
           </div>
@@ -56,8 +56,8 @@ function mapStateToProps(state) {
   return {
     polygonData: state.polygonData,
     active: state.active,
-    leftMenuOptions: state.leftMenuOptions,
-    rightMenuOptions: state.rightMenuOptions
+    leftDrawerOptions: state.leftDrawerOptions,
+    rightDrawerOptions: state.rightDrawerOptions
   };
 }
 
