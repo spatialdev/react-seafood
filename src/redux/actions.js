@@ -1,5 +1,5 @@
 import { store } from './store'
-import { SET_POLYGON_DATA, TOGGLE_LEFT_MENU, TOGGLE_RIGHT_MENU } from './constants'
+import { SET_POLYGON_DATA, SET_BOTTOM_DRAWER_DATA, TOGGLE_LEFT_DRAWER, TOGGLE_RIGHT_DRAWER, TOGGLE_BOTTOM_DRAWER } from './constants'
 
 export const setMapData = data => {
   store.dispatch({
@@ -8,16 +8,30 @@ export const setMapData = data => {
   });
 }
 
-export const toggleLeftMenu = open => {
+export const setBottomDrawerData = data => {
   store.dispatch({
-    type: TOGGLE_LEFT_MENU,
+    type: SET_BOTTOM_DRAWER_DATA,
+    data
+  });
+}
+
+export const toggleLeftDrawer = open => {
+  store.dispatch({
+    type: TOGGLE_LEFT_DRAWER,
     open
   });
 }
 
-export const toggleRightMenu = open => {
+export const toggleRightDrawer = open => {
   store.dispatch({
-    type: TOGGLE_RIGHT_MENU,
+    type: TOGGLE_RIGHT_DRAWER,
+    open
+  });
+}
+
+export const toggleBottomDrawer = open => {
+  store.dispatch({
+    type: TOGGLE_BOTTOM_DRAWER,
     open
   });
 }

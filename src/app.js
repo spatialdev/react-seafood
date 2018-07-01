@@ -3,8 +3,9 @@ import ReactGA from 'react-ga';
 import { Provider } from 'react-redux';
 import { store } from './redux/store'
 import Map from './components/map/map.js';
-import RightMenu from './components/rightMenu/rightMenu';
-import PersistentDrawer from './components/leftMenuTopNav/leftMenu';
+import BottomSheet from './components/bottomDrawer/bottomDrawer'
+import RightMenu from './components/rightDrawer/rightDrawer';
+import Main from './components/main/main';
 import { config } from './config';
 
 import './app.css';
@@ -39,9 +40,9 @@ class App extends Component {
     return (
       <Provider store={store}>
         <div className="App">
-          <PersistentDrawer clickedMenuItem={this.handleMenuData} />
-          {/*<RightMenu/>*/}
+          <Main clickedMenuItem={this.handleMenuData} />
           <Map/>
+          <BottomSheet/>
         </div>
       </Provider>
     );

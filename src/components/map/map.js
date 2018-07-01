@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import mapboxgl from 'mapbox-gl';
 import windowSize from 'react-window-size';
 import './map.css';
-import {findMyLocation} from "../../redux/actions";
+import {findMyLocation, setBottomDrawerData, toggleBottomDrawer} from "../../redux/actions";
 import {
   FIND_MY_LOCATION_ERROR,
   FIND_MY_LOCATION_OUT_OF_BOUNDS,
@@ -78,30 +78,15 @@ class Map extends Component {
     );
   }
 
-  // Render map pop up on click
-  handleMapPopup(e, features) {
-    const coordinates = e.lngLat;
-    const html = this.createPopupHTML(features[0].properties);
-
-    new mapboxgl.Popup()
-      .setLngLat(coordinates)
-      .setHTML(html)
-      .addTo(this.map);
-  }
-
-  createPopupHTML(properties) {
-    return `
-        <p>
-            ${properties.id}</br>
-            ${properties.name}</br>
-            ${properties.type}
-        </p>
-
-       `;
+  // Display feature info in bottom panel
+  displayFeatureInfo(e, features) {
+    const data = features[0].properties;
+    setBottomDrawerData(data)
+    toggleBottomDrawer(true);
   }
 
   /**
-   * Overrite's GeolocateControl _updateCamera function
+   * Overwrite the GeolocateControl _updateCamera function
    * // TODO Don't track user location if out of bounds. Consider going back to custom implementation
    * @param position
    */
@@ -174,7 +159,7 @@ class Map extends Component {
     });
 
     if (features.length > 0) {
-      this.handleMapPopup(e, features);
+      this.displayFeatureInfo(e, features);
     }
   }
 }

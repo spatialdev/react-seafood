@@ -4,19 +4,13 @@ import PropTypes from 'prop-types';
 import { isBrowser } from 'react-device-detect';
 import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
-import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import { toggleLeftMenu } from '../../redux/actions';
+import { toggleLeftDrawer } from '../../redux/actions';
+import LeftDrawer from '../leftDrawer/leftDrawer';
 
 const drawerWidth = 240;
 
@@ -91,72 +85,18 @@ const styles = theme => ({
   },
 });
 
-class PersistentDrawer extends Component {
-
-  // Set leftMenuOptions.open state boolean to true
-  handleDrawerOpen = () => {
-    toggleLeftMenu(true);
-  };
-
-  // Set leftMenuOptions.open state boolean to false
-  handleDrawerClose = () => {
-    toggleLeftMenu(false);
-  };
-
-  handleClickedItem = (itemId) => {
-    this.props.clickedMenuItem(itemId);
-  };
-
-  filterLeftMenuItems = (data) => {
-    let leftPanelData = [];
-    const items = data.features;
-    items.forEach((vendor) => {
-      if (vendor.properties.left_panel) {
-        leftPanelData.push(vendor);
-      }
-    });
-    return leftPanelData;
-  };
+class Main extends Component {
 
   componentDidUpdate() {
     console.log(`updated state: ${this.props}`)
   }
 
   render() {
-    const { classes, polygonData, leftMenuOptions } = this.props;
-    const { anchor, open } = leftMenuOptions;
-    const menuItems = this.filterLeftMenuItems(polygonData);
-
-    const drawer = (
-      <Drawer
-        variant="persistent"
-        anchor={anchor}
-        open={open}
-        classes={{
-          paper: classes.drawerPaper,
-        }}
-      >
-        <div className={classes.drawerHeader}>
-          <IconButton onClick={this.handleDrawerClose}>
-            <ChevronLeftIcon/>
-          </IconButton>
-        </div>
-        <Divider/>
-        <List>
-          {menuItems.map((item) => {
-            return (
-              <ListItem button key={item.properties.id} onClick={() => this.handleClickedItem(item.properties.id)}>
-                <ListItemText primary={item.properties.name}/>
-              </ListItem>);
-          })}
-        </List>
-        <Divider/>
-      </Drawer>
-    );
+    const { classes, leftDrawerOptions } = this.props;
+    const { anchor, open } = leftDrawerOptions;
 
     return (
       <div className={classes.root}>
-
         <div>
           <AppBar
             className={classNames(classes.appBar, {
@@ -168,7 +108,7 @@ class PersistentDrawer extends Component {
               <IconButton
                 color="inherit"
                 aria-label="open drawer"
-                onClick={this.handleDrawerOpen}
+                onClick={()=>{toggleLeftDrawer(true)}}
                 className={classNames(classes.menuButton, open && classes.hide)}
               >
                 <MenuIcon/>
@@ -178,7 +118,7 @@ class PersistentDrawer extends Component {
               </Typography>
             </Toolbar>
           </AppBar>
-          {drawer}
+          <LeftDrawer/>
           <main
             className={classNames(classes.content, classes[`content-${anchor}`], {
               [classes.contentShift]: open,
@@ -193,19 +133,19 @@ class PersistentDrawer extends Component {
   }
 }
 
-PersistentDrawer.propTypes = {
+Main.propTypes = {
   classes: PropTypes.object.isRequired,
   theme: PropTypes.object.isRequired,
   polygonData: PropTypes.object.isRequired,
-  leftMenuOptions: PropTypes.object.isRequired
+  leftDrawerOptions: PropTypes.object.isRequired
 };
 
 function mapStateToProps(state) {
   return {
     polygonData: state.polygonData,
     active: state.active,
-    leftMenuOptions: state.leftMenuOptions
+    leftDrawerOptions: state.leftDrawerOptions
   };
 }
 
-export default connect(mapStateToProps)(withStyles(styles, { withTheme: true })(PersistentDrawer));
+export default connect(mapStateToProps)(withStyles(styles, { withTheme: true })(Main));
