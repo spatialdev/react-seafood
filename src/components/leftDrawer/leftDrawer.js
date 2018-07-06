@@ -113,14 +113,14 @@ class LeftDrawer extends Component {
 
     return (
       <Drawer
-        variant="persistent"
         anchor={anchor}
         open={open}
+        onClose={()=>{toggleLeftDrawer(false)}}
         classes={{
           paper: classes.drawerPaper,
         }}
       >
-        <div className={classes.drawerHeader}>
+        <div>
           <IconButton onClick={()=>{toggleLeftDrawer(false)}}>
             <ChevronLeftIcon/>
           </IconButton>
