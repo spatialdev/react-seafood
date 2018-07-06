@@ -1,16 +1,20 @@
-import { SET_POLYGON_DATA, SET_BOTTOM_DRAWER_DATA, TOGGLE_RIGHT_DRAWER, TOGGLE_LEFT_DRAWER, TOGGLE_BOTTOM_DRAWER } from './constants'
-import polygonData from '../data/polygons_2017'
+import { SET_POLYGON_DATA, SET_BOTTOM_DRAWER_DATA, TOGGLE_RIGHT_DRAWER, TOGGLE_LEFT_DRAWER, TOGGLE_BOTTOM_DRAWER, SET_TAB_VALUE } from './constants'
+import polygonData from '../data/polygons_2018'
 import { isBrowser } from 'react-device-detect';
 
 const initialState: State = {
   polygonData,
   leftDrawerOptions: {
     anchor: 'left',
-    open : isBrowser
+    open : false
   },
   rightDrawerOptions: {
     anchor: 'right',
-    open: false
+    open: false,
+    tabs: {
+      index: 0,
+      name: 'All'
+    }
   },
   bottomDrawer: {
     options: {
@@ -56,6 +60,13 @@ function reducer(state = initialState, action) {
             ...state.bottomDrawer.options,
             open: action.open
           }
+        }
+      }
+    case SET_TAB_VALUE:
+      return {
+        ...state, rightDrawerOptions: {
+          ...state.rightDrawerOptions,
+          tabs: action.tabs
         }
       }
     default:

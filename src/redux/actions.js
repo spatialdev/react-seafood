@@ -1,5 +1,5 @@
 import { store } from './store'
-import { SET_POLYGON_DATA, SET_BOTTOM_DRAWER_DATA, TOGGLE_LEFT_DRAWER, TOGGLE_RIGHT_DRAWER, TOGGLE_BOTTOM_DRAWER } from './constants'
+import { SET_POLYGON_DATA, SET_BOTTOM_DRAWER_DATA, TOGGLE_LEFT_DRAWER, TOGGLE_RIGHT_DRAWER, TOGGLE_BOTTOM_DRAWER, SET_TAB_VALUE } from './constants'
 
 export const setMapData = data => {
   store.dispatch({
@@ -41,4 +41,11 @@ export const findMyLocation = action => {
     type: action.type,
     payload: action.payload
   })
+}
+
+export const setTabValue = tabs => {
+  store.dispatch({
+    type: SET_TAB_VALUE,
+    tabs
+  });
 }

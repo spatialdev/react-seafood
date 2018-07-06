@@ -1,16 +1,8 @@
-.RightMenu {
-    position: absolute;
-    right: 0;
-    z-index: 9999;
-}
-
-.RightMenuButton {
-    position: relative;
-    right: 20px;
-    top: 40px;
-}
-
-/* Over write Drawer z-index to render on top of button and map */
+/* Overwrite Drawer z-index to render on top of button and map */
 .RightMenuDrawer {
     z-index: 10000 !important;
+}
+
+.ListWrapper {
+    width: 300px;
 }
