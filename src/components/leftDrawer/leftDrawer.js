@@ -11,8 +11,15 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { toggleLeftDrawer } from '../../redux/actions';
+import './leftDrawer.css';
+import imgFlier from '../../images/logo-flier.png';
+import imgIconEntertainment from '../../images/icons/svg_entertainment.svg'
+import imgIconArts from '../../images/icons/svg_arts.svg'
+import imgIconFoods from '../../images/icons/svg_foods.svg'
+import imgIconSponsors from '../../images/icons/svg_sponsors_NP.svg'
+import imgIconMisc from '../../images/icons/svg_misc.svg'
 
-const drawerWidth = 240;
+const drawerWidth = 280;
 
 const styles = theme => ({
   root: {
@@ -111,6 +118,14 @@ class LeftDrawer extends Component {
     const { anchor, open } = leftDrawerOptions;
     const menuItems = this.filterLeftMenuItems(polygonData);
 
+    const divider = index => {
+      if (index === menuItems.length - 2){
+        return <Divider/>
+      }
+      return null;
+    };
+
+
     return (
       <Drawer
         anchor={anchor}
@@ -120,21 +135,60 @@ class LeftDrawer extends Component {
           paper: classes.drawerPaper,
         }}
       >
-        <div>
-          <IconButton onClick={()=>{toggleLeftDrawer(false)}}>
-            <ChevronLeftIcon/>
-          </IconButton>
+        {/* Drawer Flier Image */}
+        <img className="Flier" src={imgFlier}/>
+
+        {/*  Map Legend */}
+        <div className="Legend">
+          <div className="legend-title">Map legend:</div>
+          <div className="legend-item-wrapper">
+            <span className="legend-box">
+              <img className="map-pin" src={imgIconEntertainment}/>
+            </span>
+            <span className="legend-item-text">Entertainment</span>
+          </div>
+          <div className="legend-item-wrapper">
+            <span className="legend-box">
+              <img className="map-pin" src={imgIconArts}/></span>
+            <span className="legend-item-text">Arts & Crafts</span>
+          </div>
+          <div className="legend-item-wrapper">
+            <span className="legend-box">
+              <img className="map-pin" src={imgIconFoods}/></span>
+            <span className="legend-item-text">Food</span>
+          </div>
+          <div className="legend-item-wrapper">
+            <span className="legend-box">
+              <img className="map-pin" src={imgIconSponsors}/></span>
+            <span className="legend-item-text">Sponsors/Non-Profits</span>
+          </div>
+          <div className="legend-item-wrapper">
+            <span className="legend-box">
+              <img className="map-pin" src={imgIconMisc}/></span>
+            <span className="legend-item-text">Other</span>
+          </div>
+          <div className="legend-item-wrapper">
+            <span className="legend-box">
+              <i className="material-icons games-icon">star</i></span>
+            <span className="legend-item-text">Games</span>
+          </div>
         </div>
+
         <Divider/>
+
+        {/*  Must See List */}
+        <div className="legend-title sub-section">Don't Miss:</div>
         <List>
-          {menuItems.map((item) => {
+          {menuItems.map((item, index) => {
             return (
-              <ListItem button key={item.properties.id} onClick={() => this.handleClickedItem(item.properties.id)}>
-                <ListItemText primary={item.properties.name}/>
-              </ListItem>);
+              <div>
+                {index === menuItems.length - 1 ? (<Divider/>) : null}
+                <ListItem button key={item.properties.id} onClick={() => this.handleClickedItem(item.properties.id)}>
+                <ListItemText disableTypography={true} classes={{root: 'list-item-text'}} primary={item.properties.name}/>
+              </ListItem>
+              </div>);
           })}
         </List>
-        <Divider/>
       </Drawer>
     );
   }

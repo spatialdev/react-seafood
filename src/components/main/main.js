@@ -21,25 +21,6 @@ const styles = theme => ({
   root: {
     flexGrow: 1,
   },
-  appBar: {
-    transition: theme.transitions.create(['margin', 'width'], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-  },
-  appBarShift: {
-    width: `calc(100% - ${drawerWidth}px)`,
-    transition: theme.transitions.create(['margin', 'width'], {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  },
-  'appBarShift-left': {
-    marginLeft: drawerWidth,
-  },
-  'appBarShift-right': {
-    marginRight: drawerWidth,
-  },
   flex: {
     flex: 1,
   },
@@ -68,25 +49,7 @@ const styles = theme => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-  },
-  'content-left': {
-    marginLeft: -drawerWidth,
-  },
-  'content-right': {
-    marginRight: -drawerWidth,
-  },
-  contentShift: {
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  },
-  'contentShift-left': {
-    marginLeft: 0,
-  },
-  'contentShift-right': {
-    marginRight: 0,
-  },
+  }
 });
 
 class Main extends Component {
@@ -103,7 +66,7 @@ class Main extends Component {
       <div className={classes.root}>
         <div>
           <AppBar>
-            <Toolbar className="toolbar" disableGutters={!open}>
+            <Toolbar className="toolbar" disableGutters={true}>
               <IconButton
                 aria-label="open drawer"
                 onClick={()=>{toggleLeftDrawer(true)}}
