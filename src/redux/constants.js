@@ -12,6 +12,9 @@ const FIND_MY_LOCATION_OUT_OF_BOUNDS = 'FIND_MY_LOCATION_OUT_OF_BOUNDS';
 
 const SET_TAB_VALUE = 'SET_TAB_VALUE';
 
+// TODO put this in a better place
+const drawerWidth = 280;
+
 export {
   SET_POLYGON_DATA,
   SET_BOTTOM_DRAWER_DATA,
@@ -22,5 +25,6 @@ export {
   FIND_MY_LOCATION_ERROR,
   FIND_MY_LOCATION_SUCCESS,
   FIND_MY_LOCATION_OUT_OF_BOUNDS,
-  SET_TAB_VALUE
+  SET_TAB_VALUE,
+  drawerWidth
 }

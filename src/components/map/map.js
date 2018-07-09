@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
+import { connect } from 'react-redux'
+import { withStyles } from '@material-ui/core/styles';
+import withWidth from "@material-ui/core/withWidth/index";
 import mapboxgl from 'mapbox-gl';
-import windowSize from 'react-window-size';
 import './map.css';
 import {findMyLocation, setBottomDrawerData, toggleBottomDrawer} from "../../redux/actions";
 import {
@@ -11,6 +13,28 @@ import {
 } from "../../redux/constants";
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoic3BhdGlhbGRldiIsImEiOiJKRGYyYUlRIn0.PuYcbpuC38WO6D1r7xdMdA';
+
+const styles = theme => ({
+  map: {
+    [theme.breakpoints.down('sm')]: {
+      position: 'relative',
+      // toolbar height
+      top: '56px',
+      height: `calc(100% - 56px)`,
+    },
+    [theme.breakpoints.up('md')]: {
+      position: 'relative',
+      // 65 = toolbar height
+      top: '65px',
+      // 280 = left drawer width
+      left: '280px',
+      height: `calc(100% - 65px)`
+    },
+    [theme.breakpoints.up('lg')]: {
+      position: 'relative'
+    },
+  },
+});
 
 class Map extends Component {
 
@@ -33,7 +57,6 @@ class Map extends Component {
     },
   };
 
-  // TODO
   bounds = [
     //southwest
     [-122.38885402679443, 47.66567637286265],
@@ -71,9 +94,11 @@ class Map extends Component {
 
   render() {
 
+    const { classes } = this.props;
+
     return (
       <div className="Map">
-        <div ref={el => this.mapContainer = el} className="GL-Map"/>
+        <div ref={el => this.mapContainer = el} className={classes.map}/>
       </div>
     );
   }
@@ -164,4 +189,12 @@ class Map extends Component {
   }
 }
 
-export default windowSize(Map);
+function mapStateToProps(state) {
+  return {
+    polygonData: state.polygonData,
+    active: state.active,
+    leftDrawerOptions: state.leftDrawerOptions
+  };
+}
+
+export default connect(mapStateToProps)(withWidth()(withStyles(styles, { withTheme: true })(Map)));
