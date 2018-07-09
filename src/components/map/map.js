@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import withWidth from "@material-ui/core/withWidth/index";
 import mapboxgl from 'mapbox-gl';
 import './map.css';
-import {findMyLocation, setBottomDrawerData, toggleBottomDrawer} from "../../redux/actions";
+import {findMyLocation, setBottomDrawerData, toggleBottomDrawer, setMap} from "../../redux/actions";
 import {
   FIND_MY_LOCATION_ERROR,
   FIND_MY_LOCATION_OUT_OF_BOUNDS,
@@ -22,12 +22,12 @@ const styles = theme => ({
       top: '56px',
       height: `calc(100% - 56px)`,
     },
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('sm')]: {
       position: 'relative',
       // 65 = toolbar height
       top: '65px',
       // 280 = left drawer width
-      left: '280px',
+      // left: '280px',
       height: `calc(100% - 65px)`
     },
     [theme.breakpoints.up('lg')]: {
@@ -38,24 +38,12 @@ const styles = theme => ({
 
 class Map extends Component {
 
-  map;
-
   geoLocate = new mapboxgl.GeolocateControl({
     positionOptions: {
       enableHighAccuracy: true
     },
     trackUserLocation: false
   });
-
-  state = {
-    viewport: {
-      latitude: 47.668667600018416,
-      longitude: -122.38473415374757,
-      zoom: 18,
-      bearing: 0,
-      pitch: 0
-    },
-  };
 
   bounds = [
     //southwest
@@ -66,7 +54,7 @@ class Map extends Component {
 
   componentDidMount() {
 
-    this.map = new mapboxgl.Map({
+    const map = new mapboxgl.Map({
       container: this.mapContainer,
       style: 'mapbox://styles/spatialdev/cj44jbnm59nnq2rmrzd5ozf36',
       center: [-122.38473415374757, 47.668667600018416],
@@ -74,7 +62,7 @@ class Map extends Component {
       zoom: 18
     });
 
-    this.map.addControl(this.geoLocate);
+    map.addControl(this.geoLocate);
 
     // Replace GeolocateControl's _updateCamera function
     // see: https://github.com/mapbox/mapbox-gl-js/issues/6789
@@ -83,12 +71,14 @@ class Map extends Component {
     // Catch GeolocateControl errors
     this.geoLocate.on('error', this.handleGeolocationError);
 
-    this.map.on('load', () => {
-    });
+    map.on('load', () => {});
 
-    this.map.on('click', (e) => {
+    map.on('click', (e) => {
       this.handleMapClick(e);
     });
+
+    // Set Map object in global state
+    setMap(map);
 
   }
 
@@ -97,8 +87,8 @@ class Map extends Component {
     const { classes } = this.props;
 
     return (
-      <div className="Map">
-        <div ref={el => this.mapContainer = el} className={classes.map}/>
+      <div className={classes.map}>
+        <div ref={el => this.mapContainer = el} className="GL-Map"/>
       </div>
     );
   }
@@ -170,9 +160,12 @@ class Map extends Component {
   }
 
   handleMapClick = (e) => {
+
+    const { map } = this.props;
+
     // Fetch map feature from specified layer list.
     // TODO grab this layer list from a configuration
-    let features = this.map.queryRenderedFeatures(e.point, {
+    let features = map.queryRenderedFeatures(e.point, {
       layers: [
         'vendor icons',
         'vendor pins',
@@ -193,7 +186,8 @@ function mapStateToProps(state) {
   return {
     polygonData: state.polygonData,
     active: state.active,
-    leftDrawerOptions: state.leftDrawerOptions
+    leftDrawerOptions: state.leftDrawerOptions,
+    map: state.map
   };
 }
 

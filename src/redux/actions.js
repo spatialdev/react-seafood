@@ -1,5 +1,12 @@
 import { store } from './store'
-import { SET_POLYGON_DATA, SET_BOTTOM_DRAWER_DATA, TOGGLE_LEFT_DRAWER, TOGGLE_RIGHT_DRAWER, TOGGLE_BOTTOM_DRAWER, SET_TAB_VALUE } from './constants'
+import { SET_MAP, SET_POLYGON_DATA, SET_BOTTOM_DRAWER_DATA, TOGGLE_LEFT_DRAWER, TOGGLE_RIGHT_DRAWER, TOGGLE_BOTTOM_DRAWER, SET_TAB_VALUE } from './constants'
+
+export const setMap = map => {
+  store.dispatch({
+    type: SET_MAP,
+    map
+  });
+}
 
 export const setMapData = data => {
   store.dispatch({

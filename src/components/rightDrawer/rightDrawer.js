@@ -9,9 +9,10 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Button from '@material-ui/core/Button';
 import {withStyles} from '@material-ui/core/styles';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
-import {toggleRightDrawer, setTabValue} from "../../redux/actions";
-
+import {toggleRightDrawer, setTabValue, toggleLeftDrawer} from "../../redux/actions";
 import './rightDrawer.css';
+import turfCenter from "@turf/center";
+import {drawerWidth} from "../../redux/constants";
 
 const styles = theme => ({
   tabsRoot: {
@@ -41,6 +42,22 @@ class RightMenu extends Component {
     setTabValue({index:value, name: filters[value]})
   };
 
+  zoomToVendor = (vendor) => {
+
+    const { map, width } = this.props;
+    const bbox = turfCenter(vendor);
+
+    map.flyTo({
+      center: bbox.geometry.coordinates,
+      zoom: 19.5
+    });
+
+    // If we're in mobile mode, close the left drawer
+    if (width === 'xs' || width === 'sm') {
+      toggleRightDrawer(false);
+    }
+  }
+
   componentDidUpdate() {
   }
 
@@ -59,6 +76,9 @@ class RightMenu extends Component {
     return (
       <div className="RightMenu">
         <SwipeableDrawer
+          classes={{
+            paper: classes.drawerPaper
+          }}
           className="RightMenuDrawer"
           anchor={anchor}
           open={open}
@@ -88,7 +108,7 @@ class RightMenu extends Component {
           >
             {activeItems.map((item) => {
               return (
-                <ListItem button key={item.properties.id}>
+                <ListItem onClick={() => this.zoomToVendor(item)} button key={item.properties.id}>
                   <ListItemText primary={item.properties.name}/>
                 </ListItem>
               );
@@ -110,7 +130,8 @@ function mapStateToProps(state) {
     polygonData: state.polygonData,
     active: state.active,
     leftDrawerOptions: state.leftDrawerOptions,
-    rightDrawerOptions: state.rightDrawerOptions
+    rightDrawerOptions: state.rightDrawerOptions,
+    map: state.map
   };
 }
 
