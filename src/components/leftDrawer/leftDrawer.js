@@ -12,8 +12,9 @@ import IconButton from '@material-ui/core/IconButton';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import { toggleLeftDrawer } from '../../redux/actions';
+import { toggleLeftDrawer, toggleRightDrawer, setTabValue } from '../../redux/actions';
 import { drawerWidth } from '../../redux/constants';
+import turfCenter from '@turf/center'
 import './leftDrawer.css';
 import imgFlier from '../../images/logo-flier.png';
 import imgIconEntertainment from '../../images/icons/svg_entertainment.svg'
@@ -96,9 +97,21 @@ const styles = theme => ({
 
 class LeftDrawer extends Component {
 
-  handleClickedItem = (itemId) => {
-    this.props.clickedMenuItem(itemId);
-  };
+  zoomToVendor = (vendor) => {
+    const { map, width } = this.props;
+    const bbox = turfCenter(vendor);
+
+    map.flyTo({
+      center: bbox.geometry.coordinates,
+      zoom: 19.5
+    });
+
+    // If we're in mobile mode, close the left drawer
+    if (width === 'xs' || width === 'sm') {
+      toggleLeftDrawer(false);
+    }
+
+  }
 
   filterLeftMenuItems = (data) => {
     let leftPanelData = [];
@@ -130,7 +143,7 @@ class LeftDrawer extends Component {
         onClose={()=>{toggleLeftDrawer(false)}}
         onOpen={()=>{toggleLeftDrawer(true)}}
         classes={{
-          paper: classes.drawerPaper,
+          paper: classes.drawerPaper
         }}
       >
         {/* Drawer Flier Image */}
@@ -177,15 +190,30 @@ class LeftDrawer extends Component {
         {/*  Must See List */}
         <div className="legend-title sub-section">Don't Miss:</div>
         <List>
+          <ListItem className="list-item-wrapper" button onClick={() => {
+            {/*  Close the right & left menu */}
+            toggleRightDrawer(true);
+            toggleLeftDrawer(false);
+            setTabValue({index: 1, name: "Food"});
+          }}>
+            <ListItemText disableTypography={true} classes={{root: 'list-item-text'}} primary="Food Vendors"/>
+          </ListItem>
           {menuItems.map((item, index) => {
             return (
               <div key={item.properties.id}>
-                {index === menuItems.length - 1 ? (<Divider/>) : null}
-                <ListItem button onClick={() => this.handleClickedItem(item.properties.id)}>
+                {/* {index === menuItems.length - 1 ? (<Divider/>) : null} */}
+                <ListItem className="list-item-wrapper" button onClick={() => this.zoomToVendor(item)}>
                   <ListItemText disableTypography={true} classes={{root: 'list-item-text'}} primary={item.properties.name}/>
               </ListItem>
               </div>);
           })}
+          <Divider/>
+          {/*  Go to seafoodfest.org */}
+          <a className="list-link" href="https://seafoodfest.org/" target="_blank">
+            <ListItem className="list-item-wrapper" button>
+              <ListItemText disableTypography={true} classes={{root: 'list-item-text'}} primary="Seafood Fest Org"/>
+            </ListItem>
+          </a>
         </List>
       </SwipeableDrawer>
     );
@@ -196,14 +224,16 @@ LeftDrawer.propTypes = {
   classes: PropTypes.object.isRequired,
   theme: PropTypes.object.isRequired,
   polygonData: PropTypes.object.isRequired,
-  leftDrawerOptions: PropTypes.object.isRequired
+  leftDrawerOptions: PropTypes.object.isRequired,
+  map: PropTypes.object.isRequired
 };
 
 function mapStateToProps(state) {
   return {
     polygonData: state.polygonData,
     active: state.active,
-    leftDrawerOptions: state.leftDrawerOptions
+    leftDrawerOptions: state.leftDrawerOptions,
+    map: state.map
   };
 }
 

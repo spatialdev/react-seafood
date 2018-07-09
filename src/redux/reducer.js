@@ -1,9 +1,21 @@
-import { SET_POLYGON_DATA, SET_BOTTOM_DRAWER_DATA, TOGGLE_RIGHT_DRAWER, TOGGLE_LEFT_DRAWER, TOGGLE_BOTTOM_DRAWER, SET_TAB_VALUE } from './constants'
+import {
+  SET_POLYGON_DATA, SET_BOTTOM_DRAWER_DATA, TOGGLE_RIGHT_DRAWER, TOGGLE_LEFT_DRAWER, TOGGLE_BOTTOM_DRAWER,
+  SET_TAB_VALUE, SET_MAP
+} from './constants'
 import polygonData from '../data/polygons_2018'
 import { isBrowser } from 'react-device-detect';
 
+// Sort feature collection by vendor name
+const sortFeatures = (a,b) => {
+  if( a.properties.name > b.properties.name) return 1;
+  if( a.properties.name < b.properties.name) return -1;
+}
+
 const initialState: State = {
-  polygonData,
+  polygonData: {
+    ...polygonData,
+    features: polygonData.features.sort(sortFeatures)
+  },
   leftDrawerOptions: {
     anchor: 'left',
     open : false
@@ -22,7 +34,8 @@ const initialState: State = {
       open: false,
     },
     data: {}
-  }
+  },
+  map: {}
 };
 
 function reducer(state = initialState, action) {
@@ -68,6 +81,12 @@ function reducer(state = initialState, action) {
           ...state.rightDrawerOptions,
           tabs: action.tabs
         }
+      }
+
+    case SET_MAP:
+
+      return {
+        ...state, map: action.map
       }
     default:
       return state;
