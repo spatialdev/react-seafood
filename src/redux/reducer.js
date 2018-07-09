@@ -6,7 +6,7 @@ const initialState: State = {
   polygonData,
   leftDrawerOptions: {
     anchor: 'left',
-    open : true
+    open : false
   },
   rightDrawerOptions: {
     anchor: 'right',

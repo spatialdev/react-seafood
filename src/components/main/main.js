@@ -7,22 +7,33 @@ import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
+import Hidden from '@material-ui/core/Hidden';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import { toggleLeftDrawer, toggleRightDrawer } from '../../redux/actions';
 import LeftDrawer from '../leftDrawer/leftDrawer';
 import RightDrawer from '../rightDrawer/rightDrawer';
+import { drawerWidth } from '../../redux/constants';
 import './main.css'
 
-const drawerWidth = 240;
-
 const styles = theme => ({
+  toolbar: {
+    "background-color": '#076293',
+    "font-family": `'Open Sans', sans-serif  !important`,
+    marginLeft: drawerWidth,
+    [theme.breakpoints.up('md')]: {
+      width: `calc(100% - ${drawerWidth}px)`,
+    },
+  },
   root: {
     flexGrow: 1,
   },
   flex: {
     flex: 1,
+    [theme.breakpoints.up('md')]: {
+      marginLeft: `40px`,
+    }
   },
   menuButton: {
     marginLeft: 12,
@@ -65,14 +76,16 @@ class Main extends Component {
     return (
       <div className={classes.root}>
         <div>
-          <AppBar>
-            <Toolbar className="toolbar" disableGutters={true}>
+          <AppBar className={classes.toolbar}>
+            <Toolbar disableGutters={true}>
+              <Hidden mdUp>
               <IconButton
                 aria-label="open drawer"
                 onClick={()=>{toggleLeftDrawer(true)}}
                 className={classNames(classes.menuButton)}>
                 <MenuIcon/>
               </IconButton>
+              </Hidden>
               <div className={classes.flex}>
                 Ballard SeafoodFest
               </div>

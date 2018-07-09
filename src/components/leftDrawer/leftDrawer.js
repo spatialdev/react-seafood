@@ -3,7 +3,9 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types';
 import { isBrowser } from 'react-device-detect';
 import { withStyles } from '@material-ui/core/styles';
+import withWidth from '@material-ui/core/withWidth';
 import Drawer from '@material-ui/core/Drawer';
+import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
@@ -11,6 +13,7 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { toggleLeftDrawer } from '../../redux/actions';
+import { drawerWidth } from '../../redux/constants';
 import './leftDrawer.css';
 import imgFlier from '../../images/logo-flier.png';
 import imgIconEntertainment from '../../images/icons/svg_entertainment.svg'
@@ -19,7 +22,6 @@ import imgIconFoods from '../../images/icons/svg_foods.svg'
 import imgIconSponsors from '../../images/icons/svg_sponsors_NP.svg'
 import imgIconMisc from '../../images/icons/svg_misc.svg'
 
-const drawerWidth = 280;
 
 const styles = theme => ({
   root: {
@@ -114,23 +116,19 @@ class LeftDrawer extends Component {
   }
 
   render() {
-    const { classes, polygonData, leftDrawerOptions } = this.props;
+    const { classes, polygonData, leftDrawerOptions, width } = this.props;
     const { anchor, open } = leftDrawerOptions;
     const menuItems = this.filterLeftMenuItems(polygonData);
-
-    const divider = index => {
-      if (index === menuItems.length - 2){
-        return <Divider/>
-      }
-      return null;
-    };
-
+    // On large screens, make the left drawer permanently open
+    const drawerVariant = (width === 'md' || width === 'lg' || width === 'xl') ? 'permanent' : 'temporary';
 
     return (
-      <Drawer
+      <SwipeableDrawer
+        variant={drawerVariant}
         anchor={anchor}
         open={open}
         onClose={()=>{toggleLeftDrawer(false)}}
+        onOpen={()=>{toggleLeftDrawer(true)}}
         classes={{
           paper: classes.drawerPaper,
         }}
@@ -181,15 +179,15 @@ class LeftDrawer extends Component {
         <List>
           {menuItems.map((item, index) => {
             return (
-              <div>
+              <div key={item.properties.id}>
                 {index === menuItems.length - 1 ? (<Divider/>) : null}
-                <ListItem button key={item.properties.id} onClick={() => this.handleClickedItem(item.properties.id)}>
-                <ListItemText disableTypography={true} classes={{root: 'list-item-text'}} primary={item.properties.name}/>
+                <ListItem button onClick={() => this.handleClickedItem(item.properties.id)}>
+                  <ListItemText disableTypography={true} classes={{root: 'list-item-text'}} primary={item.properties.name}/>
               </ListItem>
               </div>);
           })}
         </List>
-      </Drawer>
+      </SwipeableDrawer>
     );
   }
 }
@@ -209,4 +207,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(withStyles(styles, { withTheme: true })(LeftDrawer));
+export default connect(mapStateToProps)(withWidth()(withStyles(styles, { withTheme: true })(LeftDrawer)));
