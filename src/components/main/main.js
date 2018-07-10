@@ -16,6 +16,7 @@ import LeftDrawer from '../leftDrawer/leftDrawer';
 import RightDrawer from '../rightDrawer/rightDrawer';
 import { drawerWidth } from '../../redux/constants';
 import './main.css'
+import imgNavLogo from '../../images/logo-header.svg'
 
 const styles = theme => ({
   toolbar: {
@@ -60,7 +61,10 @@ const styles = theme => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-  }
+  },
+  navLogo: {
+    height: '40px'
+}
 });
 
 class Main extends Component {
@@ -87,7 +91,7 @@ class Main extends Component {
               </IconButton>
               </Hidden>
               <div className={classes.flex}>
-                Ballard SeafoodFest
+                <img className={classes.navLogo} src={imgNavLogo} />
               </div>
               <Button  onClick={()=>{toggleRightDrawer(true)}} className="vendorButton">Vendor List</Button>
             </Toolbar>
