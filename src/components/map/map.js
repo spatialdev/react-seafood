@@ -56,7 +56,7 @@ class Map extends Component {
 
     const map = new mapboxgl.Map({
       container: this.mapContainer,
-      style: 'mapbox://styles/spatialdev/cj44jbnm59nnq2rmrzd5ozf36',
+      style: 'mapbox://styles/spatialdev/cjiqnp2s746bw2srrd5uic6t1',
       center: [-122.38473415374757, 47.668667600018416],
       maxBounds: this.bounds,
       zoom: 18
@@ -172,6 +172,7 @@ class Map extends Component {
         'centroid labels',
         'game icons',
         'entertainment polygons',
+        'entertainment polygon outline',
         'vendor pins highlight'
       ]
     });

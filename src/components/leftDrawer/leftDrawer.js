@@ -28,25 +28,6 @@ const styles = theme => ({
   root: {
     flexGrow: 1,
   },
-  appBar: {
-    transition: theme.transitions.create(['margin', 'width'], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-  },
-  appBarShift: {
-    width: `calc(100% - ${drawerWidth}px)`,
-    transition: theme.transitions.create(['margin', 'width'], {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  },
-  'appBarShift-left': {
-    marginLeft: drawerWidth,
-  },
-  'appBarShift-right': {
-    marginRight: drawerWidth,
-  },
   flex: {
     flex: 1,
   },
@@ -54,45 +35,14 @@ const styles = theme => ({
     marginLeft: 12,
     marginRight: 20,
   },
-  hide: {
-    display: 'none',
-  },
   drawerPaper: {
     width: drawerWidth,
   },
-  drawerHeader: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-    padding: '0 8px',
-    ...theme.mixins.toolbar,
-  },
-  content: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.default,
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-  },
-  'content-left': {
-    marginLeft: -drawerWidth,
-  },
-  'content-right': {
-    marginRight: -drawerWidth,
-  },
-  contentShift: {
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  },
-  'contentShift-left': {
-    marginLeft: 0,
-  },
-  'contentShift-right': {
-    marginRight: 0,
-  },
+  list: {
+    [theme.breakpoints.down('sm')]: {
+      marginBottom: '50px'
+    }
+  }
 });
 
 class LeftDrawer extends Component {
@@ -210,7 +160,7 @@ class LeftDrawer extends Component {
           <Divider/>
           {/*  Go to seafoodfest.org */}
           <a className="list-link" href="https://seafoodfest.org/" target="_blank">
-            <ListItem className="list-item-wrapper" button>
+            <ListItem classes={{root: classes.list }} className="list-item-wrapper" button>
               <ListItemText disableTypography={true} classes={{root: 'list-item-text'}} primary="Seafood Fest Org"/>
             </ListItem>
           </a>
