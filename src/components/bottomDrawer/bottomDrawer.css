@@ -2,3 +2,45 @@
     padding: 20px;
     font-family: 'Open Sans', sans-serif;
 }
+
+.key-wrapper {
+    float: left;
+    margin: 0 20px 0 0;
+}
+
+.key-id {
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+.svg-icon {
+    position: relative;
+    bottom: 23px;
+    z-index: 5;
+}
+
+.svg-icon img {
+    height: 32px;
+}
+
+.title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #333;
+}
+
+.content-wrapper {
+}
+
+.category {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: #333;
+    margin: 0 0 20px 0;
+}
