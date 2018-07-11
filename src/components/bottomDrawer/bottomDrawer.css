@@ -35,7 +35,9 @@
 }
 
 .content-wrapper {
-    padding: 1rem 8%;
+}
+
+.custom-content-wrapper {
     font-size: 12px;
 }
 
