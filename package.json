@@ -2,6 +2,7 @@
   "name": "react-seafood",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "http://54.202.214.10",
   "dependencies": {
     "@material-ui/core": "^1.2.0",
     "@material-ui/icons": "^1.1.0",
