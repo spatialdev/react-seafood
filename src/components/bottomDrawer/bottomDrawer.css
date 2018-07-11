@@ -37,10 +37,22 @@
 .content-wrapper {
 }
 
+.custom-content-wrapper {
+    font-size: 12px;
+}
+
 .category {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-size: 14px;
     color: #333;
     margin: 0 0 20px 0;
+}
+
+.drawerSubHead {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: #333;
+    margin: 20px 0 20px 0;
 }
