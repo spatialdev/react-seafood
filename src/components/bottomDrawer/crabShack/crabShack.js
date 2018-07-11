@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './crabShack.css';
-import { Tabs, Tab } from '../../../node_modules/@material-ui/core';
-import { TabContainer } from '../../helpers';
+import { Tabs, Tab } from '../../../../node_modules/@material-ui/core';
+import { TabContainer } from '../../../helpers';
 
 class CrabShack extends Component {
 

@@ -11,16 +11,16 @@ import imgIconArts from '../../images/icons/svg_arts.svg'
 import imgIconFoods from '../../images/icons/svg_foods.svg'
 import imgIconSponsors from '../../images/icons/svg_sponsors_NP.svg'
 import imgIconMisc from '../../images/icons/svg_misc.svg'
-import BeerGarden from '../beerGarden/beerGarden';
-import SmokedSalmon from '../smokedSalmon/smokedSalmon';
-import Stage from '../stage/stage';
-import FestiBowl from '../festiBowl/festiBowl';
-import GamePlank from '../gamePlank/gamePlank';
-import FestivalInfo from '../festivalInfo/festivalInfo';
-import KidsDeck from '../kidsDeck/kidsDeck';
-import PurpleSlide from '../purpleSlide/purpleSlide';
-import CrabShack from '../crabShack/crabShack';
-import Lutefisk from '../lutefisk/lutefisk';
+import BeerGarden from './beerGarden/beerGarden';
+import SmokedSalmon from './smokedSalmon/smokedSalmon';
+import Stage from './stage/stage';
+import FestiBowl from './festiBowl/festiBowl';
+import GamePlank from './gamePlank/gamePlank';
+import FestivalInfo from './festivalInfo/festivalInfo';
+import KidsDeck from './kidsDeck/kidsDeck';
+import PurpleSlide from './purpleSlide/purpleSlide';
+import CrabShack from './crabShack/crabShack';
+import Lutefisk from './lutefisk/lutefisk';
 
 const styles = theme => ({
   sheet: {},
@@ -96,7 +96,7 @@ class BottomSheet extends Component {
             <div className="content-wrapper">
               <div className="title">{data.name}</div>
               <div className="category">{data.type}</div>
-              {style}
+              <div className="custom-content-wrapper">{style}</div>
             </div>
           </div>
         </SwipeableDrawer>
