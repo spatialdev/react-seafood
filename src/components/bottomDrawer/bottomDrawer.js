@@ -27,6 +27,9 @@ const styles = theme => ({
   list: {
     width: 250,
   },
+  paperAnchorBottom: {
+    'max-height': '90vh'
+  },
   fullList: {
     width: 'auto',
   },
@@ -70,7 +73,7 @@ class BottomSheet extends Component {
 
     return (
       <div>
-        <SwipeableDrawer className={classes.sheet}
+        <SwipeableDrawer classes={{paperAnchorBottom: classes.paperAnchorBottom}}
                          anchor={anchor}
                          open={open}
                          onClose={() => {
