@@ -96,8 +96,18 @@ class Map extends Component {
   // Display feature info in bottom panel
   displayFeatureInfo(e, features) {
     const data = features[0].properties;
-    setBottomDrawerData(data)
+    const { map } = this.props;
+
+    setBottomDrawerData(data);
     toggleBottomDrawer(true);
+
+    map.setFilter('vendor pins highlight',
+      ["all",
+        ["==", "id", data.id],
+        ["!=", "show_icon", true]
+      ]);
+
+    map.setLayoutProperty('vendor pins highlight', 'visibility', 'visible');
   }
 
   /**
