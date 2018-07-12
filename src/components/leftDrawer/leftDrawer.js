@@ -52,7 +52,7 @@ class LeftDrawer extends Component {
     // Zoom to center
     map.flyTo({
       center: bbox.geometry.coordinates,
-      zoom: 20.5
+      zoom: 18.5
     });
 
     // Record selection on google analytics
