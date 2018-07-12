@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './kidsDeck.css';
-import { Tabs, Tab } from '../../../../node_modules/@material-ui/core';
+import { Tabs, Tab } from '@material-ui/core';
 import { TabContainer } from '../../../helpers';
 
 class KidsDeck extends Component {

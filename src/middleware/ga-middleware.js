@@ -4,7 +4,10 @@ import {
   FIND_MY_LOCATION_ERROR,
   FIND_MY_LOCATION_SUCCESS,
   FIND_MY_LOCATION_OUT_OF_BOUNDS,
-  FIND_MY_LOCATION_SELECT
+  FIND_MY_LOCATION_SELECT,
+  RIGHT_PANEL_VENDOR_SELECT,
+  LEFT_PANEL_VENDOR_SELECT,
+  MAP_VENDOR_SELECT
 } from '../redux/constants';
 import ReactGA from 'react-ga';
 
@@ -31,6 +34,33 @@ const logger = store => next => action => {
       category: event.ui.CATEGORY,
       action: event.ui.action.LEFT_MENU_SELECT,
       label: action.open ? 'open' : 'close'
+    });
+
+  } else if (type === RIGHT_PANEL_VENDOR_SELECT) {
+
+    // Record left menu "Must See" item selection
+    ReactGA.event({
+      category: event.vendor.CATEGORY,
+      action: event.vendor.action.RIGHT_PANEL_VENDOR_SELECT,
+      label: action.name
+    })
+
+  } else if (type === LEFT_PANEL_VENDOR_SELECT) {
+
+    // Record right menu vendor list item selection
+    ReactGA.event({
+      category: event.vendor.CATEGORY,
+      action: event.vendor.action.LEFT_PANEL_VENDOR_SELECT,
+      label: action.name
+    });
+
+  } else if (type === MAP_VENDOR_SELECT) {
+
+    // Record vendor selection from Map click
+    ReactGA.event({
+      category: event.vendor.CATEGORY,
+      action: event.vendor.action.MAP_CLICK,
+      label: action.name
     });
 
   } else if (type === FIND_MY_LOCATION_ERROR

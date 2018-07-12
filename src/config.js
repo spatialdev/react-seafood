@@ -17,7 +17,7 @@ const config = {
         action: {
           MAP_CLICK: 'Map Click Select',
           RIGHT_PANEL_VENDOR_SELECT: 'Vendor List Select (Right Panel)',
-          LEFT_PANEL: 'Featured Vendor Select (Left Panel)'
+          LEFT_PANEL_VENDOR_SELECT: 'Featured Vendor Select (Left Panel)'
         }
       },
       // Geolocate "Find Me" button

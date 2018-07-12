@@ -11,7 +11,7 @@ import {withStyles} from '@material-ui/core/styles';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import {
   toggleRightDrawer, setTabValue, toggleLeftDrawer, toggleBottomDrawer,
-  setBottomDrawerData
+  setBottomDrawerData, selectRightMenuItem
 } from "../../redux/actions";
 import './rightDrawer.css';
 import turfCenter from "@turf/center";
@@ -45,11 +45,13 @@ class RightMenu extends Component {
     setTabValue({index:value, name: filters[value]})
   };
 
-  zoomToVendor = (vendor) => {
+  handleItemSelection = (vendor) => {
 
     const { map, width } = this.props;
+    // Get center of point/polygon
     const bbox = turfCenter(vendor);
 
+    // Zoom to vendor center
     map.flyTo({
       center: bbox.geometry.coordinates,
       zoom: 19.5
@@ -59,6 +61,8 @@ class RightMenu extends Component {
     setBottomDrawerData(vendor.properties);
     // Open bottom drawer
     toggleBottomDrawer(true);
+    // Record action on google analytics
+    selectRightMenuItem(vendor.properties.name);
 
     // If we're in mobile mode, close the left drawer
     if (width === 'xs' || width === 'sm') {
@@ -116,7 +120,7 @@ class RightMenu extends Component {
           >
             {activeItems.map((item) => {
               return (
-                <ListItem onClick={() => this.zoomToVendor(item)} button key={item.properties.id}>
+                <ListItem onClick={() => this.handleItemSelection(item)} button key={item.properties.id}>
                   <ListItemText primary={item.properties.name}/>
                 </ListItem>
               );
