@@ -13,6 +13,7 @@ import imgIconRestroom from '../../images/icons/svg_WB.svg'
 import imgIconCrab from '../../images/icons/svg_crab.svg'
 import imgIconInfo from '../../images/icons/svg_info.svg'
 import imgIconContest from '../../images/icons/svg_contestEating.svg'
+import imgIconTickets from '../../images/icons/svg_tickets.svg'
 import BeerGarden from './beerGarden/beerGarden';
 import SmokedSalmon from './smokedSalmon/smokedSalmon';
 import Stage from './stage/stage';
@@ -51,7 +52,8 @@ class BottomSheet extends Component {
     "Honey Buckets": imgIconRestroom,
     "Seafood Shack": imgIconCrab,
     "SeafoodFest Info": imgIconInfo,
-    "Lutefisk Contest": imgIconContest
+    "Lutefisk Contest": imgIconContest,
+    "Token sales": imgIconTickets
   }
 
   render() {
