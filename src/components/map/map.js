@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux'
-import ReactResizeDetector from 'react-resize-detector';
 import { withStyles } from '@material-ui/core/styles';
 import withWidth from "@material-ui/core/withWidth/index";
 import mapboxgl from 'mapbox-gl';

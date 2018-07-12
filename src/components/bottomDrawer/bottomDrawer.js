@@ -4,9 +4,7 @@ import {withStyles} from '@material-ui/core/styles';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import {connect} from "react-redux";
 import {toggleBottomDrawer} from '../../redux/actions';
-import { breweries } from "../../redux/constants";
 import './bottomDrawer.css';
-import imgIconEntertainment from '../../images/icons/svg_entertainment.svg'
 import imgIconArts from '../../images/icons/svg_arts.svg'
 import imgIconFoods from '../../images/icons/svg_foods.svg'
 import imgIconSponsors from '../../images/icons/svg_sponsors_NP.svg'

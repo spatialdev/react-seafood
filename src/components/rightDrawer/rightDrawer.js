@@ -6,16 +6,14 @@ import Tab from '@material-ui/core/Tab';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import Button from '@material-ui/core/Button';
 import {withStyles} from '@material-ui/core/styles';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import {
-  toggleRightDrawer, setTabValue, toggleLeftDrawer, toggleBottomDrawer,
+  toggleRightDrawer, setTabValue, toggleBottomDrawer,
   setBottomDrawerData, selectRightMenuItem
 } from "../../redux/actions";
 import './rightDrawer.css';
 import turfCenter from "@turf/center";
-import {drawerWidth} from "../../redux/constants";
 
 const styles = theme => ({
   tabsRoot: {
