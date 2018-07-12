@@ -110,7 +110,7 @@ class Map extends Component {
         ["!=", "type", "Restroom"],
         ["!=", "type", "Entertainment"],
         ["!=", "type", "Info Booth"],
-        ["!=", "name", "Crab Shack / Shellshole"],
+        ["!=", "name", "Seafood Shack"],
         ["!=", "name", "Trident Seafoods Alder-smoked Salmon"],
         ["==", "id", data.id],
         ["!=", "show_icon", true]

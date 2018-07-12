@@ -10,14 +10,14 @@ class BeerGarden extends Component {
 
     return (
       <div className="beerGarden">
-        Enjoy local beers and wine in our festival beer garden located near the Gravity and <a href="https://VisitBallard.com">VisitBallard.com</a> MainStage.
+        Enjoy local beers and wine in our festival beer garden located near the Gravity Payments MainStage.
         <br/>
         <div className="drawerSubHead">Hours</div>
         <table>
         <tbody>
           <tr>
             <td><b>Friday</b></td>
-            <td>5pm - 10pm</td>
+            <td>5pm - 11pm</td>
           </tr>
           <tr>
             <td><b>Saturday</b></td>

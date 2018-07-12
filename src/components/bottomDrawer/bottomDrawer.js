@@ -49,7 +49,7 @@ class BottomSheet extends Component {
 
   imgIconNameMap = {
     "Honey Buckets": imgIconRestroom,
-    "Crab Shack / Shellshole": imgIconCrab,
+    "Seafood Shack": imgIconCrab,
     "SeafoodFest Info": imgIconInfo,
     "Lutefisk Contest": imgIconContest
   }
@@ -124,6 +124,7 @@ class BottomSheet extends Component {
 
         case "Main Stage":
         case "Back Stage":
+        case "Gravity Payments Main Stage":
           return (
             <Stage />
           )
