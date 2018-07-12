@@ -22,6 +22,9 @@ const styles = theme => ({
   tabRoot: {
     textTransform: 'initial',
     minWidth: 72
+  },
+  drawerPaper: {
+    height: '100%'
   }
 });
 
