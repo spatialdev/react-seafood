@@ -8,10 +8,9 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import Hidden from '@material-ui/core/Hidden';
-import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import { toggleLeftDrawer, toggleRightDrawer } from '../../redux/actions';
+import { toggleLeftDrawer, toggleRightDrawer, toggleBottomDrawer } from '../../redux/actions';
 import LeftDrawer from '../leftDrawer/leftDrawer';
 import RightDrawer from '../rightDrawer/rightDrawer';
 import { drawerWidth } from '../../redux/constants';
@@ -38,7 +37,7 @@ const styles = theme => ({
   },
   menuButton: {
     marginLeft: 12,
-    marginRight: 20,
+    marginRight: 5,
     color: "#fff"
   },
   hide: {
@@ -63,14 +62,28 @@ const styles = theme => ({
     }),
   },
   navLogo: {
-    height: '40px'
-}
+    height: '40px',
+    cursor: 'pointer'
+  }
 });
 
 class Main extends Component {
 
   componentDidUpdate() {
     console.log(`updated state: ${this.props}`)
+  }
+
+  resetView () {
+    const { map } = this.props;
+
+    toggleLeftDrawer(false);
+    toggleRightDrawer(false);
+    toggleBottomDrawer(false);
+
+    map.flyTo({
+      center: [-122.38473415374757, 47.668667600018416],
+      zoom: 18
+    })
   }
 
   render() {
@@ -91,7 +104,7 @@ class Main extends Component {
               </IconButton>
               </Hidden>
               <div className={classes.flex}>
-                <img className={classes.navLogo} src={imgNavLogo} />
+                <img onClick={()=>{this.resetView()}} className={classes.navLogo} src={imgNavLogo} />
               </div>
               <Button  onClick={()=>{toggleRightDrawer(true)}} className="vendorButton">Vendor List</Button>
             </Toolbar>
@@ -108,14 +121,16 @@ Main.propTypes = {
   classes: PropTypes.object.isRequired,
   theme: PropTypes.object.isRequired,
   polygonData: PropTypes.object.isRequired,
-  leftDrawerOptions: PropTypes.object.isRequired
+  leftDrawerOptions: PropTypes.object.isRequired,
+  map: PropTypes.object.isRequired
 };
 
 function mapStateToProps(state) {
   return {
     polygonData: state.polygonData,
     active: state.active,
-    leftDrawerOptions: state.leftDrawerOptions
+    leftDrawerOptions: state.leftDrawerOptions,
+    map: state.map
   };
 }
 
