@@ -49,10 +49,13 @@ class RightMenu extends Component {
     // Get center of point/polygon
     const bbox = turfCenter(vendor);
 
+    // Highlight vendor pin
+    this.highlightVendorPin(vendor);
+
     // Zoom to vendor center
     map.flyTo({
       center: bbox.geometry.coordinates,
-      zoom: 19.5
+      zoom: 20.5
     });
 
     // Set bottom drawer data
@@ -72,6 +75,25 @@ class RightMenu extends Component {
   }
 
   componentDidMount() {
+  }
+
+  highlightVendorPin(vendor) {
+
+    const { map } = this.props;
+
+    map.setFilter('vendor pins highlight',
+      ["all",
+        ["!=", "type", "Amusement"],
+        ["!=", "type", "Restroom"],
+        ["!=", "type", "Entertainment"],
+        ["!=", "type", "Info Booth"],
+        ["!=", "name", "Crab Shack / Shellshole"],
+        ["!=", "name", "Trident Seafoods Alder-smoked Salmon"],
+        ["==", "id", vendor.properties.id],
+        ["!=", "show_icon", true]
+      ]);
+
+    map.setLayoutProperty('vendor pins highlight', 'visibility', 'visible');
   }
 
   render() {

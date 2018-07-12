@@ -14,11 +14,11 @@ class PurpleSlide extends Component {
         <table>
         <tbody>
           <tr>
-            <td>Saturday - July 14th</td>
+            <td><b>Saturday - July 14th</b></td>
             <td>11:00am - 7:00pm</td>
           </tr>
           <tr>
-            <td>Sunday - July 15th</td>
+            <td><b>Sunday - July 15th</b></td>
             <td>11:00am - 6:00pm</td>
           </tr>
         </tbody>

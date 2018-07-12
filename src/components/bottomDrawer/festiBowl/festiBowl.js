@@ -23,14 +23,14 @@ class FestiBowl extends Component {
         Welcome, skaters and fans!
         <br/>
         Festi-Bowl is a regional, all-ages skate competition.
-        Saturday only. Let’s SHRED!
+        <b>Saturday only</b>. Let’s SHRED!
 
         <Tabs value={value}
               onChange={this.handleChange}
               indicatorColor="primary"
               textColor="primary">
-          <Tab label="Saturday - 12pm - 4pm"/>
-          <Tab label="Saturday - 5pm - 8pm"/>
+          <Tab label="12pm - 4pm"/>
+          <Tab label="5pm - 8pm"/>
         </Tabs>
 
         {value === 0 && <TabContainer>

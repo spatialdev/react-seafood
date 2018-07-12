@@ -16,15 +16,15 @@ class BeerGarden extends Component {
         <table>
         <tbody>
           <tr>
-            <td>Friday</td>
+            <td><b>Friday</b></td>
             <td>5pm - 10pm</td>
           </tr>
           <tr>
-            <td>Saturday</td>
+            <td><b>Saturday</b></td>
             <td>12pm - 11pm</td>
           </tr>
           <tr>
-            <td>Sunday</td>
+            <td><b>Sunday</b></td>
             <td>12pm - 9pm</td>
           </tr>
         </tbody>
