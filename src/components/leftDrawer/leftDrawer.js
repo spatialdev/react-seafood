@@ -38,7 +38,7 @@ const styles = theme => ({
   },
   list: {
     [theme.breakpoints.down('sm')]: {
-      marginBottom: '50px'
+      marginBottom: '10px'
     }
   }
 });
