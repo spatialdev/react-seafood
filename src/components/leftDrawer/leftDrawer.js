@@ -9,7 +9,10 @@ import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import { toggleLeftDrawer, toggleRightDrawer, setTabValue, selectLeftMenuItem } from '../../redux/actions';
+import {
+  toggleLeftDrawer, toggleRightDrawer, setTabValue, selectLeftMenuItem,
+  toggleBottomDrawer, setBottomDrawerData
+} from '../../redux/actions';
 import { drawerWidth } from '../../redux/constants';
 import turfCenter from '@turf/center'
 import './leftDrawer.css';
@@ -55,6 +58,10 @@ class LeftDrawer extends Component {
       zoom: 18.5
     });
 
+    // Set bottom drawer data
+    setBottomDrawerData(vendor.properties);
+    // Open bottom drawer
+    toggleBottomDrawer(true);
     // Record selection on google analytics
     selectLeftMenuItem(vendor.properties.name);
 
