@@ -111,6 +111,7 @@ class Map extends Component {
         ["!=", "type", "Entertainment"],
         ["!=", "type", "Info Booth"],
         ["!=", "name", "Seafood Shack"],
+        ["!=", "name", "Token Sales"],
         ["!=", "name", "Trident Seafoods Alder-smoked Salmon"],
         ["==", "id", data.id],
         ["!=", "show_icon", true]
