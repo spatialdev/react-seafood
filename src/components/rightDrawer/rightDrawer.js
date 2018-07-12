@@ -6,13 +6,14 @@ import Tab from '@material-ui/core/Tab';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import Button from '@material-ui/core/Button';
 import {withStyles} from '@material-ui/core/styles';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
-import {toggleRightDrawer, setTabValue, toggleLeftDrawer} from "../../redux/actions";
+import {
+  toggleRightDrawer, setTabValue, toggleBottomDrawer,
+  setBottomDrawerData, selectRightMenuItem
+} from "../../redux/actions";
 import './rightDrawer.css';
 import turfCenter from "@turf/center";
-import {drawerWidth} from "../../redux/constants";
 
 const styles = theme => ({
   tabsRoot: {
@@ -42,15 +43,27 @@ class RightMenu extends Component {
     setTabValue({index:value, name: filters[value]})
   };
 
-  zoomToVendor = (vendor) => {
+  handleItemSelection = (vendor) => {
 
     const { map, width } = this.props;
+    // Get center of point/polygon
     const bbox = turfCenter(vendor);
 
+    // Highlight vendor pin
+    this.highlightVendorPin(vendor);
+
+    // Zoom to vendor center
     map.flyTo({
       center: bbox.geometry.coordinates,
-      zoom: 19.5
+      zoom: 20.5
     });
+
+    // Set bottom drawer data
+    setBottomDrawerData(vendor.properties);
+    // Open bottom drawer
+    toggleBottomDrawer(true);
+    // Record action on google analytics
+    selectRightMenuItem(vendor.properties.name);
 
     // If we're in mobile mode, close the left drawer
     if (width === 'xs' || width === 'sm') {
@@ -62,6 +75,25 @@ class RightMenu extends Component {
   }
 
   componentDidMount() {
+  }
+
+  highlightVendorPin(vendor) {
+
+    const { map } = this.props;
+
+    map.setFilter('vendor pins highlight',
+      ["all",
+        ["!=", "type", "Amusement"],
+        ["!=", "type", "Restroom"],
+        ["!=", "type", "Entertainment"],
+        ["!=", "type", "Info Booth"],
+        ["!=", "name", "Crab Shack / Shellshole"],
+        ["!=", "name", "Trident Seafoods Alder-smoked Salmon"],
+        ["==", "id", vendor.properties.id],
+        ["!=", "show_icon", true]
+      ]);
+
+    map.setLayoutProperty('vendor pins highlight', 'visibility', 'visible');
   }
 
   render() {
@@ -108,7 +140,7 @@ class RightMenu extends Component {
           >
             {activeItems.map((item) => {
               return (
-                <ListItem onClick={() => this.zoomToVendor(item)} button key={item.properties.id}>
+                <ListItem onClick={() => this.handleItemSelection(item)} button key={item.properties.id}>
                   <ListItemText primary={item.properties.name}/>
                 </ListItem>
               );

@@ -4,15 +4,12 @@ import PropTypes from 'prop-types';
 import { isBrowser } from 'react-device-detect';
 import { withStyles } from '@material-ui/core/styles';
 import withWidth from '@material-ui/core/withWidth';
-import Drawer from '@material-ui/core/Drawer';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
-import IconButton from '@material-ui/core/IconButton';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import { toggleLeftDrawer, toggleRightDrawer, setTabValue } from '../../redux/actions';
+import { toggleLeftDrawer, toggleRightDrawer, setTabValue, selectLeftMenuItem } from '../../redux/actions';
 import { drawerWidth } from '../../redux/constants';
 import turfCenter from '@turf/center'
 import './leftDrawer.css';
@@ -47,14 +44,19 @@ const styles = theme => ({
 
 class LeftDrawer extends Component {
 
-  zoomToVendor = (vendor) => {
+  handleItemSelection = (vendor) => {
     const { map, width } = this.props;
+    // Get polygon/point center
     const bbox = turfCenter(vendor);
 
+    // Zoom to center
     map.flyTo({
       center: bbox.geometry.coordinates,
-      zoom: 19.5
+      zoom: 18.5
     });
+
+    // Record selection on google analytics
+    selectLeftMenuItem(vendor.properties.name);
 
     // If we're in mobile mode, close the left drawer
     if (width === 'xs' || width === 'sm') {
@@ -145,6 +147,7 @@ class LeftDrawer extends Component {
             toggleRightDrawer(true);
             toggleLeftDrawer(false);
             setTabValue({index: 1, name: "Food"});
+            selectLeftMenuItem("Food Vendors");
           }}>
             <ListItemText disableTypography={true} classes={{root: 'list-item-text'}} primary="Food Vendors"/>
           </ListItem>
@@ -152,7 +155,7 @@ class LeftDrawer extends Component {
             return (
               <div key={item.properties.id}>
                 {/* {index === menuItems.length - 1 ? (<Divider/>) : null} */}
-                <ListItem className="list-item-wrapper" button onClick={() => this.zoomToVendor(item)}>
+                <ListItem className="list-item-wrapper" button onClick={() => this.handleItemSelection(item)}>
                   <ListItemText disableTypography={true} classes={{root: 'list-item-text'}} primary={item.properties.name}/>
               </ListItem>
               </div>);

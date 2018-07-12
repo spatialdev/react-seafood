@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import withWidth from "@material-ui/core/withWidth/index";
 import mapboxgl from 'mapbox-gl';
 import './map.css';
-import {findMyLocation, setBottomDrawerData, toggleBottomDrawer, setMap} from "../../redux/actions";
+import {findMyLocation, setBottomDrawerData, toggleBottomDrawer, setMap, selectMapItem} from "../../redux/actions";
 import {
   FIND_MY_LOCATION_ERROR,
   FIND_MY_LOCATION_OUT_OF_BOUNDS,
@@ -22,13 +22,14 @@ const styles = theme => ({
       top: '56px',
       height: `calc(100% - 56px)`,
     },
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('md')]: {
       position: 'relative',
       // 65 = toolbar height
       top: '65px',
       // 280 = left drawer width
-      // left: '280px',
-      height: `calc(100% - 65px)`
+      left: '280px',
+      height: `calc(100% - 65px)`,
+      width: `calc(100% - 280px)`
     },
     [theme.breakpoints.up('lg')]: {
       position: 'relative'
@@ -96,8 +97,26 @@ class Map extends Component {
   // Display feature info in bottom panel
   displayFeatureInfo(e, features) {
     const data = features[0].properties;
-    setBottomDrawerData(data)
+    const { map } = this.props;
+
+    setBottomDrawerData(data);
     toggleBottomDrawer(true);
+    // Record feature selection on google analytics
+    selectMapItem(data.name);
+
+    map.setFilter('vendor pins highlight',
+      ["all",
+        ["!=", "type", "Amusement"],
+        ["!=", "type", "Restroom"],
+        ["!=", "type", "Entertainment"],
+        ["!=", "type", "Info Booth"],
+        ["!=", "name", "Crab Shack / Shellshole"],
+        ["!=", "name", "Trident Seafoods Alder-smoked Salmon"],
+        ["==", "id", data.id],
+        ["!=", "show_icon", true]
+      ]);
+
+    map.setLayoutProperty('vendor pins highlight', 'visibility', 'visible');
   }
 
   /**

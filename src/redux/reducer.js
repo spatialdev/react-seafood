@@ -18,7 +18,7 @@ const initialState: State = {
   },
   leftDrawerOptions: {
     anchor: 'left',
-    open : false
+    open : true
   },
   rightDrawerOptions: {
     anchor: 'right',
