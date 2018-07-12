@@ -13,7 +13,7 @@ class SmokedSalmon extends Component {
         <div className="drawerSubHead">Hours</div>
         <b>11:00am - 7:00pm</b>
         <div className="drawerSubHead">TOKEN PURCHASE:</div> 
-        Tokens are available only at the Information Booth: Crab, mussels, bbq oysters and
+        Tokens are available at the Information Booth and Beer Garden: Crab, mussels, bbq oysters and
         Salmon Token Sales Stations located at 22nd Ave NW and NW Market Street (next to Starbucks).
         <br/>We have a limited quantity of these tasty seafood offerings, so buy your tokens early!
         <br/><br/><b>PURCHASE TOKENS FIRST THEN PICK UP SALMON ON THE NORTH SIDE OF MARKET STREET ON 22nd AVE

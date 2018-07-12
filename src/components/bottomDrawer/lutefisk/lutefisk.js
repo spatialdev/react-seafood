@@ -7,9 +7,12 @@ class Lutefisk extends Component {
 
     return (
       <div className="lutefisk">
+        <b>Sponsored by Mountain Pacific Bank</b>
+        <br/>
+        <br/>
         Nothing says Ballard and Seafood like 2 lbs. of lutefisk. Ozzie’s 3nd Annual Lutefisk eating competition is a real crowd pleaser.
         <div className="drawerSubHead">Date:</div>		
-        Sunday at 4:00 p.m.
+        Sunday at 3:00 p.m.
         <div className="drawerSubHead">Location:</div> 	
         Intersection of NW Market Street and 22nd Avenue NW
         <div className="drawerSubHead">Fee:</div>  	

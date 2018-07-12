@@ -90,7 +90,7 @@ class RightMenu extends Component {
         ["!=", "type", "Restroom"],
         ["!=", "type", "Entertainment"],
         ["!=", "type", "Info Booth"],
-        ["!=", "name", "Crab Shack / Shellshole"],
+        ["!=", "name", "Seafood Shack"],
         ["!=", "name", "Trident Seafoods Alder-smoked Salmon"],
         ["==", "id", vendor.properties.id],
         ["!=", "show_icon", true]
