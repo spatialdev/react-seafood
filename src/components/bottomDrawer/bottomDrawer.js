@@ -11,6 +11,10 @@ import imgIconArts from '../../images/icons/svg_arts.svg'
 import imgIconFoods from '../../images/icons/svg_foods.svg'
 import imgIconSponsors from '../../images/icons/svg_sponsors_NP.svg'
 import imgIconMisc from '../../images/icons/svg_misc.svg'
+import imgIconRestroom from '../../images/icons/svg_WB.svg'
+import imgIconCrab from '../../images/icons/svg_crab.svg'
+import imgIconInfo from '../../images/icons/svg_info.svg'
+import imgIconContest from '../../images/icons/svg_contestEating.svg'
 import BeerGarden from './beerGarden/beerGarden';
 import SmokedSalmon from './smokedSalmon/smokedSalmon';
 import Stage from './stage/stage';
@@ -28,7 +32,7 @@ const styles = theme => ({
     width: 250,
   },
   paperAnchorBottom: {
-    'max-height': '90vh'
+    'max-height': '75vh'
   },
   fullList: {
     width: 'auto',
@@ -37,39 +41,28 @@ const styles = theme => ({
 
 class BottomSheet extends Component {
 
-  imgIconMap = {
-    "All": imgIconEntertainment,
+  imgIconTypeMap = {
     "Food": imgIconFoods,
     "A/C": imgIconArts,
-    "Amusement": imgIconEntertainment,
-    "Entertainment": imgIconEntertainment,
-    "Non-Profit": imgIconMisc,
+    "Non-Profit": imgIconSponsors,
     "Police": imgIconMisc,
-    "Restroom": imgIconMisc,
     "Sponsor": imgIconSponsors
   }
 
-  customInfo = [
-    "Beer Garden",
-    "Trident Seafoods Alder-smoked Salmon",
-    "Main Stage",
-    "Festi-Bowl",
-    "Back Stage",
-    "Game Plank",
-    "SeafoodFest Info",
-    "Big Purple Slide",
-    "Crab Shack / Shellshole",
-    "Lutefisk Contest"
-  ]
+  imgIconNameMap = {
+    "Honey Buckets": imgIconRestroom,
+    "Crab Shack / Shellshole": imgIconCrab,
+    "SeafoodFest Info": imgIconInfo,
+    "Lutefisk Contest": imgIconContest
+  }
 
   render() {
 
-    const {classes, bottomDrawer} = this.props;
+    const {classes, bottomDrawer, map} = this.props;
     const {options, data} = bottomDrawer;
     const {open, anchor} = options;
-
     let style = this.getBottomSheetTemplate(data);
-    let image = this.imgIconMap[data.type];
+    let header = this.getHeader(data)
 
     return (
       <div>
@@ -77,7 +70,12 @@ class BottomSheet extends Component {
                          anchor={anchor}
                          open={open}
                          onClose={() => {
-                           toggleBottomDrawer(false)
+                           toggleBottomDrawer(false);
+                           // Clear highlight filter
+                           map.setFilter('vendor pins highlight',
+                             ["all",
+                               ["==", "id", 0],
+                             ]);
                          }}
                          onOpen={() => {
                            toggleBottomDrawer(true)
@@ -86,20 +84,14 @@ class BottomSheet extends Component {
                          disableSwipeToOpen={true}
         >
           <div className="wrapperText">
-            {this.customInfo.indexOf(data.name) === -1 ? (
-              <div className="key-wrapper">
-              <div className="key-id">
-                {data.id}
-              </div>
-              <div className="svg-icon">
-                <img src={image}/>
-              </div>
-            </div>) : null}
-
+            {header}
             <div className="content-wrapper">
               <div className="title">{data.name}</div>
               <div className="category">{data.type}</div>
-              <div className="custom-content-wrapper">{style}</div>
+              <div className="custom-content-wrapper">
+                {style}
+                {data.details === "games" ? (<GamePlank />) : null}
+              </div>
             </div>
           </div>
         </SwipeableDrawer>
@@ -109,12 +101,9 @@ class BottomSheet extends Component {
 
   getBottomSheetTemplate = (item) => {
 
-
     if (item.hasOwnProperty("id")) {
 
       switch (item.name) {
-        // TODO each of these should be its own <Component/>
-        // ALDER SMOKED SALMON
         case "Trident Seafoods Alder-smoked Salmon":
           return (
             <SmokedSalmon />
@@ -130,9 +119,6 @@ class BottomSheet extends Component {
           return (
             <FestiBowl />
           )
-
-          // TODO material-ui tabs for each day
-          // TODO also, should be in <tables/>
         case "Kid's Deck":
           return (
             <KidsDeck />
@@ -171,6 +157,36 @@ class BottomSheet extends Component {
     }
 
   }
+
+  getHeader (data) {
+
+    let svgPin = this.imgIconTypeMap[data.type];
+    let svgIcon = this.imgIconNameMap[data.name];
+
+    // If icon exists, render
+    if (typeof svgIcon !== "undefined") {
+      return (<div className="key-wrapper">
+          <div className="svg-icon">
+            <img src={svgIcon}/>
+          </div>
+        </div>
+      )
+      // If custom pin exists
+    } else if (typeof svgPin !== "undefined" && data.name !== "Trident Seafoods Alder-smoked Salmon") {
+      return (
+        <div className="key-wrapper">
+          <div className="key-id">
+            {data.id}
+          </div>
+          <div className="svg-pin">
+            <img src={svgPin}/>
+          </div>
+        </div>)
+      // Show nothing
+    }  else {
+      return null;
+    }
+  }
 }
 
 BottomSheet.propTypes = {
@@ -180,6 +196,7 @@ BottomSheet.propTypes = {
 function mapStateToProps(state) {
   return {
     bottomDrawer: state.bottomDrawer,
+    map: state.map
   };
 }
 

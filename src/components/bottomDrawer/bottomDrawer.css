@@ -17,13 +17,22 @@
     z-index: 10;
 }
 
-.svg-icon {
+.svg-pin {
     position: relative;
     bottom: 23px;
     z-index: 5;
 }
 
+.svg-icon {
+    position: relative;
+    z-index: 5;
+}
+
 .svg-icon img {
+    height: 40px;
+}
+
+.svg-pin img {
     height: 32px;
 }
 
@@ -38,7 +47,9 @@
 }
 
 .custom-content-wrapper {
-    font-size: 12px;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
 }
 
 .category {
@@ -54,5 +65,5 @@
     font-weight: 600;
     font-size: 13px;
     color: #333;
-    margin: 20px 0 20px 0;
+    margin: 10px 0 5px 0;
 }
