@@ -38,6 +38,9 @@ const styles = theme => ({
   fullList: {
     width: 'auto',
   },
+  modal: {
+    position: 'unset'
+  }
 });
 
 class BottomSheet extends Component {
@@ -86,7 +89,7 @@ class BottomSheet extends Component {
 
     return (
       <div>
-        <SwipeableDrawer classes={{paperAnchorBottom: classes.paperAnchorBottom}}
+        <SwipeableDrawer classes={{paperAnchorBottom: classes.paperAnchorBottom, modal: classes.modal}}
                          anchor={anchor}
                          open={open}
                          onClose={() => {
@@ -203,7 +206,7 @@ class BottomSheet extends Component {
           </div>
         </div>)
       // Show nothing
-    }  else if (data.details = "games") {
+    }  else if (data.details === "games") {
       return (
         <div className="key-wrapper">
           <div className="svg-games">

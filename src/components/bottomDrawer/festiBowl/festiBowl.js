@@ -23,7 +23,7 @@ class FestiBowl extends Component {
         Welcome, skaters and fans!
         <br/>
         Festi-Bowl is a regional, all-ages skate competition.
-        <b>Saturday only</b>. Let’s SHRED!
+        <b> Saturday only</b>. Let’s SHRED!
 
         <Tabs value={value}
               onChange={this.handleChange}
