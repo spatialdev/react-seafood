@@ -37,6 +37,10 @@
     height: 32px;
 }
 
+.svg-games img {
+    height: 25px
+}
+
 .title {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
