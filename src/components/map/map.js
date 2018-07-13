@@ -43,7 +43,7 @@ class Map extends Component {
     positionOptions: {
       enableHighAccuracy: true
     },
-    trackUserLocation: false
+    trackUserLocation: true
   });
 
   bounds = [
@@ -59,7 +59,7 @@ class Map extends Component {
       container: this.mapContainer,
       style: 'mapbox://styles/spatialdev/cjiqnp2s746bw2srrd5uic6t1',
       center: [-122.38473415374757, 47.668667600018416],
-      maxBounds: this.bounds,
+      // maxBounds: this.bounds,
       zoom: 18
     });
 
@@ -67,7 +67,7 @@ class Map extends Component {
 
     // Replace GeolocateControl's _updateCamera function
     // see: https://github.com/mapbox/mapbox-gl-js/issues/6789
-    this.geoLocate._updateCamera = this.handleGeolocation;
+    // this.geoLocate._updateCamera = this.handleGeolocation;
 
     // Catch GeolocateControl errors
     this.geoLocate.on('error', this.handleGeolocationError);
