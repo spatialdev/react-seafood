@@ -132,7 +132,7 @@ class RightMenu extends Component {
           >
             <Tab classes={{root: classes.tabRoot}} label="All" />
             <Tab classes={{root: classes.tabRoot}} label="Food" />
-            <Tab classes={{root: classes.tabRoot}} label="A/C" />
+            <Tab classes={{root: classes.tabRoot}} label={<span>Arts <br/>& Crafts</span>} />
             <Tab classes={{root: classes.tabRoot}} label="Entertainment" />
           </Tabs>
 

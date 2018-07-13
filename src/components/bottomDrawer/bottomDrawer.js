@@ -14,6 +14,8 @@ import imgIconCrab from '../../images/icons/svg_crab.svg'
 import imgIconInfo from '../../images/icons/svg_info.svg'
 import imgIconContest from '../../images/icons/svg_contestEating.svg'
 import imgIconTickets from '../../images/icons/svg_tickets.svg'
+import imgIconGames from '../../images/icons/mb_star-15.svg';
+
 import BeerGarden from './beerGarden/beerGarden';
 import SmokedSalmon from './smokedSalmon/smokedSalmon';
 import Stage from './stage/stage';
@@ -53,8 +55,26 @@ class BottomSheet extends Component {
     "Seafood Shack": imgIconCrab,
     "SeafoodFest Info": imgIconInfo,
     "Lutefisk Contest": imgIconContest,
-    "Token sales": imgIconTickets
+    "Token sales": imgIconTickets,
   }
+
+  games = [
+    "Fix Enterprises Rock Wall",
+    "Cornhole Station #1",
+    "Ladder Ball Station",
+    "Verity Badminton Station",
+    "Giant Jenga",
+    "Clover Toys Bubble Station",
+    "Arcadia Aerial Performance",
+    "AstroTurf Lounge",
+    "Bucket Ball Game Station",
+    "Cornhole Station #2",
+    "Doggie Splash Town Pool",
+    "Amusement on Demand Bounce Houses",
+    "Tiny Art Face Painting",
+    "Parachute",
+    "Illumination Learning Studio"
+  ]
 
   render() {
 
@@ -90,7 +110,6 @@ class BottomSheet extends Component {
               <div className="category">{data.type}</div>
               <div className="custom-content-wrapper">
                 {style}
-                {data.details === "games" ? (<GamePlank />) : null}
               </div>
             </div>
           </div>
@@ -184,7 +203,14 @@ class BottomSheet extends Component {
           </div>
         </div>)
       // Show nothing
-    }  else {
+    }  else if (data.details = "games") {
+      return (
+        <div className="key-wrapper">
+          <div className="svg-games">
+          <img src={imgIconGames}/>
+          </div>
+      </div>)
+    } else {
       return null;
     }
   }
