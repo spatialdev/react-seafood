@@ -27,6 +27,7 @@ class Stage extends Component {
               onChange={this.handleChange}
               indicatorColor="primary"
               textColor="primary"
+              scrollButtons="on"
               scrollable>
           <Tab label="Friday - July 13th" />
           <Tab label="Saturday - July 14th" />
