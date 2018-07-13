@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
+import Icon from '@material-ui/core/Icon';
+
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import {connect} from "react-redux";
 import {toggleBottomDrawer} from '../../redux/actions';
@@ -40,6 +42,12 @@ const styles = theme => ({
   },
   modal: {
     position: 'unset'
+  },
+  icon: {
+    position: 'fixed',
+    right: '15px',
+    cursor: 'pointer',
+    color: '#333'
   }
 });
 
@@ -108,6 +116,11 @@ class BottomSheet extends Component {
         >
           <div className="wrapperText">
             {header}
+
+            <Icon onClick={()=>{toggleBottomDrawer(false)}} className={classes.icon}>
+              close
+            </Icon>
+
             <div className="content-wrapper">
               <div className="title">{data.name}</div>
               <div className="category">{data.type}</div>
