@@ -35,7 +35,7 @@ const styles = theme => ({
     width: 250,
   },
   paperAnchorBottom: {
-    'max-height': '75vh'
+    'max-height': '85vh'
   },
   fullList: {
     width: 'auto',
@@ -179,6 +179,7 @@ class BottomSheet extends Component {
             <PurpleSlide />
           )
         case "Crab Shack / Shellshole":
+        case "Seafood Shack":
           return (
             <CrabShack />
           )
