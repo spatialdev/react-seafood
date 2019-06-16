@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types';
-import { isBrowser } from 'react-device-detect';
 import { withStyles } from '@material-ui/core/styles';
 import withWidth from '@material-ui/core/withWidth';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
@@ -107,35 +106,35 @@ class LeftDrawer extends Component {
         }}
       >
         {/* Drawer Flier Image */}
-        <img className="Flier" src={imgFlier}/>
+        <img alt="Official Seafood Fest Flier" className="Flier" src={imgFlier}/>
 
         {/*  Map Legend */}
         <div className="Legend">
           <div className="legend-title">Map legend:</div>
           <div className="legend-item-wrapper">
             <span className="legend-box">
-              <img className="map-pin" src={imgIconEntertainment}/>
+              <img alt="Entertainment" className="map-pin" src={imgIconEntertainment}/>
             </span>
             <span className="legend-item-text">Entertainment</span>
           </div>
           <div className="legend-item-wrapper">
             <span className="legend-box">
-              <img className="map-pin" src={imgIconArts}/></span>
+              <img alt="Arts & Crafts" className="map-pin" src={imgIconArts}/></span>
             <span className="legend-item-text">Arts & Crafts</span>
           </div>
           <div className="legend-item-wrapper">
             <span className="legend-box">
-              <img className="map-pin" src={imgIconFoods}/></span>
+              <img alt="Food" className="map-pin" src={imgIconFoods}/></span>
             <span className="legend-item-text">Food</span>
           </div>
           <div className="legend-item-wrapper">
             <span className="legend-box">
-              <img className="map-pin" src={imgIconSponsors}/></span>
+              <img alt="Sponsors" className="map-pin" src={imgIconSponsors}/></span>
             <span className="legend-item-text">Sponsors/Non-Profits</span>
           </div>
           <div className="legend-item-wrapper">
             <span className="legend-box">
-              <img className="map-pin" src={imgIconMisc}/></span>
+              <img alt="Miscellaneous" className="map-pin" src={imgIconMisc}/></span>
             <span className="legend-item-text">Other</span>
           </div>
           <div className="legend-item-wrapper">
@@ -151,7 +150,7 @@ class LeftDrawer extends Component {
         <div className="legend-title sub-section">Don't Miss:</div>
         <List>
           <ListItem className="list-item-wrapper" button onClick={() => {
-            {/*  Close the right & left menu */}
+            // Close the right & left menu
             toggleRightDrawer(true);
             toggleLeftDrawer(false);
             setTabValue({index: 1, name: "Food"});
@@ -170,7 +169,7 @@ class LeftDrawer extends Component {
           })}
           <Divider/>
           {/*  Go to seafoodfest.org */}
-          <a className="list-link" href="https://seafoodfest.org/" target="_blank">
+          <a className="list-link" href="https://seafoodfest.org/" target="_blank" rel="noopener noreferrer">
             <ListItem classes={{root: classes.list }} className="list-item-wrapper" button>
               <ListItemText disableTypography={true} classes={{root: 'list-item-text'}} primary="Seafood Fest Org"/>
             </ListItem>

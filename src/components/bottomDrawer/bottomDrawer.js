@@ -204,7 +204,7 @@ class BottomSheet extends Component {
     if (typeof svgIcon !== "undefined") {
       return (<div className="key-wrapper">
           <div className="svg-icon">
-            <img src={svgIcon}/>
+            <img alt="Featured vendor icon" src={svgIcon}/>
           </div>
         </div>
       )
@@ -216,7 +216,7 @@ class BottomSheet extends Component {
             {data.id}
           </div>
           <div className="svg-pin">
-            <img src={svgPin}/>
+            <img alt="Vendor icon" src={svgPin}/>
           </div>
         </div>)
       // Show nothing
@@ -224,7 +224,7 @@ class BottomSheet extends Component {
       return (
         <div className="key-wrapper">
           <div className="svg-games">
-          <img src={imgIconGames}/>
+          <img alt="Games icon" src={imgIconGames}/>
           </div>
       </div>)
     } else {

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types';
-import { isBrowser } from 'react-device-detect';
 import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -87,8 +86,7 @@ class Main extends Component {
   }
 
   render() {
-    const { classes, leftDrawerOptions } = this.props;
-    const { anchor, open } = leftDrawerOptions;
+    const { classes } = this.props;
 
     return (
       <div className={classes.root}>
@@ -104,7 +102,7 @@ class Main extends Component {
               </IconButton>
               </Hidden>
               <div className={classes.flex}>
-                <img onClick={()=>{this.resetView()}} className={classes.navLogo} src={imgNavLogo} />
+                <img alt="Reset application" onClick={()=>{this.resetView()}} className={classes.navLogo} src={imgNavLogo} />
               </div>
               <Button  onClick={()=>{toggleRightDrawer(true)}} className="vendorButton">Vendor List</Button>
             </Toolbar>
