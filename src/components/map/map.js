@@ -160,7 +160,7 @@ class Map extends Component {
    * see https://developer.mozilla.org/en-US/docs/Web/API/PositionError
    * @param error
    */
-  handleGeolocationError = (error: PositionError) => {
+  handleGeolocationError = (error) => {
 
     let message;
     switch (error.code) {
@@ -173,6 +173,8 @@ class Map extends Component {
       case error.TIMEOUT:
         message = "The request to get user location timed out.";
         break;
+      default:
+        message = "Error handling Geolocation button select."
     }
 
     findMyLocation({type: FIND_MY_LOCATION_ERROR, payload: message})

@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import './purpleSlide.css';
-import { Tabs, Tab } from '@material-ui/core';
-import { TabContainer } from '../../../helpers';
 
 class PurpleSlide extends Component {
 

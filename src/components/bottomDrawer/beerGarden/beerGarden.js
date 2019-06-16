@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import './beerGarden.css';
 import { breweries } from "../../../redux/constants";
-import { Tabs, Tab } from '@material-ui/core';
-import { TabContainer } from '../../../helpers';
 
 class BeerGarden extends Component {
 
