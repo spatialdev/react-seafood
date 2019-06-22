@@ -31,7 +31,7 @@ The app should be available at http://127.0.0.1:3000
 ### Data
 Mapbox Studio is used to to host the two static geojson files located in src/data.
 
-#### [polygons_2019.json](/src/data/polygons_2018.json)
+#### [polygons_2018.json](/src/data/polygons_2018.json)
 
 This is a geojson FeatureCollection that contains location and metadata for for all vendor, entertainment, arts & crafts. Each feature contains a properties object with the following information
 
