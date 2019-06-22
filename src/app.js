@@ -20,7 +20,7 @@ class App extends Component {
     // Initialize Google Analytics
     const { ga } = config;
     ReactGA.initialize(ga.id,{
-      debug: true,
+      debug: process.env.NODE_ENV === 'development',
       titleCase: false,
       gaOptions: {
         name: 'dev2018'
