@@ -1,3 +1,5 @@
+jest.mock("react-ga")
+import '../__TESTS__/createUrlObject.mock.js'
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './app';
