@@ -51,9 +51,9 @@ if ('function' === typeof importScripts) {
 
       /* Custom cache rules - map tiles 
          Cache png map tiles from the external mapbox root url - for only successfull responses.
-       
+      */ 
       workbox.routing.registerRoute(
-        new RegExp('^https://api.tiles.mapbox.com/v4/mapbox.streets/'),
+        new RegExp('^https://api.mapbox.com/v4/mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v7,spatialdev.45mt0wo1,spatialdev.00lrg24b/'),
         new workbox.strategies.CacheFirst({
           cacheName: 'map-tile-cache',
           plugins: [
@@ -63,7 +63,7 @@ if ('function' === typeof importScripts) {
           ]
         })
       );
-      */
+      
 
       // Cache the Google Fonts stylesheets with a stale-while-revalidate strategy.
       workbox.routing.registerRoute(
