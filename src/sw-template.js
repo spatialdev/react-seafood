@@ -16,7 +16,8 @@ if ('function' === typeof importScripts) {
         blacklist: [/^\/_/, /\/[^\/]+\.[^\/]+$/],
       });
       
-      /* Custom cache rules - app images 
+      /* 
+         Custom cache rules - app images 
          Cache all image types.
          Get images from the cache first.  
          Fetch new images every 30 days so they are not stale - image update are NOT frequent. 
@@ -34,7 +35,8 @@ if ('function' === typeof importScripts) {
         })
       );
 
-      /* Custom cache rules - json 
+      /* 
+         Custom cache rules - json 
          Cache .geojson files.
          Fetch garagesale.geojson from the network first if possible (as they are updated frequently).
          Fallback to the cached garagesale.geojson if disconnected from the internet.
@@ -46,16 +48,14 @@ if ('function' === typeof importScripts) {
         })
       );
 
-      // TODO: The below is a cache rule for Mapbox base map .png files.
-      // Update to cache Mapbox GL protobuffs instead
-
-      /* Custom cache rules - map tiles 
-         Cache png map tiles from the external mapbox root url - for only successfull responses.
+      /* 
+         Custom cache rules - map tiles 
+         Cache map tiles from the external mapbox root url - for only successfull responses.
       */ 
       workbox.routing.registerRoute(
         new RegExp('^https://api.mapbox.com/v4/mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v7,spatialdev.45mt0wo1,spatialdev.00lrg24b/'),
         new workbox.strategies.CacheFirst({
-          cacheName: 'map-tile-cache',
+          cacheName: 'sf-map-tile-cache',
           plugins: [
             new workbox.cacheableResponse.Plugin({
               statuses: [0, 200],
