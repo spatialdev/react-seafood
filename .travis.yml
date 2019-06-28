@@ -3,8 +3,6 @@ branches:
   only:
   - development
 node_js:
-- '9'
-- '8'
 - node
 install:
 - npm install -g travis-ci-cloudfront-invalidation
