@@ -6,7 +6,7 @@ if ('function' === typeof importScripts) {
     /* global workbox */
     if (workbox) {
       
-      console.log('Workbox is loaded');
+      console.log('Workbox for SFF is loaded');
   
       /* injection point for manifest files.  */
       workbox.precaching.precacheAndRoute([]);
@@ -24,7 +24,7 @@ if ('function' === typeof importScripts) {
       workbox.routing.registerRoute(
         /\.(?:png|gif|jpg|jpeg|svg)$/,
         workbox.strategies.cacheFirst({
-          cacheName: 'images',
+          cacheName: 'sf-images',
           plugins: [
             new workbox.expiration.Plugin({
               maxEntries: 60,
@@ -34,21 +34,21 @@ if ('function' === typeof importScripts) {
         })
       );
 
-      /* Custom cache rules - geojson 
+      /* Custom cache rules - json 
          Cache .geojson files.
          Fetch garagesale.geojson from the network first if possible (as they are updated frequently).
          Fallback to the cached garagesale.geojson if disconnected from the internet.
        */
       workbox.routing.registerRoute(
-        new RegExp('.*\.geojson'),
+        new RegExp('.*\.json'),
         new workbox.strategies.NetworkFirst({
-          cacheName: 'geojson'
+          cacheName: 'sf-json'
         })
       );
-      
+
       // TODO: The below is a cache rule for Mapbox base map .png files.
       // Update to cache Mapbox GL protobuffs instead
-      
+
       /* Custom cache rules - map tiles 
          Cache png map tiles from the external mapbox root url - for only successfull responses.
        
