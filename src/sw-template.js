@@ -86,7 +86,7 @@ if ('function' === typeof importScripts) {
         ],
       })
     );
-} else {
+  } else {
     console.log('Workbox could not be loaded. No Offline support');
   }
 }
