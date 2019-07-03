@@ -1,7 +1,4 @@
 language: node_js
-branches:
-  only:
-  - development
 node_js:
 - node
 install:
@@ -10,12 +7,31 @@ install:
 script:
 - npm run build
 deploy:
-  provider: s3
-  access_key_id: "AKIAJCO2VAR7MBG5NQEA"
-  secret_access_key:
-    secure: Oa+5lY4kSQnYeS/rRzjLKyYBjaZJjqCQSxkxyxCB9qm8oRbKx23SmrmtDljhZIV4XZ1C7y97j950KQNVq2sMYy7XH4eBEPwoMr7esYxj8vhT069iUT3UZM0A8XNTrHGfb4ziQ64JUOQhDZ0lJ/eBOKN9LdC4dvITzbw7rDPHWqVbwVDDQoohjCv74bGim1zfwPaEkUqGZnju0FhPjxWu8lgH8a6I17HRlgS9BnuLrXfj2jfXYdg3yPCzDIO8HrQuRFsi1/nkRh65K9P+VWj4Gt8KlQexqSWK4wyHQ3eGJigC8XJdsUx9Mfcz6NiPty/74PYYhlp6GqCGN3j1TVF6op9UVKwN3/w2/dn8AiigpT2pBUJrDpy/mscUFMPB6JNCokZNpIO7menERlFBjdHUuIsIaVVScXCA5rfNOEdD8VWmGnWkDmcc7MGEiOO4UdjtfvfLOP18Ny42XOzTZTVeIX5gPlGFjY4Ua+Y6FvjeKBcfbVzsgZPaznWDWaNZCV5VApD5tlB+W6TDrSXN8cZgFKEbY+t6SpHQflL4/PUvbuQlO2JmctrJxTdN6QSU4DAScZBuzTT6kSFEMiHGe3HSkjP9twjdB1MjNn+8IvT2cWPeIxobv6SMtfJEyul46uTWXQSpyXv+sxCCtHpuAg4f3rKV2sm2+mLAmOtkHSXxHgw=
-  bucket: seafood-fest-serverless
-  local_dir: build
-  skip_cleanup: true
-  on:
-    branch: development
+    - provider: s3
+      access_key_id: "AKIAJCO2VAR7MBG5NQEA"
+      secret_access_key:
+        secure: Oa+5lY4kSQnYeS/rRzjLKyYBjaZJjqCQSxkxyxCB9qm8oRbKx23SmrmtDljhZIV4XZ1C7y97j950KQNVq2sMYy7XH4eBEPwoMr7esYxj8vhT069iUT3UZM0A8XNTrHGfb4ziQ64JUOQhDZ0lJ/eBOKN9LdC4dvITzbw7rDPHWqVbwVDDQoohjCv74bGim1zfwPaEkUqGZnju0FhPjxWu8lgH8a6I17HRlgS9BnuLrXfj2jfXYdg3yPCzDIO8HrQuRFsi1/nkRh65K9P+VWj4Gt8KlQexqSWK4wyHQ3eGJigC8XJdsUx9Mfcz6NiPty/74PYYhlp6GqCGN3j1TVF6op9UVKwN3/w2/dn8AiigpT2pBUJrDpy/mscUFMPB6JNCokZNpIO7menERlFBjdHUuIsIaVVScXCA5rfNOEdD8VWmGnWkDmcc7MGEiOO4UdjtfvfLOP18Ny42XOzTZTVeIX5gPlGFjY4Ua+Y6FvjeKBcfbVzsgZPaznWDWaNZCV5VApD5tlB+W6TDrSXN8cZgFKEbY+t6SpHQflL4/PUvbuQlO2JmctrJxTdN6QSU4DAScZBuzTT6kSFEMiHGe3HSkjP9twjdB1MjNn+8IvT2cWPeIxobv6SMtfJEyul46uTWXQSpyXv+sxCCtHpuAg4f3rKV2sm2+mLAmOtkHSXxHgw=
+      bucket: seafood-fest-serverless
+      local_dir: build
+      skip_cleanup: true
+      on:
+        branch: development
+    - provider: s3
+      access_key_id: "AKIAJCO2VAR7MBG5NQEA"
+      secret_access_key:
+        secure: Oa+5lY4kSQnYeS/rRzjLKyYBjaZJjqCQSxkxyxCB9qm8oRbKx23SmrmtDljhZIV4XZ1C7y97j950KQNVq2sMYy7XH4eBEPwoMr7esYxj8vhT069iUT3UZM0A8XNTrHGfb4ziQ64JUOQhDZ0lJ/eBOKN9LdC4dvITzbw7rDPHWqVbwVDDQoohjCv74bGim1zfwPaEkUqGZnju0FhPjxWu8lgH8a6I17HRlgS9BnuLrXfj2jfXYdg3yPCzDIO8HrQuRFsi1/nkRh65K9P+VWj4Gt8KlQexqSWK4wyHQ3eGJigC8XJdsUx9Mfcz6NiPty/74PYYhlp6GqCGN3j1TVF6op9UVKwN3/w2/dn8AiigpT2pBUJrDpy/mscUFMPB6JNCokZNpIO7menERlFBjdHUuIsIaVVScXCA5rfNOEdD8VWmGnWkDmcc7MGEiOO4UdjtfvfLOP18Ny42XOzTZTVeIX5gPlGFjY4Ua+Y6FvjeKBcfbVzsgZPaznWDWaNZCV5VApD5tlB+W6TDrSXN8cZgFKEbY+t6SpHQflL4/PUvbuQlO2JmctrJxTdN6QSU4DAScZBuzTT6kSFEMiHGe3HSkjP9twjdB1MjNn+8IvT2cWPeIxobv6SMtfJEyul46uTWXQSpyXv+sxCCtHpuAg4f3rKV2sm2+mLAmOtkHSXxHgw=
+      bucket: map.seafoodfest.org
+      local_dir: build
+      skip_cleanup: true
+      on:
+        branch: master
+afterdeploy:
+  - travis-ci-cloudfront-invalidation
+    a: "AKIAJCO2VAR7MBG5NQEA"
+    s: 
+      secure: Oa+5lY4kSQnYeS/rRzjLKyYBjaZJjqCQSxkxyxCB9qm8oRbKx23SmrmtDljhZIV4XZ1C7y97j950KQNVq2sMYy7XH4eBEPwoMr7esYxj8vhT069iUT3UZM0A8XNTrHGfb4ziQ64JUOQhDZ0lJ/eBOKN9LdC4dvITzbw7rDPHWqVbwVDDQoohjCv74bGim1zfwPaEkUqGZnju0FhPjxWu8lgH8a6I17HRlgS9BnuLrXfj2jfXYdg3yPCzDIO8HrQuRFsi1/nkRh65K9P+VWj4Gt8KlQexqSWK4wyHQ3eGJigC8XJdsUx9Mfcz6NiPty/74PYYhlp6GqCGN3j1TVF6op9UVKwN3/w2/dn8AiigpT2pBUJrDpy/mscUFMPB6JNCokZNpIO7menERlFBjdHUuIsIaVVScXCA5rfNOEdD8VWmGnWkDmcc7MGEiOO4UdjtfvfLOP18Ny42XOzTZTVeIX5gPlGFjY4Ua+Y6FvjeKBcfbVzsgZPaznWDWaNZCV5VApD5tlB+W6TDrSXN8cZgFKEbY+t6SpHQflL4/PUvbuQlO2JmctrJxTdN6QSU4DAScZBuzTT6kSFEMiHGe3HSkjP9twjdB1MjNn+8IvT2cWPeIxobv6SMtfJEyul46uTWXQSpyXv+sxCCtHpuAg4f3rKV2sm2+mLAmOtkHSXxHgw= 
+    c: 'E2AM1R8A87V99T'
+    i: '*'
+    b: 'master'
+    p: ''
+    o: 'master'
