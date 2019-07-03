@@ -35,9 +35,9 @@ if ('function' === typeof importScripts) {
 
       /* 
          Custom cache rules - json 
-         Cache .geojson files.
-         Fetch garagesale.geojson from the network first if possible (as they are updated frequently).
-         Fallback to the cached garagesale.geojson if disconnected from the internet.
+         Cache .json files.
+         Fetch .json from the network first if possible (as they are updated frequently).
+         Fallback to the cached .json if disconnected from the internet.
        */
       workbox.routing.registerRoute(
         new RegExp('.*\.json'),
