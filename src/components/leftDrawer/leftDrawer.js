@@ -21,6 +21,7 @@ import imgIconArts from '../../images/icons/svg_arts.svg'
 import imgIconFoods from '../../images/icons/svg_foods.svg'
 import imgIconSponsors from '../../images/icons/svg_sponsors_NP.svg'
 import imgIconMisc from '../../images/icons/svg_misc.svg'
+import imgIconGames from '../../images/icons/mb_star-15.svg';
 
 
 const styles = theme => ({
@@ -139,7 +140,7 @@ class LeftDrawer extends Component {
           </div>
           <div className="legend-item-wrapper">
             <span className="legend-box">
-              <i className="material-icons games-icon">star</i></span>
+              <img alt="Games" className="map-pin games-icon" src={imgIconGames} /></span>
             <span className="legend-item-text">Games</span>
           </div>
         </div>

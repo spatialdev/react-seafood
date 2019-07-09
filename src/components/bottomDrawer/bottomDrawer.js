@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
-import Icon from '@material-ui/core/Icon';
+import { Close } from '@material-ui/icons';
 
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import {connect} from "react-redux";
@@ -117,9 +117,9 @@ class BottomSheet extends Component {
           <div className="wrapperText">
             {header}
 
-            <Icon onClick={()=>{toggleBottomDrawer(false)}} className={classes.icon}>
+            <Close onClick={()=>{toggleBottomDrawer(false)}} className={classes.icon}>
               close
-            </Icon>
+            </Close>
 
             <div className="content-wrapper">
               <div className="title">{data.name}</div>
