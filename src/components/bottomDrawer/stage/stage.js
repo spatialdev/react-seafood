@@ -36,7 +36,7 @@ class Stage extends Component {
 
         {value === 0 && <TabContainer>
           Friday evening from 5:00 p.m. - 11:00 p.m. we kick off the festival with a Ballard Block Party featuring a DJ, #All4Doras and NITE WAVE.<br/>
-          The Beer Garden will be open and five Food Trucks are available for your dining pleasure!<br/>
+          The Beer Garden will be open and six Food Trucks are available for your dining pleasure!<br/>
           (Full festival of vendors and events begins on Saturday at 11 a.m.)<br/><br/>
           <table>
             <tbody>

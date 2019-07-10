@@ -16,7 +16,7 @@ class PurpleSlide extends Component {
             <td>11:00am - 10:00pm</td>
           </tr>
           <tr>
-            <td><b>Sunday - July 15th</b></td>
+            <td><b>Sunday - July 14th</b></td>
             <td>11:00am - 8:00pm</td>
           </tr>
         </tbody>

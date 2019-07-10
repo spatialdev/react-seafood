@@ -5,8 +5,6 @@ class CrabShack extends Component {
 
   render() {
 
-
-
     return (
       <div className="crabShack">
         <div className="drawerSubHead">Hours</div>
