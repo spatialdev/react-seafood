@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './lutefisk.css';
+import './lutefisk.scss';
 
 class Lutefisk extends Component {
 

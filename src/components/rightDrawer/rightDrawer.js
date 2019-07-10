@@ -12,7 +12,7 @@ import {
   toggleRightDrawer, setTabValue, toggleBottomDrawer,
   setBottomDrawerData, selectRightMenuItem
 } from "../../redux/actions";
-import './rightDrawer.css';
+import './rightDrawer.scss';
 import turfCenter from "@turf/center";
 
 const styles = theme => ({

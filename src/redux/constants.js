@@ -39,24 +39,22 @@ export {
   drawerWidth
 }
 
-// TODO put this in a better place
 export const breweries = [
-  "Aalborg Akvavit",
-  "Bad Jimmy's Brewing Co.",
-  "Captive Spirits – Big Gin",
-  "Fremont Brewing",
-  "Hale's Ales",
-  "Heritage Distilling Company",
-  "Lagunitas Brewing Company",
-  "Linie Aquavit",
-  "Lucky Envelope Brewing",
-  "Obec Brewing",
-  "Peddler Brewing Company",
-  "Populuxe Brewing",
-  "Portland Cider Company",
-  "Rambling Route Cider",
-  "Reuben's Brews",
-  "Seattle Cider Co.",
-  "Stoup Brewing",
-  "Wilridge Winery"
+"Bad Jimmy’s Brewing Company",
+"Fremont Brewing Company",
+"Hale’s Ales",
+"Heritage Distilling Co.",
+"Lagunitas Brewing Company",
+"Locust Cider",
+"Lucky Envelope Brewing",
+"Maritime Pacific Brewing Company",
+"NW Peaks Brewery",
+"Obec Brewing",
+"Peddler Brewing Company",
+"Populuxe Brewing",
+"Portland Cider Company",
+"Proletariat Wine Company",
+"Reuben’s Brews",
+"Seattle Cider Company",
+"Stoup Brewing"
 ]

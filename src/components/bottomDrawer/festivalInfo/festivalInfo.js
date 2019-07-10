@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './festivalInfo.css';
+import './festivalInfo.scss';
 
 class FestivalInfo extends Component {
 

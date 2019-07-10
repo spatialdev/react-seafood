@@ -6,7 +6,7 @@ import { Close } from '@material-ui/icons';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import {connect} from "react-redux";
 import {toggleBottomDrawer} from '../../redux/actions';
-import './bottomDrawer.css';
+import './bottomDrawer.scss';
 import imgIconArts from '../../images/icons/svg_arts.svg'
 import imgIconFoods from '../../images/icons/svg_foods.svg'
 import imgIconSponsors from '../../images/icons/svg_sponsors_NP.svg'

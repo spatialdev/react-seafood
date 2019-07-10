@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import withWidth from "@material-ui/core/withWidth/index";
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import './map.css';
+import './map.scss';
 import {findMyLocation, setBottomDrawerData, toggleBottomDrawer, setMap, selectMapItem} from "../../redux/actions";
 import {
   FIND_MY_LOCATION_ERROR,

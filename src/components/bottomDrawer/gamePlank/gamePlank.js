@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './gamePlank.css';
+import './gamePlank.scss';
 
 class GamePlank extends Component {
 

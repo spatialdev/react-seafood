@@ -13,12 +13,11 @@ import { toggleLeftDrawer, toggleRightDrawer, toggleBottomDrawer } from '../../r
 import LeftDrawer from '../leftDrawer/leftDrawer';
 import RightDrawer from '../rightDrawer/rightDrawer';
 import { drawerWidth } from '../../redux/constants';
-import './main.css'
+import './main.scss'
 import imgNavLogo from '../../images/logo-header.svg'
 
 const styles = theme => ({
   toolbar: {
-    "background-color": '#076293',
     "font-family": `'Open Sans', sans-serif  !important`,
     marginLeft: drawerWidth,
     [theme.breakpoints.up('md')]: {
@@ -91,7 +90,7 @@ class Main extends Component {
     return (
       <div className={classes.root}>
         <div>
-          <AppBar className={classes.toolbar}>
+          <AppBar className={classes.toolbar + ` toolbar`}>
             <Toolbar disableGutters={true}>
               <Hidden mdUp>
               <IconButton

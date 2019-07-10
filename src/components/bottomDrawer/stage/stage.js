@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './stage.css';
+import './stage.scss';
 import { Tabs, Tab } from '@material-ui/core';
 import { TabContainer } from '../../../helpers';
 
