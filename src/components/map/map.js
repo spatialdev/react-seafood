@@ -58,7 +58,7 @@ class Map extends Component {
 
     const map = new mapboxgl.Map({
       container: this.mapContainer,
-      style: 'mapbox://styles/spatialdev/cjxwlalofb99l1cnyahqujmbo',
+      style: 'mapbox://styles/spatialdev/cjiqnp2s746bw2srrd5uic6t1',
       center: [-122.38473415374757, 47.668667600018416],
       // maxBounds: this.bounds,
       zoom: 18
