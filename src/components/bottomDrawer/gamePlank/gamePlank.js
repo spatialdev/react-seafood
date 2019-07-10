@@ -7,9 +7,14 @@ class GamePlank extends Component {
 
     return (
       <div className="gamePlank">
-        Continue down Ballard Avenue, just past the Gravity Payments MainStage, and enjoy our Game Plank on Saturday!
+        Continue on down Ballard Avenue, just past the Gravity Payments MainStage,
+        and enjoy the Game Plank hosted by Homestreet Bank, Verity Credit Union and All the Best Pet Care!<br/>
+        We’ll have a variety of free and fun games for you to play including Corn Hole and Ladder Ball, Giant Jenga,
+        Chill Out Lounge, Doggie Cool Down Station and much more fun for the young at heart!<br/>
+        But wait, there’s more! HomeStreet will be displaying the HomeStreet Bank Hydroplane replica, “Miss HomeStreet”.
+        Look up and enjoy Aerial acrobatic performances by Arcadia. You won’t want to miss it!
         <div className="drawerSubHead">
-          Date: SATURDAY ONLY from 11:00 a.m. – 6:00 p.m.<br />
+          Date: SATURDAY ONLY from 11:00 a.m. – 5:00 p.m.(On Sunday the street becomes the Sunday Ballard Farmers Market!)<br />
           Location: Ballard Avenue
         </div>
         We’ll have a variety of free and fun games for you to play including:<br /><br />
