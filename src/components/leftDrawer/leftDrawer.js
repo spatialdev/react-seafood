@@ -14,7 +14,7 @@ import {
 } from '../../redux/actions';
 import { drawerWidth } from '../../redux/constants';
 import turfCenter from '@turf/center'
-import './leftDrawer.css';
+import './leftDrawer.scss';
 import imgFlier from '../../images/logo-flier.png';
 import imgIconEntertainment from '../../images/icons/svg_entertainment.svg'
 import imgIconArts from '../../images/icons/svg_arts.svg'

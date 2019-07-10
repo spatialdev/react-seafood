@@ -7,7 +7,7 @@ import BottomSheet from './components/bottomDrawer/bottomDrawer'
 import Main from './components/main/main';
 import { config } from './config';
 
-import './app.css';
+import './app.scss';
 
 class App extends Component {
   state = {

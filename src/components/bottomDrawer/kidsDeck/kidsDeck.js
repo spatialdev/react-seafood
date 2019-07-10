@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './kidsDeck.css';
+import './kidsDeck.scss';
 import { Tabs, Tab } from '@material-ui/core';
 import { TabContainer } from '../../../helpers';
 
@@ -25,67 +25,73 @@ class KidsDeck extends Component {
               onChange={this.handleChange}
               indicatorColor="primary"
               textColor="primary">
-          <Tab label="Saturday - July 14th" />
-          <Tab label="Sunday - July 15th" />
+          <Tab label="Saturday - July 13th" />
+          <Tab label="Sunday - July 14th" />
         </Tabs>
 
         {value === 0 && <TabContainer>
+          <b>Noon – 5:00 p.m. </b><br />
           <div className="drawerSubHead">Ballard Commons Park Water Feature</div>
-          <b>11:00 a.m. - 8:00 p.m.</b><br />
+          <b>12:00 p.m. - 5:00 p.m.</b><br />
           The spray park at Ballard Commons Park (weather permitting) Bring the kiddos and cool off at the Park.
         
           <div className="drawerSubHead">Bouncy Houses *</div>
-          <b>11:00 a.m. - 7:00 p.m.</b><br />
+          <b>11:00 a.m. - 5:00 p.m.</b><br/>
           An assortment of bouncy houses will be available.
-          
 
           <div className="drawerSubHead">Illumination Learning Studios Sponsored Events</div>
           <b>11:00 a.m. – 8:00 p.m.</b><br />
-          Illumination Learning Studios is hosting a series of events designed to inspire your child’s imagination:<br />
 
-          My ID Club, Balloons, Instruments, Sound Experiment, Art Project, Hula Hoops, Bubbles, Pop a Shots, Sidewalk Chalk Fun, Balloon Artists, and Face Painters
+          Illumination Learning Studios is hosting a series of events designed to inspire your child’s imagination:<br/>
+          Illumination Learning Studio: Free Raffle: Win 1 week of Summer Adventure Camp at ILS. ILS will be bringing more fun with Bubbles, Sidewalk Chalk, Parachute, Art Project (Jellyfish Shakers), ILS Dance Party and Balloons!
+          <br/>
+          Lil J’s Superdawgs Hot Dog Truck - Full Tilt Ice Cream
 
-          <div className="drawerSubHead">Seattle Public Library-Ballard Branch Activities</div>
+          <div className="drawerSubHead">Girl Scouts Troop 40827 and Boy Scouts Troop 827 Booth</div>
           <b>11:00 a.m. – 8:00 p.m.</b>
           
-          <div className="drawerSubHead">Station 18 Fire Truck</div>
+          <div className="drawerSubHead">Station 18 Fire Truck (unless called away)</div>
           <b>1:00 p.m. – 3:00 p.m.</b>
 
-          <div className="drawerSubHead">Facepainting by Tiny Art Face Painting *</div>
-          <b>1:00 p.m. – 3:00 p.m.</b>
+          <div className="drawerSubHead">Face painting by Amusements on Demand*</div>
+          <b>12:00 p.m. – 3:00 p.m.</b>
 
           <div className="small">*These events require a fee</div>
         </TabContainer>}
         {value === 1 && <TabContainer>
+          <b>11:00 a.m. – 3:00 p.m.</b><br />
           <div className="drawerSubHead">Ballard Commons Park Water Feature</div>
-          <b>11:00 a.m. - 8:00 p.m.</b><br />
+          <b>11:00 a.m. - 3:00 p.m.</b><br />
           The spray park at Ballard Commons Park (weather permitting) Bring the kiddos and cool off at the Park.
         
           <div className="drawerSubHead">Bouncy Houses *</div>
-          <b>11:00 a.m. - 6:00 p.m.</b><br />
+          <b>11:00 a.m. - 5:00 p.m.</b><br />
           An assortment of bouncy houses will be available.
-          
+
+          <div className="drawerSubHead">Face painting by Amusements on Demand*</div>
+          <b>12:00 p.m. – 3:00 p.m.</b>
 
           <div className="drawerSubHead">Illumination Learning Studios Sponsored Events</div>
-          <b>11:00 a.m. – 8:00 p.m.</b><br />
-          Illumination Learning Studios is hosting a series of events designed to inspire your child’s imagination:<br />
+          <b>11:00 a.m. – 3:00 p.m.</b><br />
 
-          My ID Club, Balloons, Instruments, Sound Experiment, Art Project, Hula Hoops, Bubbles, Pop a Shots, Sidewalk Chalk Fun, Balloon Artists, and Face Painters
-	
-          <div className="drawerSubHead">Johannes Drumming</div>
-          <b>12:00-12:45 P.M.</b>
+          <div className="drawerSubHead">Girl Scouts Troop 40827 and Boy Scouts Troop 827 Booth</div>
+          <b>11:00 a.m. – 3:00 p.m.</b>
 
           <div className="drawerSubHead">Mr. Ryan’s Pirate Yoga</div>
-          <b>1:00-1:45 P.M.</b>	
-
-          <div className="drawerSubHead">ILS Performers, Break Dance Crew, Choir, and Beckett Piano</div>
-          <b>2:00-2:45 P.M.	</b>
-
+          <b>11:00 a.m. – 11:30 a.m.</b>
+          <div className="drawerSubHead">Illumination Studio Dance Party!</div>
+          <b>11:30 a.m. –  noon</b>
+          <div className="drawerSubHead">Magic Show with George A. Magician</div>
+          <b> 12:00 p.m.  – 12:30 p.m.</b>
+          <div className="drawerSubHead">Illumination Studio Music Making Workshop</div>
+          <b>12:30 p.m. –  1:30 p.m.</b>
+          <div className="drawerSubHead">Station 18 Fire Truck (unless called away)</div>
+          <b>1:00 p.m. – 3:00 p.m.</b>
           <div className="drawerSubHead">CSZ Improv with Kids</div>
-          <b>3:00-3:45 P.M.	</b>
+          <b>1:30 p.m. – 2:00 p.m.</b>
+          <div className="drawerSubHead">Imagination Band</div>
+          <b> 2:00 p.m. –  3:00 p.m.</b>
 
-          <div className="drawerSubHead">ILS Dance Party</div>
-          <b>4:00-4:45 P.M.</b>
         </TabContainer>}
       </div>
     );
