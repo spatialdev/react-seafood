@@ -166,7 +166,7 @@ class LeftDrawer extends Component {
             setTabValue({index: 2, name: "A/C"});
             selectLeftMenuItem("A/C");
           }}>
-            <ListItemText disableTypography={true} classes={{root: 'list-item-text'}} primary="Arts and Crafts"/>
+            <ListItemText disableTypography={true} classes={{root: 'list-item-text'}} primary="Arts & Crafts Vendors"/>
           </ListItem>
           {menuItems.map((item, index) => {
             return (
