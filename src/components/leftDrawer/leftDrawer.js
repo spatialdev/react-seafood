@@ -16,11 +16,11 @@ import { drawerWidth } from '../../redux/constants';
 import turfCenter from '@turf/center'
 import './leftDrawer.scss';
 import imgFlier from '../../images/logo-flier.png';
-import imgIconEntertainment from '../../images/icons/svg_entertainment.svg'
-import imgIconArts from '../../images/icons/svg_arts.svg'
-import imgIconFoods from '../../images/icons/svg_foods.svg'
-import imgIconSponsors from '../../images/icons/svg_sponsors_NP.svg'
-import imgIconMisc from '../../images/icons/svg_misc.svg'
+import imgIconEntertainment from '../../images/icons/svg_entertainment_2019.svg'
+import imgIconArts from '../../images/icons/svg_arts_2019.svg'
+import imgIconFoods from '../../images/icons/svg_foods_2019.svg'
+import imgIconSponsors from '../../images/icons/svg_sponsors_NP_2019.svg'
+import imgIconMisc from '../../images/icons/svg_misc_2019.svg'
 import imgIconGames from '../../images/icons/mb_star-15.svg';
 
 
@@ -158,6 +158,15 @@ class LeftDrawer extends Component {
             selectLeftMenuItem("Food Vendors");
           }}>
             <ListItemText disableTypography={true} classes={{root: 'list-item-text'}} primary="Food Vendors"/>
+          </ListItem>
+          <ListItem className="list-item-wrapper" button onClick={() => {
+            // Close the right & left menu
+            toggleRightDrawer(true);
+            toggleLeftDrawer(false);
+            setTabValue({index: 2, name: "A/C"});
+            selectLeftMenuItem("A/C");
+          }}>
+            <ListItemText disableTypography={true} classes={{root: 'list-item-text'}} primary="Arts & Crafts Vendors"/>
           </ListItem>
           {menuItems.map((item, index) => {
             return (
