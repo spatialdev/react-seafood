@@ -1,4 +1,4 @@
-import polygons from '../polygons_2018.json';
+import polygons from '../points_and_polygons_2019_v6.json';
 
 expect.extend({
     toBeStringOrNull(received) {
@@ -36,8 +36,10 @@ expect.extend({
     }
 });
 
-describe('polygons_2018.json', () => {
+describe('points_and_polygons_2019_v6.json', () => {
     it('Should contain an array of objects matching the intended shape.', () => {
+
+        let types = ["A/C","Non-Profit","Sponsor","Food","Amusement","Restroom","Fire Department","Police Vehicle","Entertainment","Info Booth"]
         expect(Array.isArray(polygons.features)).toEqual(true);
         polygons.features.forEach(polygon => {
             expect(typeof polygon).toEqual('object');
@@ -46,10 +48,9 @@ describe('polygons_2018.json', () => {
             const { properties } = polygon;
             expect(properties.icon).toBeStringOrNull();
             expect(properties.show_icon).toBeStringOrNull();
-            expect(properties.details).toBeStringOrNull();
             expect(typeof properties.id).toEqual('string');
             expect(typeof properties.name).toEqual('string');
-            expect(['Food','Sponsor','A/C','Non-Profit','Amusement','Restroom','Fire Trucks','Police','Entertainment','Info Booth']).toContain(properties.type);
+            expect(types).toContain(properties.type);
             expect.toBeNumberOrNull(properties.rotate);
             expect.toBeBooleanOrNull(properties.left_panel);
         });
