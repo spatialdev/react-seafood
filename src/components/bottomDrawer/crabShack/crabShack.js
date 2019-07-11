@@ -27,7 +27,7 @@ class CrabShack extends Component {
         On Saturday and Sunday, we’ll be serving up some of Trident Seafood’s finest Alaskan King crab legs, butter and cocktail sauce for $15. Steamed Penn Cove Mussels and fresh barbecued Oysters are available for $12.<br/><br/>
         <b>TICKET PURCHASE:</b>
         <br/>
-        Order items at the Visit Ballard Seafood Sales tent located at 22nd Ave NW and NW Market Street (next to Starbucks) and pick up your food at the Trident Seafoods/Visit Ballard Seafood Pick-up tent on 22nd Ave NW. Limited quantity of these items.
+        Order items at the Visit Ballard Seafood Sales tent located at 22nd Ave NW and NW Market Street (next to Starbucks) and pick up your food at the Trident Seafoods/Visit Ballard Seafood Pick-up tent on 22nd Ave NW.
         <br/>
         Limited quantity of these items.
 
