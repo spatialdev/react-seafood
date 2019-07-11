@@ -68,8 +68,6 @@ class FestiBowl extends Component {
           Best Trick, Longest Grind, Highest Air, Tricks for Cash<br/>
           On-site registration is available, pre-registration is preferred<br/>
 
-          <b>Note: Times are subject to change based on participation</b>
-
         </TabContainer>}
 
         <div className="small">Note: Times are subject to change based on participation</div>

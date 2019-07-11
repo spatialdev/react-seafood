@@ -30,8 +30,8 @@ class Stage extends Component {
               scrollButtons="on"
               scrollable>
           <Tab label="Friday July 12th" />
-          <Tab label="Saturday - July 14th" />
-          <Tab label="Sunday - July 15th" />
+          <Tab label="Saturday - July 13th" />
+          <Tab label="Sunday - July 14th" />
         </Tabs>
 
         {value === 0 && <TabContainer>
