@@ -1819,6 +1819,27 @@
       "properties": {
         "show_label": "",
         "icon": "svg_crab",
+        "show_icon": null,
+        "id": "998",
+        "rotate": null,
+        "left_panel": null,
+        "name": "Seafood Shack",
+        "type": "Crab",
+        "description": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.384822541563797,
+          47.668553149864663
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "show_label": "",
+        "icon": "",
         "show_icon": "",
         "id": "87",
         "rotate": null,
@@ -4145,7 +4166,7 @@
         "icon": "svg_contestEating",
         "show_icon": null,
         "details": null,
-        "id": "9992",
+        "id": "997",
         "rotate": null,
         "left_panel": true,
         "name": "Lutefisk Contest",
@@ -4167,7 +4188,7 @@
         "icon": "svg_info",
         "show_icon": null,
         "details": null,
-        "id": "9991",
+        "id": "995",
         "rotate": null,
         "left_panel": true,
         "name": "SeafoodFest Info",
@@ -4189,11 +4210,11 @@
         "icon": "svg_tickets",
         "show_icon": "true",
         "details": "info",
-        "id": "9988",
+        "id": "994",
         "rotate": null,
         "left_panel": null,
         "name": "Token Sales",
-        "type": "Sponsor",
+        "type": "Token",
         "description": null
       },
       "geometry": {
@@ -4209,13 +4230,13 @@
       "properties": {
         "show_label": null,
         "icon": "svg_tickets",
-        "show_icon": null,
+        "show_icon": "true",
         "details": null,
-        "id": "9990",
+        "id": "996",
         "rotate": null,
         "left_panel": true,
         "name": "Token Sales",
-        "type": "Sponsor",
+        "type": "Token",
         "description": null
       },
       "geometry": {
@@ -4233,11 +4254,11 @@
         "icon": "svg_tickets",
         "show_icon": "true",
         "details": "info",
-        "id": "9989",
+        "id": "99999",
         "rotate": null,
         "left_panel": null,
         "name": "Token Sales",
-        "type": "Sponsor",
+        "type": "Token",
         "description": null
       },
       "geometry": {
@@ -4291,7 +4312,7 @@
           47.668649255795167
         ]
       }
-    }
+    },
     {
       "type": "Feature",
       "properties": {
@@ -4389,52 +4410,11 @@
     {
       "type": "Feature",
       "properties": {
-        "show_label": null,
-        "icon": null,
-        "show_icon": null,
-        "description": null,
-        "id": "9998",
-        "name": "Gravity Payments Back Stage",
-        "type": "Amusement",
-        "rotate": null,
-        "left_panel": null
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -122.384679026046797,
-              47.667551238698714
-            ],
-            [
-              -122.384664801069448,
-              47.667538465975873
-            ],
-            [
-              -122.384713403075523,
-              47.667490036040029
-            ],
-            [
-              -122.384726837776384,
-              47.667502808774728
-            ],
-            [
-              -122.384679026046797,
-              47.667551238698714
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "show_label": "true",
         "icon": null,
         "show_icon": null,
         "description": null,
-        "id": "9999",
+        "id": "999",
         "name": "Beer Garden",
         "type": "Amusement",
         "rotate": 45,
@@ -4621,7 +4601,7 @@
         "id": "9995",
         "name": "Kid's Deck",
         "type": "Amusement",
-        "rotate": null,
+        "rotate": 90,
         "left_panel": true
       },
       "geometry": {
