@@ -159,6 +159,15 @@ class LeftDrawer extends Component {
           }}>
             <ListItemText disableTypography={true} classes={{root: 'list-item-text'}} primary="Food Vendors"/>
           </ListItem>
+          <ListItem className="list-item-wrapper" button onClick={() => {
+            // Close the right & left menu
+            toggleRightDrawer(true);
+            toggleLeftDrawer(false);
+            setTabValue({index: 2, name: "A/C"});
+            selectLeftMenuItem("A/C");
+          }}>
+            <ListItemText disableTypography={true} classes={{root: 'list-item-text'}} primary="Arts & Crafts Vendors"/>
+          </ListItem>
           {menuItems.map((item, index) => {
             return (
               <div key={item.properties.id}>

@@ -12,8 +12,9 @@ import {
   FIND_MY_LOCATION_SELECT,
   FIND_MY_LOCATION_SUCCESS
 } from "../../redux/constants";
+import { config } from '../../config';
 
-mapboxgl.accessToken = 'pk.eyJ1Ijoic3BhdGlhbGRldiIsImEiOiJjamxuN2kydGIxZzhsM3BwbmNrYmhpaWRkIn0.51uF3UCh8Vpb2M3Y-glu2g';
+mapboxgl.accessToken = config.map.accessToken;
 
 const styles = theme => ({
   map: {
@@ -47,20 +48,13 @@ class Map extends Component {
     trackUserLocation: true
   });
 
-  bounds = [
-    //southwest
-    [-122.38885402679443, 47.66567637286265],
-    //northeast
-    [-122.37951993942261, 47.6712685277693]
-  ];
 
   componentDidMount() {
 
     const map = new mapboxgl.Map({
       container: this.mapContainer,
-      style: 'mapbox://styles/spatialdev/cjxy5fl8q0j5v1co88xg7dhtm',
-      center: [-122.38473415374757, 47.668667600018416],
-      // maxBounds: this.bounds,
+      style: config.map.style,
+      center: config.map.centroid,
       zoom: 18
     });
 
