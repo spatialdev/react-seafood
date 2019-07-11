@@ -128,7 +128,7 @@ class RightMenu extends Component {
             indicatorColor="primary"
             classes={{root: classes.tabsRoot}}
             textColor="primary"
-            fullWidth
+            fullwidth="true"
           >
             <Tab classes={{root: classes.tabRoot}} label="All" />
             <Tab classes={{root: classes.tabRoot}} label="Food" />

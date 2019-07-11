@@ -1,4 +1,4 @@
-import polygons from '../points_and_polygons_2019_v6.json';
+import polygons from '../polygons_2019.json';
 
 expect.extend({
     toBeStringOrNull(received) {
@@ -36,7 +36,7 @@ expect.extend({
     }
 });
 
-describe('points_and_polygons_2019_v6.json', () => {
+describe('polygons_2019.json', () => {
     it('Should contain an array of objects matching the intended shape.', () => {
 
         let types = ["A/C","Non-Profit","Sponsor","Food","Amusement","Restroom","Fire Department","Police Vehicle","Entertainment","Info Booth"]
