@@ -28,10 +28,11 @@ class Stage extends Component {
               indicatorColor="primary"
               textColor="primary"
               scrollButtons="on"
+              variant="scrollable"
               scrollable>
-          <Tab label="Fri July 12th" />
-          <Tab label="Sat - July 13th" />
-          <Tab label="Sun - July 14th" />
+          <Tab label="Friday July 12th" />
+          <Tab label="Saturday - July 13th" />
+          <Tab label="Sunday - July 14th" />
         </Tabs>
 
         {value === 0 && <TabContainer>
