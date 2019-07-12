@@ -14,7 +14,7 @@ class Lutefisk extends Component {
         Ozzie’s 4th Annual Lutefisk eating competition is a real crowd pleaser.<br/>
         Sponsored by Mountain Pacific Bank, Skal Beer Hall and Scandinavian Specialties.
         <div className="drawerSubHead">Date:</div>		
-        Sunday at 3:00 p.m.
+        Saturday at 3:00 p.m.
         <div className="drawerSubHead">Location:</div> 	
         Intersection of NW Market Street and 22nd Avenue NW
         <div className="drawerSubHead">Fee:</div>
