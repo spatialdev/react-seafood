@@ -48,7 +48,7 @@ describe('polygons_2019.json', () => {
             const { properties } = polygon;
             expect(properties.icon).toBeStringOrNull();
             expect(properties.show_icon).toBeStringOrNull();
-            expect(typeof properties.id).toEqual('string');
+            expect(typeof properties.id).toEqual('number');
             expect(typeof properties.name).toEqual('string');
             expect(types).toContain(properties.type);
             expect.toBeNumberOrNull(properties.rotate);
