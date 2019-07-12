@@ -66,7 +66,8 @@ class BottomSheet extends Component {
     "Seafood Shack": imgIconCrab,
     "SeafoodFest Info": imgIconInfo,
     "Lutefisk Contest": imgIconContest,
-    "Token sales": imgIconTickets,
+    "Token Sales": imgIconTickets,
+    "Beer + Cocktail Garden Token Sales": imgIconTickets
   }
 
   games = [
