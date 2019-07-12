@@ -155,7 +155,7 @@ class BottomSheet extends Component {
           return (
             <FestiBowl />
           )
-        case "Kid's Deck":
+        case "Ballard Market Kid's Deck":
           return (
             <KidsDeck />
           )
