@@ -8,7 +8,7 @@ const config = {
   // Google Analytics
   ga: {
     // Global GA identifier
-    id: 'UA-XXXXXXXX-1',
+    id: 'UA-80485263-1',
     // Event Category constants
     event: {
       // Vendor click events
@@ -39,6 +39,18 @@ const config = {
         }
       }
     }
+  },
+  // Mapbox GL
+  map: {
+    style: 'mapbox://styles/spatialdev/cjxy5fl8q0j5v1co88xg7dhtm',
+    accessToken: "pk.eyJ1Ijoic3BhdGlhbGRldiIsImEiOiJjamxuN2kydGIxZzhsM3BwbmNrYmhpaWRkIn0.51uF3UCh8Vpb2M3Y-glu2g",
+    centroid: [-122.38473415374757, 47.668667600018416],
+    bounds: [
+      //southwest
+      [-122.38885402679443, 47.66567637286265],
+      //northeast
+      [-122.37951993942261, 47.6712685277693]
+    ]
   }
 }
 

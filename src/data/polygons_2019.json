@@ -1,0 +1,3912 @@
+{
+    "type": "FeatureCollection",
+    "features": [{
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 1,
+            "rotate": null,
+            "left_panel": null,
+            "name": "West Coast Sea Glass",
+            "type": "A/C",
+            "description": "Handmade jewelry from sea glass",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38726250000002, 47.66872134]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 2,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Forest Green Enterprisese",
+            "type": "A/C",
+            "description": "Home goods and backyard items",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38726250000002, 47.668665645149]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 3,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Leif Erikson Lodge",
+            "type": "Non-Profit",
+            "description": "Non-profit Norwegian community group",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3872341, 47.66872134]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 4,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Ashley May Jewelry",
+            "type": "A/C",
+            "description": "Handmade jewelry ",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3872341, 47.668665645149]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 5,
+            "rotate": null,
+            "left_panel": null,
+            "name": "KBFG 107.3FM",
+            "type": "Non-Profit",
+            "description": "Non-profit local radio station",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38715709999997, 47.66872109]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 6,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Metropolitan Design",
+            "type": "A/C",
+            "description": "Designer bamboo sheets",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38715739999998, 47.668664525149]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 7,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Slurp - C",
+            "type": "A/C",
+            "description": "Eco-friendly, reusable straws",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38712729999997, 47.66872109]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 8,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Salty and Sweet Design",
+            "type": "A/C",
+            "description": "Mobiles and other homegoods",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38712729999997, 47.668664765148996]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 9,
+            "rotate": null,
+            "left_panel": null,
+            "name": "UFCW21",
+            "type": "Non-Profit",
+            "description": "Local union organization",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38704660000002, 47.66872109]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 10,
+            "rotate": null,
+            "left_panel": null,
+            "name": "The Old White House",
+            "type": "A/C",
+            "description": "Lavender products",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.387046, 47.668664695149]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 11,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Algrano Fish",
+            "type": "A/C",
+            "description": "Flash frozen seafood",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38701659999998, 47.66872134]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 12,
+            "rotate": null,
+            "left_panel": false,
+            "name": "5416 Studio + Storefront",
+            "type": "A/C",
+            "description": "Local artisan group - pottery, essential oils, and more",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38701659999998, 47.668664945149]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 13,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Tangerine Tales",
+            "type": "A/C",
+            "description": "Face paintings for kids of all ages",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38694520000001, 47.66871993]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 14,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Cutco Cuttlery",
+            "type": "Sponsor",
+            "description": "American made cuttlery",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38694529999998, 47.668663045148996]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 15,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Fudgeworks",
+            "type": "A/C",
+            "description": "Fudge",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38691519999998, 47.66872012]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 16,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Seciwa's SW Native Jewelry & Crafts",
+            "type": "A/C",
+            "description": "Native American-inspired jewelry",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38691519999998, 47.66866377514899]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 17,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Caramel Kitchen",
+            "type": "A/C",
+            "description": "Caramel treats",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38683409999999, 47.66872159]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 18,
+            "rotate": null,
+            "left_panel": false,
+            "name": "KlipnKlap Soy Candles",
+            "type": "A/C",
+            "description": "Handmade Candles",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38683409999999, 47.66866524514899]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 19,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Alice's Aromarama",
+            "type": "A/C",
+            "description": "Handmand candles",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38680469999997, 47.66872183]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 20,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Cascadia Stoneware",
+            "type": "A/C",
+            "description": "Stoneware ",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3868046, 47.66866524514899]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 21,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Dharma Doll Books",
+            "type": "A/C",
+            "description": "Vintage book pages, journals, and cards",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38672170000001, 47.66872078]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 22,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Classic Collection Hats",
+            "type": "A/C",
+            "description": "Hats and apparel",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38672120000001, 47.668664275149]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 23,
+            "rotate": null,
+            "left_panel": null,
+            "name": "OMG! Olive Oils",
+            "type": "A/C",
+            "description": "Olive oils",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38669170000003, 47.6687206]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 24,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Classic Collection Hats",
+            "type": "A/C",
+            "description": "Hats and apparel",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38669170000003, 47.668664275149]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 25,
+            "rotate": null,
+            "left_panel": null,
+            "name": "National Nordic Museum",
+            "type": "Non-Profit",
+            "description": "National Nordic Musuem",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3866099, 47.66872134]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 26,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Renewal by Anderson",
+            "type": "Sponsor",
+            "description": "Info on window installation and services",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38660930000003, 47.668664445149]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 27,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Smith Brothers Farms",
+            "type": "Sponsor",
+            "description": "Info on milk CSA",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3865805, 47.66872159]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 28,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Gutter Helmet",
+            "type": "Sponsor",
+            "description": "Info on rain gutter improvements",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38658040000001, 47.668664445149]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 29,
+            "rotate": null,
+            "left_panel": null,
+            "name": "EnviroIssues (ST3 Light Rail Extensions)",
+            "type": "Non-Profit",
+            "description": "Info on light rail expansion to Ballard",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38650239999998, 47.66872052]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 30,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Metamorphic Gear",
+            "type": "A/C",
+            "description": "Handmade bags and other apparel",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38650230000002, 47.66866402514899]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 31,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Hot Mama Salsa",
+            "type": "A/C",
+            "description": "Salsas",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.386473, 47.6687206]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 32,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Renee Staeck",
+            "type": "A/C",
+            "description": "Fine arts and paintings",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.386473, 47.668664275149]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 33,
+            "rotate": null,
+            "left_panel": null,
+            "name": "F45 Ballard",
+            "type": "Sponsor",
+            "description": "Local Ballard fitness organization",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3863907, 47.66872145]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 34,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Trapp Industries",
+            "type": "A/C",
+            "description": "Metal art",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38639030000002, 47.668665285149]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 35,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Ballard Station Public House",
+            "type": "A/C",
+            "description": "Handmade bloody mary mixes",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38636050000002, 47.66872174]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 36,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Trapp Industries",
+            "type": "A/C",
+            "description": "Metal art",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38636029999998, 47.66866524514899]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 37,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Getaround",
+            "type": "Sponsor",
+            "description": "Info on local peer-to-peer car sharing",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38620621990705, 47.668720616300305]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 38,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Two Obsessed Jewelry",
+            "type": "A/C",
+            "description": "Handmade jewelry ",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38620749729091, 47.66866696617806]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 39,
+            "rotate": null,
+            "left_panel": null,
+            "name": "BECU",
+            "type": "Sponsor",
+            "description": "Info on banking options",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38617747877014, 47.668721254992235]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 40,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Languid Decadence Artworks",
+            "type": "A/C",
+            "description": "Home goods and other fine art",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38617747877014, 47.66866632748613]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 41,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Market Street Shoes",
+            "type": "Sponsor",
+            "description": "Shoes",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38610119999998, 47.66872183]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 42,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Olive Branch",
+            "type": "A/C",
+            "description": "Olive oils",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38610119999998, 47.66866507514899]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 43,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Val's Crafty Corner",
+            "type": "A/C",
+            "description": "Patchwork pillows and art",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38607179999997, 47.66872208]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 44,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Salmon Bay Eagles",
+            "type": "Non-Profit",
+            "description": "Info the Salmon Bay Eagles and the community work they do",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38607230000002, 47.66866507514899]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 45,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Bonnie B's Peppers",
+            "type": "A/C",
+            "description": "Jarred peppers",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3859979, 47.66872225]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 46,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Poly Clinic",
+            "type": "Sponsor",
+            "description": "Info on Poly Clinic medical system",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38599750000003, 47.66866532514899]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 47,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Bombay Trends",
+            "type": "A/C",
+            "description": "Henna tattoos",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.385968, 47.66872208]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 48,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Over the Line Art",
+            "type": "A/C",
+            "description": "Caricatures",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.385968, 47.66866532514899]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 49,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Powerslide Designs Co.",
+            "type": "A/C",
+            "description": "Paintings, prints, and other fine art",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38588370000002, 47.66872208]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 50,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Original Baby Bundle / Mixed Metals Jewelry",
+            "type": "A/C",
+            "description": "Towel, soap, rubby ducky package for the little one",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3858828, 47.668665265148995]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 51,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Sketches by the Sea",
+            "type": "A/C",
+            "description": "Fine arts and paintings",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3858535, 47.66872183]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 52,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Original Baby Bundle / Mixed Metals Jewelry",
+            "type": "A/C",
+            "description": "Towel, soap, rubby ducky package for the little one",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3858535, 47.668665505148994]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 53,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Austin Steiner Art",
+            "type": "A/C",
+            "description": "Fun, loud, paintings",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38577570000001, 47.66872208]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 54,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Filson",
+            "type": "Sponsor",
+            "description": "Info on a PNW original clothier - Filson",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38577570000001, 47.66866532514899]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 55,
+            "rotate": null,
+            "left_panel": null,
+            "name": "World Comp Kenya",
+            "type": "Non-Profit",
+            "description": "Info on non-profit work in Kenya",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3857463, 47.66872233]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 56,
+            "rotate": null,
+            "left_panel": null,
+            "name": "AT&T",
+            "type": "Sponsor",
+            "description": "Info on AT&T products and services",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38574619999997, 47.668665735149]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 57,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Bubble World",
+            "type": "A/C",
+            "description": "Bubble makers - great for the kids!",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3856661, 47.6687224]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 58,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Alaska USA Federal Credit Union",
+            "type": "Sponsor",
+            "description": "Info on a PNW credit union",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3856661, 47.668665645149]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 59,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Artjaden",
+            "type": "A/C",
+            "description": "Cards, clothing, and other apparel",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38563670000002, 47.66872341]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 60,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Magpie Mouse Studios",
+            "type": "A/C",
+            "description": "Handmade jewelry ",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38563670000002, 47.668665895149]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 61,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Bella Lulli",
+            "type": "A/C",
+            "description": "Handmade jewelry ",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38555659999997, 47.66872326]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 62,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Uphill Designs Co.",
+            "type": "A/C",
+            "description": "Leather goods and more",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3855562, 47.668666725148995]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 63,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Cat's Creations",
+            "type": "A/C",
+            "description": "Handmade jewelry ",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38552670000001, 47.6687231]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 64,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Uphill Designs Co.",
+            "type": "A/C",
+            "description": "Leather goods and more",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38552670000001, 47.668667175149]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 65,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Cousins",
+            "type": "A/C",
+            "description": "Clothing and other apparel",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38545169999998, 47.66872269]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 66,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Tim Wistrom Fine Art Paintings",
+            "type": "A/C",
+            "description": "Fine arts and paintings",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38545160000001, 47.668666035148995]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 67,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Col Designs",
+            "type": "A/C",
+            "description": "Handmade candles",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3854222, 47.66872261]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 68,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Tim Wistrom Fine Art Paintings",
+            "type": "A/C",
+            "description": "Fine arts and paintings",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3854222, 47.668666285148994]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 69,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Alexandra's Macarons",
+            "type": "A/C",
+            "description": "Macarons",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3853461, 47.66872247]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 70,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Celia's Gourmet Foods",
+            "type": "A/C",
+            "description": "Balsamic oils",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38534549999997, 47.66866653514899]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 71,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Mustard and Co.",
+            "type": "A/C",
+            "description": "Mustards ",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3853163, 47.6687231]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 72,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Gossamer Lane Fine Art",
+            "type": "A/C",
+            "description": "Fine arts and paintings",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3853171, 47.66866653514899]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 73,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Brendan Fuller Ceramics",
+            "type": "A/C",
+            "description": "Ceramics ",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3852336, 47.66872247]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 74,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Craig Hagstrom Jewelry Collections",
+            "type": "A/C",
+            "description": "Handmade jewelry ",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3852331, 47.668665645149]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 75,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Brendan Fuller Ceramics",
+            "type": "A/C",
+            "description": "Ceramics ",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38520370000003, 47.66872222]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 76,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Samantha Slater Studio",
+            "type": "A/C",
+            "description": "Handmade jewelry ",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38520370000003, 47.668665895149]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 77,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Mediums",
+            "type": "A/C",
+            "description": "Hats and apparel",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38512650000001, 47.66872247]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 78,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Bob Oates Plumbing",
+            "type": "Sponsor",
+            "description": "Info on plumbing services",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38512650000001, 47.668666125148995]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 79,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Healing Stone Foundry",
+            "type": "A/C",
+            "description": "Handmade jewelry ",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38509720000002, 47.66872189]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 80,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Bob Oates Plumbing",
+            "type": "Sponsor",
+            "description": "Info on plumbing services",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.385097, 47.668665715149]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 81,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Peace of the Earth Jewelry",
+            "type": "A/C",
+            "description": "Handmade jewelry ",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38501969999999, 47.66872287]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 82,
+            "rotate": null,
+            "left_panel": null,
+            "name": "New Seasons Market",
+            "type": "Sponsor",
+            "description": "Info on Ballard's New Season Market",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38501969999999, 47.668666425149]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 83,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Full Circle",
+            "type": "Sponsor",
+            "description": "Info on Full Circle CSA program",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3849904, 47.66872299]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 84,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Linda McClamrock Paper Collage",
+            "type": "A/C",
+            "description": "Paper collage art",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3849904, 47.668666665149]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 85,
+            "rotate": null,
+            "left_panel": null,
+            "name": "UW Medicine",
+            "type": "Sponsor",
+            "description": "Info on the UW Medical system",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38493840000001, 47.66871313]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 86,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Gravity Payments",
+            "type": "Sponsor",
+            "description": "Info on payment processing",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3848375415638, 47.66860414986466]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": "",
+            "show_icon": "",
+            "id": 87,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Island Creamery",
+            "type": "Food",
+            "description": "Hand-dipped ice cream",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3848059948653, 47.66850287279269]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 88,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Puffle Up",
+            "type": "Food",
+            "description": "Fruity waffle with ice cream",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38480662638021, 47.668440984332385]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 89,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Seattle Pops",
+            "type": "Food",
+            "description": "Popsickles ",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38480662638021, 47.6683892001105]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 90,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Scouts Mini Donuts",
+            "type": "Food",
+            "description": "Mini donuts",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38480788941001, 47.66835636133563]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 91,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Sugar + Spoon",
+            "type": "Food",
+            "description": "Ready to eat cookie dough and ice cream",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38480788941001, 47.66830710317335]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 92,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Raspados del Sur",
+            "type": "Food",
+            "description": "Various beverages and sweet treats",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38480978395471, 47.66824584622794]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 93,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Corn Shack",
+            "type": "Food",
+            "description": "Mango cups and more",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38481167849942, 47.668177642618616]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 94,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Carter Volkswagen Subaru",
+            "type": "Sponsor",
+            "description": "Info on Carter Volkswagen Subaru",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38481231001431, 47.66815175050767]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 95,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Carter Volkswagen Subaru",
+            "type": "Sponsor",
+            "description": "Subaru car",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38481231001431, 47.66812333233712]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 96,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Egyptian Mug Coffee and Desserts",
+            "type": "Food",
+            "description": "Espresso and other beverages",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38470828605159, 47.66814513513025]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 97,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Vespucci Pizza",
+            "type": "Food",
+            "description": "Wood-fired pizza",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38470795996439, 47.668202913360524]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 98,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Jarritos",
+            "type": "Sponsor",
+            "description": "Jarritos sodas",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38470734500464, 47.668259489657075]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 99,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Stizzy Works (Boba King)",
+            "type": "Food",
+            "description": "Boba teas",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38470734500464, 47.66830561163796]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 100,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Ibajella's Ice Cream Cane",
+            "type": "Food",
+            "description": "Cotton candy and ice cream",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38470734500464, 47.66834865882012]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 101,
+            "rotate": null,
+            "left_panel": null,
+            "name": "La Crespella",
+            "type": "Food",
+            "description": "Sweet and savory crepes",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38470734500464, 47.668397855599736]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 102,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Wyndham Destinations",
+            "type": "Sponsor",
+            "description": "Info on time shares and purchases",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38465445846657, 47.668506088514874]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 103,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Biringer Farm",
+            "type": "Food",
+            "description": "Strawberry shortcakes",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38461571600263, 47.66855282545551]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 104,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Miss Hannah's Gourmet Popcorn",
+            "type": "Food",
+            "description": "Gourmet popcorn",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38455237514887, 47.66855221049576]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 105,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Wild Bill's Olde Fashioned Soda Pop",
+            "type": "Food",
+            "description": "Various sodas and mugs for purchase",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38447427526124, 47.6685023987564]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 106,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Alaska Weathervane Scallops",
+            "type": "Food",
+            "description": "Scallops",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38429839677413, 47.66845012717807]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 107,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Paella House",
+            "type": "Food",
+            "description": "Paella",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38422214176572, 47.66838432648534]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 108,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Kaleenka Piroshky",
+            "type": "Food",
+            "description": "Piroshky",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38415757099249, 47.66832898010827]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 109,
+            "rotate": null,
+            "left_panel": null,
+            "name": "All About Cookies",
+            "type": "Food",
+            "description": "Pre-made cookies - yum!",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38411083405185, 47.668289007724844]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 110,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Jump",
+            "type": "Sponsor",
+            "description": "Jump bike booth with free demos",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38407393646713, 47.66825948965708]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 111,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Mud Bay",
+            "type": "Sponsor",
+            "description": "Free dog and cat treats and other goodies",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38403580896293, 47.6682256668711]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 112,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Secret Aardvark ",
+            "type": "Sponsor",
+            "description": "Hot sauces and such",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38400820557678, 47.66820261585223]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 113,
+            "rotate": null,
+            "left_panel": null,
+            "name": "King Co. Metro Booth",
+            "type": "Non-Profit",
+            "description": "King County Metro booth",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38396574043038, 47.6681660126665]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 114,
+            "rotate": null,
+            "left_panel": null,
+            "name": "King Co. Metro Bus",
+            "type": "Non-Profit",
+            "description": "40' King County Metro bus",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3839227940613, 47.66812851020335]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 115,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Ballard VFW",
+            "type": "Non-Profit",
+            "description": "Charitable organization",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38387561354315, 47.66809161261864]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 116,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Ballard Lions Club",
+            "type": "Non-Profit",
+            "description": "Free vision screening and more",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38371708950169, 47.66806423296024]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 117,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Fix Enterprises Rock Wall",
+            "type": "Amusement",
+            "description": "Rock climbing wall",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38379353234376, 47.66812996406648]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 118,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Seattle Public Utilties Ship Canal",
+            "type": "Non-Profit",
+            "description": "Info on public utility improvement",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.383865106215, 47.66819179999606]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 120,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Sacred Realm",
+            "type": "A/C",
+            "description": "Brass water bottles",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38398585669164, 47.66829161389812]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 121,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Kevita",
+            "type": "Sponsor",
+            "description": "Kevita kombucha ",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3840481795183, 47.66834517257728]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 122,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Mehndi Madness",
+            "type": "A/C",
+            "description": "Henna tattoos",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38415042790578, 47.66843670922894]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 123,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Viking Kitchen",
+            "type": "Food",
+            "description": "Lobster corndogs",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38417083053993, 47.66854832009216]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 124,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Fresh Squeezed Lemonade",
+            "type": "Food",
+            "description": "Lemonade and other beverages",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3841703102528, 47.66857797645851]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 127,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Glow Tea",
+            "type": "Food",
+            "description": "Teas and other beverages",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38396360387235, 47.66864836580458]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 128,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Fire and Scrape",
+            "type": "Food",
+            "description": "Seafood racelette",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38390797961318, 47.668648890561734]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 129,
+            "rotate": null,
+            "left_panel": false,
+            "name": "The Lemongrass",
+            "type": "Food",
+            "description": "Vietnamese-inspired seafood",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38386023883967, 47.66864843702262]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 130,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Tornado Potato",
+            "type": "Food",
+            "description": "Potato sticks and other seafood",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38380139721693, 47.66864946933179]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 131,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Aunties Family Kitchen",
+            "type": "Food",
+            "description": "Rice bowls and seafood",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38372500633827, 47.66864843702262]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 132,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Gather Kitchen and Bar",
+            "type": "Food",
+            "description": "Grilled octopus and other high end seafood",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38354614625565, 47.668646694604156]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 133,
+            "rotate": null,
+            "left_panel": false,
+            "name": "JJ & Sons Lemonade",
+            "type": "Food",
+            "description": "Lemonade and other beverages",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38350327487763, 47.6686460821559]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 134,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Show Me Your Cones",
+            "type": "Food",
+            "description": "Seafood waffle and cones",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38345822593026, 47.66864601015716]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 135,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Cousins Gourmet",
+            "type": "Food",
+            "description": "Crab and shrimp melts",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38340050969049, 47.66864670553355]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 136,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Vong's Kitchen",
+            "type": "Food",
+            "description": "Honey walnut prawns",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38332262753563, 47.66864740090993]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 137,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Pac Island Grill",
+            "type": "Food",
+            "description": "Hawaiian-inspired seafood",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38324057312248, 47.66864601015716]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 138,
+            "rotate": null,
+            "left_panel": false,
+            "name": "New Orleans Cookery",
+            "type": "Food",
+            "description": "New Orleans style seafood",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3831390481706, 47.66864670553355]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 139,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Pike Place Chowder",
+            "type": "Food",
+            "description": "Lobster rolls and chowder",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38283586406776, 47.66864740090993]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 140,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Wow Wow Hawaiian Lemonade",
+            "type": "Food",
+            "description": "Lemonade and other beverages",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38277884320438, 47.66864740090993]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 141,
+            "rotate": null,
+            "left_panel": false,
+            "name": "True North Coffee Roasters",
+            "type": "Food",
+            "description": "Coffee",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38273990212696, 47.66864740090993]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 142,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Lobster Shack",
+            "type": "Food",
+            "description": "Lobster rolls and more",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38268009975805, 47.66864809628631]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 143,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Panda Dim Sum",
+            "type": "Food",
+            "description": "Dim Sum, elephant ears, and other Asian-inspired seafood",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38261890663637, 47.66864809628631]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 144,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Bread and Circuses",
+            "type": "Food",
+            "description": "Seafood and street tacos",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38255075975087, 47.6686487916627]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 145,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Taco Bahia",
+            "type": "Food",
+            "description": "Fish tacos",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38245757931558, 47.66864809628631]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 146,
+            "rotate": null,
+            "left_panel": false,
+            "name": "The Corn Roasters",
+            "type": "Food",
+            "description": "Corn on the cob",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38238247866626, 47.66864809628631]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 147,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Wich Came First",
+            "type": "Food",
+            "description": "Chicken sandwiches and seafood",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38242350587284, 47.66871485241905]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 148,
+            "rotate": null,
+            "left_panel": false,
+            "name": "C. Davis Texas BBQ",
+            "type": "Food",
+            "description": "Texas style BBQ and southern seafood",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38251529555535, 47.66871485241905]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 149,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Yummy 8 Lunchbox & Catering",
+            "type": "Food",
+            "description": "Asian-inspired seafood",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38260082685042, 47.66871485241905]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 150,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Hapa Garlic Shrimp",
+            "type": "Food",
+            "description": "Garlic shrimp ",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38268427201635, 47.66871554779543]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 151,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Mix Poke Truck",
+            "type": "Food",
+            "description": "Poke bowls",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38276632642952, 47.66871485241906]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 152,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Stizzy Works (Sweet Tea)",
+            "type": "Food",
+            "description": "Teas and other beverages",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38286159299395, 47.668715547795436]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 153,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Simply Soulfood",
+            "type": "Food",
+            "description": "Red beans and rice and seafood",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38294225665433, 47.668715547795436]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 154,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Seoul Bowl Co.",
+            "type": "Food",
+            "description": "Korean-inspired seafood",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3831640817204, 47.668716243171815]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 155,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Kuk Ki by Buddha Bruddah",
+            "type": "Food",
+            "description": "Asian-inspired seafood",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38325726215567, 47.668716243171815]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 156,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Slide Thru",
+            "type": "Food",
+            "description": "Asian-inspired seafood",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3833525287201, 47.668716938548194]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 157,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Off the Rez",
+            "type": "Food",
+            "description": "Native American-inspired seafood",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38357713529169, 47.6687169385482]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 158,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Island Blends Acai",
+            "type": "Food",
+            "description": "Chilled acai bowls",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38367101110335, 47.668716243171815]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 159,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Tuk Tuk Mobile Feast",
+            "type": "Food",
+            "description": "Laosian-inspired seafood",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.383764886915, 47.668716938548194]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 160,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Carlos Catering",
+            "type": "Food",
+            "description": "Filipino-inspired seafood",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38385598122113, 47.66871554779544]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 161,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Hapa Food Company",
+            "type": "Food",
+            "description": "Garlic shrimp, hawaiian treats, grilled cheese",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38409936295507, 47.66871763392458]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 162,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Zieglers Bratwurst Haus",
+            "type": "Food",
+            "description": "Bratwurst and seafood in corndog form",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38417307285165, 47.66871832930096]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 163,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Kornman of Washington ",
+            "type": "Food",
+            "description": "Corn on the cob",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38428495468006, 47.668716451709955]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 164,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Truly Med",
+            "type": "Food",
+            "description": "Mediteranian seafood",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38439420254133, 47.66871624317182]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 165,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Swedish Medical Center",
+            "type": "Sponsor",
+            "description": "Sponsor ",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38451797953743, 47.66871554779544]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 166,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Where Ya At Matt",
+            "type": "Food",
+            "description": "New Orleans style seafood",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3860037894304, 47.66848040440308]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 167,
+            "rotate": null,
+            "left_panel": false,
+            "name": "SoSo Good",
+            "type": "Food",
+            "description": "New Mexican fair (green chili burgers, etc.)",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38594557858973, 47.66843217256367]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 168,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Homestreet Bank Hydro Boat",
+            "type": "Sponsor",
+            "description": "Hydro boat! Vroom! Vroom!",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3845317403648, 47.66747975947525]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 169,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Homestreet Bank",
+            "type": "Sponsor",
+            "description": "Homestreet Bank booth",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38449363316603, 47.66744709616202]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 170,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Ballard P-Patch",
+            "type": "Non-Profit",
+            "description": "Save the Ballard P-Patch",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3844434, 47.6674062]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 171,
+            "rotate": null,
+            "left_panel": false,
+            "name": "A Page Ahead",
+            "type": "Non-Profit",
+            "description": "Non-profit literacy group",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38440860000003, 47.66737877]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 172,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Cornhole Station #1",
+            "type": "Amusement",
+            "description": "Cornhole games",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.384371, 47.66734383]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 173,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Ladderball Station",
+            "type": "Amusement",
+            "description": "Ladderball game",
+            "details": "games"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38429901425803, 47.667286501538634]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 174,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Verity Credit Union Badminton Station",
+            "type": "Amusement",
+            "description": "Badminton game",
+            "details": "games"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38420102431833, 47.667207565198325]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 175,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Giant Jenga Station",
+            "type": "Amusement",
+            "description": "Bigger than life Jenga",
+            "details": "games"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38412549999998, 47.6671486]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 176,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Clover Toys Bubble Station",
+            "type": "Amusement",
+            "description": "Bubble station for kids of all ages",
+            "details": "games"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3840834, 47.66711011]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 177,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Arcadia Aerial Performance",
+            "type": "Amusement",
+            "description": "Aerial acrobatics",
+            "details": "games"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38396557626879, 47.66701158531893]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 178,
+            "rotate": null,
+            "left_panel": false,
+            "name": "AstroTurf Lounge",
+            "type": "Amusement",
+            "description": "Rest area with seating",
+            "details": "games"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38386078147217, 47.66692176120755]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 179,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Bucket Ball Game Station",
+            "type": "Amusement",
+            "description": "Bucket ball game",
+            "details": "games"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.383781, 47.66685335]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 180,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Cornhole Station #2",
+            "type": "Amusement",
+            "description": "Cornhole games",
+            "details": "games"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38374039999997, 47.66681739]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": null,
+            "icon": null,
+            "show_icon": null,
+            "id": 119,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Blue Dahlia Arts",
+            "type": "A/C",
+            "description": "Fine arts and paintings",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38395664286665, 47.668267755941045]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 181,
+            "rotate": null,
+            "left_panel": false,
+            "name": "All the Best Pet Care Doggies SplashTown Pool",
+            "type": "Amusement",
+            "description": "Pool filled with water for dogs to cool off in",
+            "details": "games"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38365663576447, 47.66674755687031]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 182,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Shade Tent",
+            "type": "Amusement",
+            "description": "Shade tent",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38357089456724, 47.66667406441554]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": "svg_WB",
+            "show_icon": "",
+            "id": 193.1,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Honey Buckets",
+            "type": "Restroom",
+            "description": null,
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38585784577248, 47.67071810297509]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": "svg_WB",
+            "show_icon": "",
+            "id": 193.2,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Honey Buckets",
+            "type": "Restroom",
+            "description": null,
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38582464070373, 47.67069402299609]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 194,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Amusements on Demand - Bounce Houses",
+            "type": "Amusement",
+            "description": "Bounce houses",
+            "details": "games"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38540574599085, 47.67069574299495]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 184,
+            "rotate": null,
+            "left_panel": null,
+            "name": "St Luke's Church",
+            "type": "Amusement",
+            "description": "Community organizing",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3848856331266, 47.6703757554951]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 185,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Amusements on Demand - Face Painting",
+            "type": "Amusement",
+            "description": "Face painting",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38488563312654, 47.67032384701731]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": "svg_WB",
+            "show_icon": "",
+            "id": 193.3,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Honey Buckets",
+            "type": "Restroom",
+            "description": null,
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3848901675218, 47.6704658318492]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": "svg_WB",
+            "show_icon": "",
+            "id": 193.4,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Honey Buckets",
+            "type": "Restroom",
+            "description": null,
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3848901675218, 47.670433770791675]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 195,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Parachutes",
+            "type": "Amusement",
+            "description": "Parachute game",
+            "details": "games"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38512482247643, 47.670552091263325]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 183,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Illumination Learning Studio",
+            "type": "Amusement",
+            "description": "Children's entertainment: sidewalk chalk, hula hoops, bubbles, and more!",
+            "details": "games"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38519057120766, 47.670449801322896]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 196,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Fire Department ",
+            "type": "Fire Department",
+            "description": "Fire Department fire truck/s",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38484142277287, 47.67075209041837]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 186,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Full Tilt Ice Cream",
+            "type": "Food",
+            "description": "Ice cream",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38502481163651, 47.67022773106862]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 187,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Lil J's SuperDawgs",
+            "type": "Food",
+            "description": "Hot dogs and beverages",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38512535000403, 47.67022851043581]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 188,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Girl Scout Troop 40827",
+            "type": "Non-Profit",
+            "description": "Girl Scouts booth",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38522432963717, 47.67029163917821]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 189,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Boy Scout Troop 827",
+            "type": "Non-Profit",
+            "description": "Boy Scouts booth",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38526953293419, 47.67029008044383]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 190,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Seattle Police Mobile Precinct Unit",
+            "type": "Police Vehicle",
+            "description": "Mobile police unit",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38567695594907, 47.67018877976878]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": null,
+            "icon": "svg_WB",
+            "show_icon": null,
+            "id": 193.5,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Honey Buckets",
+            "type": "Restroom",
+            "description": null,
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38533228635788, 47.66778072627016]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": null,
+            "icon": "svg_contestEating",
+            "show_icon": null,
+            "id": 9992,
+            "rotate": null,
+            "left_panel": true,
+            "name": "Lutefisk Contest",
+            "type": "Entertainment",
+            "description": null,
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38473683595657, 47.668669406263234]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": null,
+            "icon": "svg_info",
+            "show_icon": null,
+            "id": 9991,
+            "rotate": null,
+            "left_panel": true,
+            "name": "SeafoodFest Info",
+            "type": "Info Booth",
+            "description": null,
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38482803106308, 47.668685662463645]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": null,
+            "icon": "svg_tickets",
+            "show_icon": "true",
+            "id": 9988,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Beer + Cocktail Garden Token Sales",
+            "type": "Sponsor",
+            "description": "Beer + Cocktail Garden Token Sales",
+            "details": "info"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38590627908707, 47.66837679379004]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": null,
+            "icon": "svg_tickets",
+            "show_icon": null,
+            "id": 9990,
+            "rotate": null,
+            "left_panel": true,
+            "name": "Token Sales",
+            "type": "Sponsor",
+            "description": "Order and purchase token for Visit Ballard Seafood (Trident Seafoods Alder smoked salmon BBQ dinner, King crab legs, Steamed Mussels, BBQ Oysters)",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3848307132721, 47.6687633309068]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": null,
+            "icon": "svg_tickets",
+            "show_icon": "true",
+            "id": 9989,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Beer + Cocktail Garden Token Sales",
+            "type": "Sponsor",
+            "description": "Beer + Cocktail Garden Token Sales",
+            "details": "info"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38542884588242, 47.66810224232347]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": null,
+            "icon": null,
+            "show_icon": null,
+            "id": 126,
+            "rotate": null,
+            "left_panel": false,
+            "name": "Anthony's Concessions",
+            "type": "Food",
+            "description": "Fried PB & J's and other sweet treats",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.38403243416364, 47.668648215220905]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": null,
+            "icon": null,
+            "show_icon": null,
+            "id": 125,
+            "rotate": null,
+            "left_panel": false,
+            "name": "The Fork & Fin",
+            "type": "Food",
+            "description": "Fish and chips",
+            "details": null
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3841286872825, 47.66864925579517]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 9996,
+            "rotate": 45,
+            "left_panel": null,
+            "name": "VIP Area",
+            "type": "Amusement",
+            "description": null,
+            "details": null
+        },
+        "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [-122.38472727267447, 47.667846996745006],
+                    [-122.38478193307787, 47.667846948438154],
+                    [-122.38478122471639, 47.66768132135822],
+                    [-122.3849372508646, 47.66778534924358],
+                    [-122.38494611056728, 47.667766048839944],
+                    [-122.3847345371467, 47.667619288518395],
+                    [-122.3847282067257, 47.66762573147212],
+                    [-122.38472727267447, 47.667846996745006]
+                ]
+            ]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": null,
+            "icon": null,
+            "show_icon": null,
+            "id": 9997,
+            "rotate": null,
+            "left_panel": true,
+            "name": "Gravity Payments Main Stage",
+            "type": "Amusement",
+            "description": null,
+            "details": null
+        },
+        "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [-122.38469759754508, 47.66757226048443],
+                    [-122.38468337256774, 47.66755948776159],
+                    [-122.38473197457381, 47.66751105782574],
+                    [-122.38474540927461, 47.66752383056044],
+                    [-122.38469759754508, 47.66757226048443]
+                ]
+            ]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "true",
+            "icon": null,
+            "show_icon": null,
+            "id": 9999,
+            "rotate": 45,
+            "left_panel": true,
+            "name": "Beer Garden",
+            "type": "Amusement",
+            "description": null,
+            "details": null
+        },
+        "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [-122.38582787394608, 47.66836390974284],
+                    [-122.38494611043205, 47.667766048531135],
+                    [-122.38493724964928, 47.66778534860657],
+                    [-122.38478122361835, 47.667681321048114],
+                    [-122.38478193609774, 47.667846933841325],
+                    [-122.38472724222834, 47.66784699764194],
+                    [-122.38472820283823, 47.66762571629623],
+                    [-122.38479763139867, 47.667555325463674],
+                    [-122.38587814420896, 47.66828285717026],
+                    [-122.38582787394608, 47.66836390974284]
+                ]
+            ]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "true",
+            "icon": null,
+            "show_icon": "false",
+            "id": 9993,
+            "rotate": 90,
+            "left_panel": true,
+            "name": "Trident Seafoods Salmon BBQ",
+            "type": "Food",
+            "description": null,
+            "details": null
+        },
+        "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [-122.38468713647075, 47.6688159392528],
+                    [-122.38479009181071, 47.66881490464845],
+                    [-122.38478924876485, 47.669375052444025],
+                    [-122.38468565658242, 47.66937556471307],
+                    [-122.38468713647075, 47.6688159392528]
+                ]
+            ]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "true",
+            "icon": null,
+            "show_icon": null,
+            "id": 197,
+            "rotate": null,
+            "left_panel": true,
+            "name": "Big Purple Slide",
+            "type": "Amusement",
+            "description": null,
+            "details": null
+        },
+        "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [-122.38468329175271, 47.66981447621107],
+                    [-122.38468642818376, 47.669565428435504],
+                    [-122.38479494064286, 47.669564591986614],
+                    [-122.38479266389157, 47.669814123924894],
+                    [-122.38468329175271, 47.66981447621107]
+                ]
+            ]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "true",
+            "icon": null,
+            "show_icon": null,
+            "id": 9994,
+            "rotate": 50,
+            "left_panel": true,
+            "name": "Game Plank",
+            "type": "Amusement",
+            "description": null,
+            "details": null
+        },
+        "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [-122.38462611720382, 47.66748616991782],
+                    [-122.38458489563476, 47.667509557108076],
+                    [-122.3831346781825, 47.66633160397732],
+                    [-122.38317710242336, 47.66630915209112],
+                    [-122.38462611720382, 47.66748616991782]
+                ]
+            ]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "true",
+            "icon": null,
+            "show_icon": null,
+            "id": 9995,
+            "rotate": 90,
+            "left_panel": true,
+            "name": "Ballard Market Kid's Deck",
+            "type": "Amusement",
+            "description": null,
+            "details": null
+        },
+        "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [-122.38479836620957, 47.67090255196966],
+                    [-122.38469045795074, 47.6709010324986],
+                    [-122.38468396153502, 47.6698361439624],
+                    [-122.3847917594826, 47.66983614619364],
+                    [-122.3847910783553, 47.67014563238319],
+                    [-122.38548584542093, 47.67014857346498],
+                    [-122.38548711912796, 47.670221171062174],
+                    [-122.3847913060199, 47.67021822555638],
+                    [-122.38479836620957, 47.67090255196966]
+                ]
+            ]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "true",
+            "icon": null,
+            "show_icon": null,
+            "id": 192,
+            "rotate": null,
+            "left_panel": true,
+            "name": "Festi-Bowl",
+            "type": "Amusement",
+            "description": null,
+            "details": null
+        },
+        "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [-122.38574941633266, 47.67031887574441],
+                    [-122.38578884660978, 47.67040416845895],
+                    [-122.38579630148774, 47.670461637501525],
+                    [-122.38578668556238, 47.670488183188795],
+                    [-122.38577067982948, 47.67051145300618],
+                    [-122.38571589333128, 47.67055641811512],
+                    [-122.38564451088928, 47.67059921049878],
+                    [-122.38549732071328, 47.67052309333033],
+                    [-122.38549838008385, 47.67045208439667],
+                    [-122.38552608215394, 47.67041030924871],
+                    [-122.38556484725638, 47.67036701317991],
+                    [-122.38561054318501, 47.670315969071595],
+                    [-122.38574941633266, 47.67031887574441]
+                ]
+            ]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "show_label": "",
+            "icon": null,
+            "show_icon": "",
+            "id": 191,
+            "rotate": null,
+            "left_panel": null,
+            "name": "Kid's Deck Stage",
+            "type": "Amusement",
+            "description": null,
+            "details": null
+        },
+        "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [-122.38546609491368, 47.67049375176304],
+                    [-122.38554782750828, 47.670377655466105],
+                    [-122.38551590071347, 47.67036475586159],
+                    [-122.3854316139753, 47.67048171215906],
+                    [-122.38546609491368, 47.67049375176304]
+                ]
+            ]
+        }
+    }]
+}

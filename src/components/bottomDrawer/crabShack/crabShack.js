@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './crabShack.css';
+import './crabShack.scss';
 
 class CrabShack extends Component {
 
@@ -12,24 +12,24 @@ class CrabShack extends Component {
         <table>
           <tbody>
           <tr>
-            <td><b>Saturday - July 14th</b></td>
-            <td>11:00am - 9:00pm</td>
+            <td><b>Saturday - July 13th</b></td>
+            <td>11:00am - 8:00pm</td>
           </tr>
           <tr>
-            <td><b>Sunday - July 15th</b></td>
-            <td>11:00am - 8:00pm</td>
+            <td><b>Sunday - July 14th</b></td>
+            <td>11:00am - 7:00pm</td>
           </tr>
           </tbody>
         </table>
 
         <br/>
-        Back by popular demand, we are featuring the Trident Seafoods Crab Legs and have added more seafood offerings this year!<br /><br />
-        On Saturday and Sunday, we’ll be serving up some of Trident’s finest Alaskan King crab legs, butter and cocktail sauce for $15. Enjoy your crab legs in the comfort of the Crab Lounge.<br /><br />
-        Penn Cove Mussels steamed in a wine butter broth and barbequed oysters will be on the menu this year. We are offering a generous serving for $12 that you can enjoy in the Crab Lounge<br /><br />
 
-        <div className="draweSubHead">TOKEN PURCHASE</div>
-        Tokens are available at the Information Booth and Beer Garden: Salmon, Crab, mussels, bbq oysters and Salmon Token Sales Stations located at 22nd Ave NW and NW Market Street (next to Starbucks). We have a limited quantity of these tasty seafood offerings, so buy your tokens early!
-        PURCHASE TOKENS FIRST THEN PICK UP (Crab Legs – Steamed Mussels – BBQ Oysters) ON THE SOUTH SIDE OF MARKET STREET ON 22nd AVE NW (In front of Vera’s Restaurant and across from Bergen Place Park)
+        On Saturday and Sunday, we’ll be serving up some of Trident Seafood’s finest Alaskan King crab legs, butter and cocktail sauce for $15. Steamed Penn Cove Mussels and fresh barbecued Oysters are available for $12.<br/><br/>
+        <b>TICKET PURCHASE:</b>
+        <br/>
+        Order items at the Visit Ballard Seafood Sales tent located at 22nd Ave NW and NW Market Street (next to Starbucks) and pick up your food at the Trident Seafoods/Visit Ballard Seafood Pick-up tent on 22nd Ave NW.
+        <br/>
+        Limited quantity of these items.
 
       </div>
     );

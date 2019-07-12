@@ -1,16 +1,16 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
-import Icon from '@material-ui/core/Icon';
+import { Close } from '@material-ui/icons';
 
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import {connect} from "react-redux";
 import {toggleBottomDrawer} from '../../redux/actions';
-import './bottomDrawer.css';
-import imgIconArts from '../../images/icons/svg_arts.svg'
-import imgIconFoods from '../../images/icons/svg_foods.svg'
-import imgIconSponsors from '../../images/icons/svg_sponsors_NP.svg'
-import imgIconMisc from '../../images/icons/svg_misc.svg'
+import './bottomDrawer.scss';
+import imgIconArts from '../../images/icons/svg_arts_2019.svg'
+import imgIconFoods from '../../images/icons/svg_foods_2019.svg'
+import imgIconSponsors from '../../images/icons/svg_sponsors_NP_2019.svg'
+import imgIconMisc from '../../images/icons/svg_misc_2019.svg'
 import imgIconRestroom from '../../images/icons/svg_WB.svg'
 import imgIconCrab from '../../images/icons/svg_crab.svg'
 import imgIconInfo from '../../images/icons/svg_info.svg'
@@ -66,7 +66,8 @@ class BottomSheet extends Component {
     "Seafood Shack": imgIconCrab,
     "SeafoodFest Info": imgIconInfo,
     "Lutefisk Contest": imgIconContest,
-    "Token sales": imgIconTickets,
+    "Token Sales": imgIconTickets,
+    "Beer + Cocktail Garden Token Sales": imgIconTickets
   }
 
   games = [
@@ -117,9 +118,9 @@ class BottomSheet extends Component {
           <div className="wrapperText">
             {header}
 
-            <Icon onClick={()=>{toggleBottomDrawer(false)}} className={classes.icon}>
+            <Close onClick={()=>{toggleBottomDrawer(false)}} className={classes.icon}>
               close
-            </Icon>
+            </Close>
 
             <div className="content-wrapper">
               <div className="title">{data.name}</div>

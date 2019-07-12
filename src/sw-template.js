@@ -51,7 +51,7 @@ if ('function' === typeof importScripts) {
       Cache map tiles from the external mapbox root url - for only successfull responses.
     */ 
     workbox.routing.registerRoute(
-      new RegExp('^https://api.mapbox.com/v4/mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v7,spatialdev.45mt0wo1,spatialdev.00lrg24b/'),
+      new RegExp('^https://api.mapbox.com/v4/spatialdev.88c2dyqc,mapbox.mapbox-streets-v8,spatialdev.5gfdtu5m,mapbox.mapbox-terrain-v2/'),
       new workbox.strategies.CacheFirst({
         cacheName: 'sf-map-tile-cache',
         plugins: [
