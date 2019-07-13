@@ -29,7 +29,7 @@ class Stage extends Component {
               textColor="primary"
               scrollButtons="on"
               variant="scrollable"
-              scrollable>
+              scrollable="true">
           <Tab label="Friday July 12th" />
           <Tab label="Saturday - July 13th" />
           <Tab label="Sunday - July 14th" />
