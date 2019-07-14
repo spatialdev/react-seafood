@@ -140,7 +140,7 @@ class BottomSheet extends Component {
     if (item.hasOwnProperty("id")) {
 
       switch (item.name) {
-        case "Trident Seafoods Alder-smoked Salmon":
+        case "Trident Seafoods Salmon BBQ":
           return (
             <SmokedSalmon />
           );
@@ -210,7 +210,7 @@ class BottomSheet extends Component {
         </div>
       )
       // If custom pin exists
-    } else if (typeof svgPin !== "undefined" && data.name !== "Trident Seafoods Alder-smoked Salmon") {
+    } else if (typeof svgPin !== "undefined" && data.name !== "Trident Seafoods Salmon BBQ") {
       return (
         <div className="key-wrapper">
           <div className="key-id">
