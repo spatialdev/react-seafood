@@ -18,6 +18,10 @@ class Stage extends Component {
     const { value } = this.state;
 
     return (
+      null
+
+      /* Leaving bottom drawer details out in 2022 app
+      
       <div className="stage">
         Wall-to-wall music Friday, Saturday and Sunday. What is Seattle without more music?
         <br /><br />
@@ -104,7 +108,7 @@ class Stage extends Component {
             </tbody>
           </table>
         </TabContainer>}
-      </div>
+      </div>*/
     );
   }
 }

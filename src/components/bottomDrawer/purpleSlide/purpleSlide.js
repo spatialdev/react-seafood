@@ -6,6 +6,10 @@ class PurpleSlide extends Component {
   render() {
 
     return (
+      null
+
+      /* Leaving bottom drawer details out in 2022 app
+      
       <div className="purpleSlide">
         A Ballard SeafoodFest mainstay, the Big Purple Slide has been delivering the fun to kids young and old for years.
         <br/><br/>
@@ -21,7 +25,7 @@ class PurpleSlide extends Component {
           </tr>
         </tbody>
         </table>
-      </div>
+      </div>*/
     );
   }
 }

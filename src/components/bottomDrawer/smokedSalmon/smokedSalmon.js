@@ -6,6 +6,10 @@ class SmokedSalmon extends Component {
   render() {
 
     return (
+      null
+
+      /* Leaving bottom drawer details out in 2022 app
+      
       <div className="smokedSalmon">
         A Festival favorite: Trident Seafoods Alder-smoked salmon, garlic bread, cole slaw, and a choice of water.
         <div className="price">$14 per person.</div>
@@ -16,7 +20,7 @@ class SmokedSalmon extends Component {
         Ave NW and NW Market Street (next to Starbucks).
         <br/>
         Pick up your meal at the Trident Seafoods/Visit Ballard Seafood Pick up tent on 22nd Avenue.
-      </div>
+      </div>*/
     );
   }
 }

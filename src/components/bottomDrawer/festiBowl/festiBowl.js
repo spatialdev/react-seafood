@@ -18,6 +18,10 @@ class FestiBowl extends Component {
     const {value} = this.state;
 
     return (
+      null
+
+      /* Leaving bottom drawer details out in 2022 app
+      
       <div className="festiBowl">
 
         Welcome to Festi-Bowl, Ballard’s celebration of all things Skateboard.
@@ -71,7 +75,7 @@ class FestiBowl extends Component {
         </TabContainer>}
 
         <div className="small">Note: Times are subject to change based on participation</div>
-      </div>
+      </div>*/
     );
   }
 }

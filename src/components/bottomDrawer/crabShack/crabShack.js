@@ -6,6 +6,10 @@ class CrabShack extends Component {
   render() {
 
     return (
+      null
+
+      /* Leaving bottom drawer details out in 2022 app
+      
       <div className="crabShack">
         <div className="drawerSubHead">Hours</div>
 
@@ -31,7 +35,7 @@ class CrabShack extends Component {
         <br/>
         Limited quantity of these items.
 
-      </div>
+      </div>*/
     );
   }
 }

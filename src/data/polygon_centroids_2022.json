@@ -1,0 +1,93 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "9993",
+        "name": "Salmon BBQ",
+        "type": "Food Vendor",
+        "show_label": "true",
+        "icon": null,
+        "show_icon": "false",
+        "rotate": "90",
+        "left_panel": "true",
+        "description": null,
+        "details": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.38473804090941,
+          47.669095653408625
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "9999",
+        "name": "Beer Garden",
+        "type": "Amusement",
+        "show_label": "true",
+        "icon": null,
+        "show_icon": null,
+        "rotate": "45",
+        "left_panel": "true",
+        "description": null,
+        "details": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3855750262877,
+          47.66815433608515
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "197",
+        "name": "Giant European Slide",
+        "type": "Kids Activities",
+        "show_label": "true",
+        "icon": null,
+        "show_icon": null,
+        "rotate": null,
+        "left_panel": "true",
+        "description": null,
+        "details": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.38475124705751,
+          47.66974542503336
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "9997",
+        "name": "Main Stage",
+        "type": "Amusement",
+        "show_label": null,
+        "icon": null,
+        "show_icon": null,
+        "rotate": null,
+        "left_panel": "true",
+        "description": null,
+        "details": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.38473310628295,
+          47.66753474853468
+        ]
+      }
+    }
+  ]
+}

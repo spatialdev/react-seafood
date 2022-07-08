@@ -6,6 +6,10 @@ class GamePlank extends Component {
   render() {
 
     return (
+      null
+
+      /* Leaving bottom drawer details out in 2022 app
+      
       <div className="gamePlank">
         Continue on down Ballard Avenue, just past the Gravity Payments MainStage,
         and enjoy the Game Plank hosted by Homestreet Bank, Verity Credit Union and All the Best Pet Care!<br/>
@@ -29,7 +33,7 @@ class GamePlank extends Component {
         Verity Credit Union Badminton Station<br />
         and much more fun for the young at heart!<br /><br />
         HomeStreet Bank will be displaying the HomeStreet Bank Hydroplane replica, “Miss HomeStreet” stop by their booth and say hi. You won’t want to miss it!
-      </div>
+      </div>*/
     );
   }
 }
