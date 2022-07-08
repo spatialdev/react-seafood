@@ -6,6 +6,10 @@ class Lutefisk extends Component {
   render() {
 
     return (
+      null
+
+      /* Leaving bottom drawer details out in 2022 app
+      
       <div className="lutefisk">
         <b>Lutefisk Eating Contest</b>
         <br/>
@@ -21,7 +25,7 @@ class Lutefisk extends Component {
         The contestant participation fee is only $10 and you will receive a t-shirt and all (hopefully) the lutefisk you can eat!
         <div className="drawerSubHead">Prizes:</div>
         Cash prizes will be awarded to the top winners.
-      </div>
+      </div>*/
     );
   }
 }

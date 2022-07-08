@@ -21,7 +21,7 @@ import imgIconArts from '../../images/icons/svg_arts_2019.svg'
 import imgIconFoods from '../../images/icons/svg_foods_2019.svg'
 import imgIconSponsors from '../../images/icons/svg_sponsors_NP_2019.svg'
 import imgIconMisc from '../../images/icons/svg_misc_2019.svg'
-import imgIconGames from '../../images/icons/mb_star-15.svg';
+import imgKidsActivities from '../../images/icons/svg_kids_2022.svg';
 
 
 const styles = theme => ({
@@ -135,13 +135,13 @@ class LeftDrawer extends Component {
           </div>
           <div className="legend-item-wrapper">
             <span className="legend-box">
-              <img alt="Miscellaneous" className="map-pin" src={imgIconMisc}/></span>
-            <span className="legend-item-text">Other</span>
+              <img alt="Kids Activities" className="map-pin" src={imgKidsActivities} /></span>
+            <span className="legend-item-text">Kids Activities</span>
           </div>
           <div className="legend-item-wrapper">
             <span className="legend-box">
-              <img alt="Games" className="map-pin games-icon" src={imgIconGames} /></span>
-            <span className="legend-item-text">Games</span>
+              <img alt="Miscellaneous" className="map-pin" src={imgIconMisc}/></span>
+            <span className="legend-item-text">Other</span>
           </div>
         </div>
 
@@ -163,10 +163,19 @@ class LeftDrawer extends Component {
             // Close the right & left menu
             toggleRightDrawer(true);
             toggleLeftDrawer(false);
-            setTabValue({index: 2, name: "A/C"});
-            selectLeftMenuItem("A/C");
+            setTabValue({index: 2, name: "Arts/Crafts"});
+            selectLeftMenuItem("Arts/Crafts");
           }}>
             <ListItemText disableTypography={true} classes={{root: 'list-item-text'}} primary="Arts & Crafts Vendors"/>
+          </ListItem>
+          <ListItem className="list-item-wrapper" button onClick={() => {
+            // Close the right & left menu
+            toggleRightDrawer(true);
+            toggleLeftDrawer(false);
+            setTabValue({index: 3, name: "Kids Activities"});
+            selectLeftMenuItem("Kids Activities");
+          }}>
+            <ListItemText disableTypography={true} classes={{root: 'list-item-text'}} primary="Kids Activities"/>
           </ListItem>
           {menuItems.map((item, index) => {
             return (

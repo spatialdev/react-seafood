@@ -18,6 +18,10 @@ class KidsDeck extends Component {
     const { value } = this.state;
 
     return (
+      null
+
+      /* Leaving bottom drawer details out in 2022 app
+      
       <div className="kidsDeck">
         Attention Parents and Kids! Don’t miss the fun in Ballard Commons Park! Check out these free and paid activities to keep little barnacles happy and entertained.
         <div className="drawerSubHead">Schedule</div>
@@ -93,7 +97,7 @@ class KidsDeck extends Component {
           <b> 2:00 p.m. –  3:00 p.m.</b>
 
         </TabContainer>}
-      </div>
+      </div>*/
     );
   }
 }

@@ -7,6 +7,10 @@ class BeerGarden extends Component {
   render() {
 
     return (
+      null
+
+      /* Leaving bottom drawer details out in 2022 app
+      
       <div className="beerGarden">
         Enjoy Ballard beers from 12 of our breweries.
         <br/>
@@ -40,7 +44,7 @@ class BeerGarden extends Component {
             <div key={brewery}>{brewery}</div>
           )
         })}
-      </div>
+      </div>*/
     );
   }
 }

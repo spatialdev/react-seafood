@@ -104,10 +104,9 @@ class Map extends Component {
         ["!=", "type", "Amusement"],
         ["!=", "type", "Restroom"],
         ["!=", "type", "Entertainment"],
-        ["!=", "type", "Info Booth"],
-        ["!=", "name", "Seafood Shack"],
-        ["!=", "name", "Token Sales"],
-        ["!=", "name", "Trident Seafoods Salmon BBQ"],
+        ["!=", "type", "Event Support"],
+        ["!=", "name", "Beer Garden Token Sales"],
+        ["!=", "name", "Salmon BBQ"],
         ["==", "id", data.id],
         ["!=", "show_icon", true]
       ]);
