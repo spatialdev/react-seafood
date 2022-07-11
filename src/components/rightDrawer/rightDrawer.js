@@ -30,12 +30,11 @@ const styles = theme => ({
 
 const filters = [
   "All",
-  "Food",
-  "A/C",
-  "Amusement",
+  "Food Vendor",
+  "Arts/Crafts",
+  "Kids Activities",
   "Non-Profit",
-  "Police",
-  "Restroom",
+  "Government",
   "Sponsor"
 ]
 
@@ -89,10 +88,9 @@ class RightMenu extends Component {
         ["!=", "type", "Amusement"],
         ["!=", "type", "Restroom"],
         ["!=", "type", "Entertainment"],
-        ["!=", "type", "Info Booth"],
-        ["!=", "name", "Seafood Shack"],
-        ["!=", "name", "Token Sales"],
-        ["!=", "name", "Trident Seafoods Salmon BBQ"],
+        ["!=", "type", "Event Support"],
+        ["!=", "name", "Beer Garden Token Sales"],
+        ["!=", "name", "Salmon BBQ"],
         ["==", "id", vendor.properties.id],
         ["!=", "show_icon", true]
       ]);
@@ -106,7 +104,7 @@ class RightMenu extends Component {
     const { open, anchor, tabs } = rightDrawerOptions;
 
     let activeItems = polygonData.features.filter((item) => {
-      return tabs.index !== 0 ? filters.indexOf(item.properties.type) === tabs.index : true;
+      return tabs.index !== 0 ? filters.indexOf(item.properties.type) === tabs.index : (filters.includes(item.properties.type));
     })
 
     return (
@@ -133,7 +131,7 @@ class RightMenu extends Component {
             <Tab classes={{root: classes.tabRoot}} label="All" />
             <Tab classes={{root: classes.tabRoot}} label="Food" />
             <Tab classes={{root: classes.tabRoot}} label={<span>Arts <br/>& Crafts</span>} />
-            <Tab classes={{root: classes.tabRoot}} label="Entertainment" />
+            <Tab classes={{root: classes.tabRoot}} label="Kids Activities" />
           </Tabs>
 
           <List
