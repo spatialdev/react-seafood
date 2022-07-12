@@ -312,6 +312,28 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 14.5,
+        "name": "Psychic Readings",
+        "type": "Arts/Crafts",
+        "show_label": "",
+        "icon": "",
+        "show_icon": "",
+        "rotate": "",
+        "left_panel": "",
+        "description": "",
+        "details": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.38625530993497,
+          47.66873434964762
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "id": 15,
         "name": "Mandala Moon Candle Co.",
         "type": "Arts/Crafts",
@@ -328,6 +350,28 @@
         "coordinates": [
           -122.38620300726733,
           47.668687469159366
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 15.5,
+        "name": "Imagination in Design",
+        "type": "Arts/Crafts",
+        "show_label": "",
+        "icon": "",
+        "show_icon": "",
+        "rotate": "",
+        "left_panel": "",
+        "description": "",
+        "details": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.38620300726733,
+          47.66873434964762
         ]
       }
     },
@@ -1766,6 +1810,27 @@
       "properties": {
         "id": 81,
         "name": "Sugar + Spoon",
+        "type": "Food Vendor",
+        "show_label": "",
+        "icon": "",
+        "show_icon": "",
+        "rotate": "",
+        "left_panel": "",
+        "description": "",
+        "details": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.38420151, 47.66863724
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 81.5,
+        "name": "Such A Slush",
         "type": "Food Vendor",
         "show_label": "",
         "icon": "",
