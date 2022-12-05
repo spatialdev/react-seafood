@@ -33,7 +33,7 @@ Mapbox Studio is used to to host the two static geojson files located in src/dat
 
 #### [polygons_2018.json](/src/data/polygons_2018.json)
 
-This is a geojson FeatureCollection that contains location and metadata for for all vendor, entertainment, arts & crafts. Each feature contains a properties object with the following information
+This is a geojson FeatureCollection that contains location and metadata for for all vendor, entertainment, arts & crafts. Each feature contains a properties object with the following information:
 
 ```json
   "properties": {
