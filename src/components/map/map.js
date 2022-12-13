@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux'
 import { withStyles } from '@mui/material/styles';
-import withWidth from "@mui/material/withWidth/index";
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import './map.scss';
@@ -208,4 +207,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(withWidth()(withStyles(styles, { withTheme: true })(Map)));
+export default connect(mapStateToProps)((withStyles(styles, { withTheme: true })(Map)));

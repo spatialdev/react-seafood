@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types';
 import { withStyles } from '@mui/material/styles';
-import withWidth from '@mui/material/withWidth';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
@@ -216,4 +215,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(withWidth()(withStyles(styles, { withTheme: true })(LeftDrawer)));
+export default connect(mapStateToProps)((withStyles(styles, { withTheme: true })(LeftDrawer)));
