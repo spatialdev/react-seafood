@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux'
-import { withStyles } from '@material-ui/core/styles';
-import withWidth from "@material-ui/core/withWidth/index";
+import { withStyles } from '@mui/material/styles';
+import withWidth from "@mui/material/withWidth/index";
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import './map.scss';

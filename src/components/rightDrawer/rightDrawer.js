@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
 import PropTypes from 'prop-types';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import {withStyles} from '@material-ui/core/styles';
-import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import {withStyles} from '@mui/material/styles';
+import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import {
   toggleRightDrawer, setTabValue, toggleBottomDrawer,
   setBottomDrawerData, selectRightMenuItem

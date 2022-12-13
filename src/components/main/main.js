@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux'
+import React, { useEffect } from 'react';
+import { connect, useDispatch, useSelector } from 'react-redux'
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { withStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Button from '@material-ui/core/Button';
-import Hidden from '@material-ui/core/Hidden';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+import { withStyles } from '@mui/material/styles';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Button from '@mui/material/Button';
+import Hidden from '@mui/material/Hidden';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
 import { toggleLeftDrawer, toggleRightDrawer, toggleBottomDrawer } from '../../redux/actions';
 import LeftDrawer from '../leftDrawer/leftDrawer';
 import RightDrawer from '../rightDrawer/rightDrawer';
@@ -65,70 +65,52 @@ const styles = theme => ({
   }
 });
 
-class Main extends Component {
+const dispatch = useDispatch()
 
-  componentDidUpdate() {
+const resetView = () => {
+  dispatch(toggleLeftDrawer(false));
+  dispatch(toggleRightDrawer(false));
+  dispatch(toggleBottomDrawer(false));
+}
+
+const Main = () => {
+
+  useEffect(() =>  {
     console.log(`updated state: ${this.props}`)
-  }
+  }, []);
+  
+  const state = useSelector(state => state)
+  console.log(state)
 
-  resetView () {
-    const { map } = this.props;
+  map.flyTo({
+    center: [-122.38473415374757, 47.668667600018416],
+    zoom: 18
+  })
 
-    toggleLeftDrawer(false);
-    toggleRightDrawer(false);
-    toggleBottomDrawer(false);
-
-    map.flyTo({
-      center: [-122.38473415374757, 47.668667600018416],
-      zoom: 18
-    })
-  }
-
-  render() {
-    const { classes } = this.props;
-
-    return (
-      <div className={classes.root}>
-        <div>
-          <AppBar className={classes.toolbar + ` toolbar`}>
-            <Toolbar disableGutters={true}>
-              <Hidden mdUp>
-              <IconButton
-                aria-label="open drawer"
-                onClick={()=>{toggleLeftDrawer(true)}}
-                className={classNames(classes.menuButton)}>
-                <MenuIcon/>
-              </IconButton>
-              </Hidden>
-              <div className={classes.flex}>
-                <img alt="Reset application" onClick={()=>{this.resetView()}} className={classes.navLogo} src={imgNavLogo} />
-              </div>
-              <Button  onClick={()=>{toggleRightDrawer(true)}} className="vendorButton">Vendor List</Button>
-            </Toolbar>
-          </AppBar>
-          <LeftDrawer/>
-          <RightDrawer/>
-        </div>
+  return (
+    <div className={styles.root}>
+      <div>
+        <AppBar className={styles.toolbar + ` toolbar`}>
+          <Toolbar disableGutters={true}>
+            <Hidden mdUp>
+            <IconButton
+              aria-label="open drawer"
+              onClick={()=>{dispatch(toggleLeftDrawer(true))}}
+              className={classNames(styles.menuButton)}>
+              <MenuIcon/>
+            </IconButton>
+            </Hidden>
+            <div className={styles.flex}>
+              <img alt="Reset application" onClick={()=>{resetView}} className={styles.navLogo} src={imgNavLogo} />
+            </div>
+            <Button  onClick={()=>{dispatch(toggleRightDrawer(true))}} id="vendorButton" className="vendorButton">Vendor List</Button>
+          </Toolbar>
+        </AppBar>
+        <LeftDrawer/>
+        <RightDrawer className="rightDrawer" id="rightDrawer"/>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
-Main.propTypes = {
-  classes: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired,
-  polygonData: PropTypes.object.isRequired,
-  leftDrawerOptions: PropTypes.object.isRequired,
-  map: PropTypes.object.isRequired
-};
-
-function mapStateToProps(state) {
-  return {
-    polygonData: state.polygonData,
-    active: state.active,
-    leftDrawerOptions: state.leftDrawerOptions,
-    map: state.map
-  };
-}
-
-export default connect(mapStateToProps)(withStyles(styles, { withTheme: true })(Main));
+export default Main;

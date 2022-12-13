@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {withStyles} from '@material-ui/core/styles';
-import { Close } from '@material-ui/icons';
+import {withStyles} from '@mui/material/styles';
+import { Close } from '@mui/icons-material';
 
-import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import {connect} from "react-redux";
 import {toggleBottomDrawer} from '../../redux/actions';
 import './bottomDrawer.scss';
@@ -29,7 +29,7 @@ import PurpleSlide from './purpleSlide/purpleSlide';
 import CrabShack from './crabShack/crabShack';
 import Lutefisk from './lutefisk/lutefisk';
 
-const styles = theme => ({
+const styles = (theme) => ({
   sheet: {},
   list: {
     width: 250,
@@ -51,9 +51,105 @@ const styles = theme => ({
   }
 });
 
-class BottomSheet extends Component {
+const getHeader = (data) => {
 
-  imgIconTypeMap = {
+  let svgPin = imgIconTypeMap[data.type];
+  let svgIcon = imgIconNameMap[data.name];
+
+  // If icon exists, render
+  if (typeof svgIcon !== "undefined") {
+    return (<div className="key-wrapper">
+        <div className="svg-icon">
+          <img alt="Featured vendor icon" src={svgIcon}/>
+        </div>
+      </div>
+    )
+    // If custom pin exists
+  } else if (typeof svgPin !== "undefined" && data.name !== "Trident Seafoods Salmon BBQ") {
+    return (
+      <div className="key-wrapper">
+        <div className="key-id">
+          {data.id}
+        </div>
+        <div className="svg-pin">
+          <img alt="Vendor icon" src={svgPin}/>
+        </div>
+      </div>)
+    // Show nothing
+  }  else if (data.details === "games") {
+    return (
+      <div className="key-wrapper">
+        <div className="svg-games">
+        <img alt="Games icon" src={imgIconGames}/>
+        </div>
+    </div>)
+  } else {
+    return null;
+  }
+}
+
+const getBottomSheetTemplate = (item) => {
+
+  if (item.hasOwnProperty("id")) {
+
+    switch (item.name) {
+      case "Trident Seafoods Salmon BBQ":
+        return (
+          <SmokedSalmon />
+        );
+
+      // BEER GARDEN
+      case "Beer Garden":
+        return (
+          <BeerGarden />
+        )
+
+      case "Festi-Bowl":
+        return (
+          <FestiBowl />
+        )
+      case "Ballard Market Kid's Deck":
+        return (
+          <KidsDeck />
+        )
+
+      case "Main Stage":
+      case "Back Stage":
+      case "Gravity Payments Main Stage":
+        return (
+          <Stage />
+        )
+
+      case "Game Plank":
+        return (
+          <GamePlank />
+        )
+      case "SeafoodFest Info":
+        return (
+          <FestivalInfo />
+        )
+      case "Big Purple Slide":
+        return (
+          <PurpleSlide />
+        )
+      case "Crab Shack / Shellshole":
+      case "Seafood Shack":
+        return (
+          <CrabShack />
+        )
+      case "Lutefisk Contest":
+        return (
+          <Lutefisk />
+        )
+      default:
+        return null;
+    }
+  }
+}
+
+const BottomSheet = () => {
+
+  let imgIconTypeMap = {
     "Food": imgIconFoods,
     "A/C": imgIconArts,
     "Non-Profit": imgIconSponsors,
@@ -61,7 +157,7 @@ class BottomSheet extends Component {
     "Sponsor": imgIconSponsors
   }
 
-  imgIconNameMap = {
+  let imgIconNameMap = {
     "Honey Buckets": imgIconRestroom,
     "Seafood Shack": imgIconCrab,
     "SeafoodFest Info": imgIconInfo,
@@ -70,7 +166,7 @@ class BottomSheet extends Component {
     "Beer + Cocktail Garden Token Sales": imgIconTickets
   }
 
-  games = [
+  let games = [
     "Fix Enterprises Rock Wall",
     "Cornhole Station #1",
     "Ladder Ball Station",
@@ -88,157 +184,56 @@ class BottomSheet extends Component {
     "Illumination Learning Studio"
   ]
 
-  render() {
+  const {classes, bottomDrawer, map} = this.props;
+  const {options, data} = bottomDrawer;
+  const {open, anchor} = options;
+  let style = getBottomSheetTemplate(data);
+  let header = getHeader(data)
 
-    const {classes, bottomDrawer, map} = this.props;
-    const {options, data} = bottomDrawer;
-    const {open, anchor} = options;
-    let style = this.getBottomSheetTemplate(data);
-    let header = this.getHeader(data)
+  return (
+    <div>
+      <SwipeableDrawer classes={{paperAnchorBottom: classes.paperAnchorBottom, modal: classes.modal}}
+                        anchor={anchor}
+                        open={open}
+                        onClose={() => {
+                          toggleBottomDrawer(false);
+                          // Clear highlight filter
+                          map.setFilter('vendor pins highlight',
+                            ["all",
+                              ["==", "id", 0],
+                            ]);
+                        }}
+                        onOpen={() => {
+                          toggleBottomDrawer(true)
+                        }}
+                        disableBackdropTransition={true}
+                        disableSwipeToOpen={true}
+      >
+        <div className="wrapperText">
+          {header}
 
-    return (
-      <div>
-        <SwipeableDrawer classes={{paperAnchorBottom: classes.paperAnchorBottom, modal: classes.modal}}
-                         anchor={anchor}
-                         open={open}
-                         onClose={() => {
-                           toggleBottomDrawer(false);
-                           // Clear highlight filter
-                           map.setFilter('vendor pins highlight',
-                             ["all",
-                               ["==", "id", 0],
-                             ]);
-                         }}
-                         onOpen={() => {
-                           toggleBottomDrawer(true)
-                         }}
-                         disableBackdropTransition={true}
-                         disableSwipeToOpen={true}
-        >
-          <div className="wrapperText">
-            {header}
+          <Close onClick={()=>{toggleBottomDrawer(false)}} className={classes.icon}>
+            close
+          </Close>
 
-            <Close onClick={()=>{toggleBottomDrawer(false)}} className={classes.icon}>
-              close
-            </Close>
-
-            <div className="content-wrapper">
-              <div className="title">{data.name}</div>
-              <div className="category">{data.type}</div>
-              <div className="custom-content-wrapper">
-                {style}
-              </div>
+          <div className="content-wrapper">
+            <div className="title">{data.name}</div>
+            <div className="category">{data.type}</div>
+            <div className="custom-content-wrapper">
+              {style}
             </div>
           </div>
-        </SwipeableDrawer>
-      </div>
-    );
-  }
-
-  getBottomSheetTemplate = (item) => {
-
-    if (item.hasOwnProperty("id")) {
-
-      switch (item.name) {
-        case "Trident Seafoods Salmon BBQ":
-          return (
-            <SmokedSalmon />
-          );
-
-        // BEER GARDEN
-        case "Beer Garden":
-          return (
-            <BeerGarden />
-          )
-
-        case "Festi-Bowl":
-          return (
-            <FestiBowl />
-          )
-        case "Ballard Market Kid's Deck":
-          return (
-            <KidsDeck />
-          )
-
-        case "Main Stage":
-        case "Back Stage":
-        case "Gravity Payments Main Stage":
-          return (
-            <Stage />
-          )
-
-        case "Game Plank":
-          return (
-            <GamePlank />
-          )
-        case "SeafoodFest Info":
-          return (
-            <FestivalInfo />
-          )
-        case "Big Purple Slide":
-          return (
-            <PurpleSlide />
-          )
-        case "Crab Shack / Shellshole":
-        case "Seafood Shack":
-          return (
-            <CrabShack />
-          )
-        case "Lutefisk Contest":
-          return (
-            <Lutefisk />
-          )
-        default:
-          return null;
-
-      }
-    }
-
-  }
-
-  getHeader (data) {
-
-    let svgPin = this.imgIconTypeMap[data.type];
-    let svgIcon = this.imgIconNameMap[data.name];
-
-    // If icon exists, render
-    if (typeof svgIcon !== "undefined") {
-      return (<div className="key-wrapper">
-          <div className="svg-icon">
-            <img alt="Featured vendor icon" src={svgIcon}/>
-          </div>
         </div>
-      )
-      // If custom pin exists
-    } else if (typeof svgPin !== "undefined" && data.name !== "Trident Seafoods Salmon BBQ") {
-      return (
-        <div className="key-wrapper">
-          <div className="key-id">
-            {data.id}
-          </div>
-          <div className="svg-pin">
-            <img alt="Vendor icon" src={svgPin}/>
-          </div>
-        </div>)
-      // Show nothing
-    }  else if (data.details === "games") {
-      return (
-        <div className="key-wrapper">
-          <div className="svg-games">
-          <img alt="Games icon" src={imgIconGames}/>
-          </div>
-      </div>)
-    } else {
-      return null;
-    }
-  }
+      </SwipeableDrawer>
+    </div>
+  );
 }
 
 BottomSheet.propTypes = {
   bottomDrawer: PropTypes.object.isRequired
 };
 
-function mapStateToProps(state) {
+const mapStateToProps = (state) => {
   return {
     bottomDrawer: state.bottomDrawer,
     map: state.map

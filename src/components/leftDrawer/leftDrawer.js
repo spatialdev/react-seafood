@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import withWidth from '@material-ui/core/withWidth';
-import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
+import { withStyles } from '@mui/material/styles';
+import withWidth from '@mui/material/withWidth';
+import SwipeableDrawer from '@mui/material/SwipeableDrawer';
+import List from '@mui/material/List';
+import Divider from '@mui/material/Divider';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
 import {
   toggleLeftDrawer, toggleRightDrawer, setTabValue, selectLeftMenuItem,
   toggleBottomDrawer, setBottomDrawerData
