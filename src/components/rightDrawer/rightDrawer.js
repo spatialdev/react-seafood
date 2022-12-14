@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux'
+import React, {useEffect, Component} from 'react';
+import {connect, useDispatch, useSelector} from 'react-redux'
 import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -38,16 +38,18 @@ const filters = [
   "Sponsor"
 ]
 
-class RightMenu extends Component {
+const RightMenu = () => {
+  const dispatch = useDispatch()
+  const state = useSelector(state => state)
 
   // Update global state with tab index & selection
-  handleTabChange = (event, value) => {
+  const handleTabChange = (event, value) => {
     setTabValue({index:value, name: filters[value]})
   };
 
-  handleItemSelection = (vendor) => {
+  const handleItemSelection = (vendor) => {
 
-    const { map, width } = this.props;
+    const { map, width } = state;
     // Get center of point/polygon
     const bbox = turfCenter(vendor);
 
@@ -61,7 +63,7 @@ class RightMenu extends Component {
     });
 
     // Set bottom drawer data
-    setBottomDrawerData(vendor.properties);
+    dispatch(setBottomDrawerData(vendor.properties));
     // Open bottom drawer
     toggleBottomDrawer(true);
     // Record action on google analytics
@@ -69,17 +71,11 @@ class RightMenu extends Component {
 
     // If we're in mobile mode, close the left drawer
     if (width === 'xs' || width === 'sm') {
-      toggleRightDrawer(false);
+      dispatch(toggleRightDrawer(false));
     }
   }
 
-  componentDidUpdate() {
-  }
-
-  componentDidMount() {
-  }
-
-  highlightVendorPin(vendor) {
+  const highlightVendorPin = (vendor) => {
 
     const { map } = this.props;
 
@@ -98,75 +94,58 @@ class RightMenu extends Component {
     map.setLayoutProperty('vendor pins highlight', 'visibility', 'visible');
   }
 
-  render() {
-
-    const { rightDrawerOptions, polygonData, classes } = this.props;
+    const { rightDrawerOptions, polygonData } = state;
     const { open, anchor, tabs } = rightDrawerOptions;
 
     let activeItems = polygonData.features.filter((item) => {
       return tabs.index !== 0 ? filters.indexOf(item.properties.type) === tabs.index : (filters.includes(item.properties.type));
     })
 
-    return (
-      <div className="RightMenu">
-        <SwipeableDrawer
-          classes={{
-            paper: classes.drawerPaper
-          }}
-          className="RightMenuDrawer"
-          anchor={anchor}
-          open={open}
-          onClose={() => toggleRightDrawer(false)}
-          onOpen={() => toggleRightDrawer(true)}
+  return (
+    <div className="RightMenu">
+      <SwipeableDrawer
+        sx={(styles.drawerPaper)}
+        classes={{
+          paper: styles.drawerPaper
+        }}
+        className="RightMenuDrawer"
+        anchor={anchor}
+        open={open}
+        onClose={() => dispatch(toggleRightDrawer(false))}
+        onOpen={() => dispatch(toggleRightDrawer(true))}
+      >
+
+        <Tabs
+          value={tabs.index}
+          onChange={handleTabChange}
+          indicatorColor="primary"
+          classes={{root: styles.tabsRoot}}
+          textColor="primary"
+          fullwidth="true"
         >
+          <Tab classes={{root: styles.tabRoot}} label="All" />
+          <Tab classes={{root: styles.tabRoot}} label="Food" />
+          <Tab classes={{root: styles.tabRoot}} label={<span>Arts <br/>& Crafts</span>} />
+          <Tab classes={{root: styles.tabRoot}} label="Kids Activities" />
+        </Tabs>
 
-          <Tabs
-            value={tabs.index}
-            onChange={this.handleTabChange}
-            indicatorColor="primary"
-            classes={{root: classes.tabsRoot}}
-            textColor="primary"
-            fullwidth="true"
-          >
-            <Tab classes={{root: classes.tabRoot}} label="All" />
-            <Tab classes={{root: classes.tabRoot}} label="Food" />
-            <Tab classes={{root: classes.tabRoot}} label={<span>Arts <br/>& Crafts</span>} />
-            <Tab classes={{root: classes.tabRoot}} label="Kids Activities" />
-          </Tabs>
-
-          <List
-            className="ListWrapper"
-            role="button"
-            onClick={() => toggleRightDrawer(false)}
-            onKeyDown={() => toggleRightDrawer(false)}
-          >
-            {activeItems.map((item) => {
-              return (
-                <ListItem onClick={() => this.handleItemSelection(item)} button key={item.properties.id}>
-                  <ListItemText primary={item.properties.name}/>
-                </ListItem>
-              );
-            })}
-          </List>
-        </SwipeableDrawer>
-      </div>
-    );
-  }
-
+        <List
+          className="ListWrapper"
+          role="button"
+          onClick={() => dispatch(toggleRightDrawer(false))}
+          onKeyDown={() => dispatch(toggleRightDrawer(false))}
+        >
+          {activeItems.map((item) => {
+            return (
+              <ListItem onClick={() => handleItemSelection(item)} button key={item.properties.id}>
+                <ListItemText primary={item.properties.name}/>
+              </ListItem>
+            );
+          })}
+        </List>
+      </SwipeableDrawer>
+    </div>
+  );
 }
 
-RightMenu.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-function mapStateToProps(state) {
-  return {
-    polygonData: state.polygonData,
-    active: state.active,
-    leftDrawerOptions: state.leftDrawerOptions,
-    rightDrawerOptions: state.rightDrawerOptions,
-    map: state.map
-  };
-}
-
-export default connect(mapStateToProps)(withStyles(styles)(RightMenu));
+export default RightMenu;

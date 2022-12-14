@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux'
+import React, { useEffect, Component } from 'react';
+import { connect, useDispatch, useSelector } from 'react-redux'
 import PropTypes from 'prop-types';
-import { withStyles } from '@mui/material/styles';
+import { alpha } from '@mui/material/styles';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
@@ -45,9 +45,15 @@ const styles = theme => ({
   }
 });
 
-class LeftDrawer extends Component {
+const LeftDrawer = () => {
+  const dispatch = useDispatch()
+  const state = useSelector(state => state)
 
-  handleItemSelection = (vendor) => {
+  useEffect(() => {
+    console.log(`updated state: ${this.props}`)
+  }, [])
+
+  const handleItemSelection = (vendor) => {
     const { map, width } = this.props;
     // Get polygon/point center
     const bbox = turfCenter(vendor);
@@ -59,20 +65,19 @@ class LeftDrawer extends Component {
     });
 
     // Set bottom drawer data
-    setBottomDrawerData(vendor.properties);
+    dispatch(setBottomDrawerData(vendor.properties));
     // Open bottom drawer
-    toggleBottomDrawer(true);
+    dispatch(toggleBottomDrawer(true));
     // Record selection on google analytics
-    selectLeftMenuItem(vendor.properties.name);
+    dispatch(selectLeftMenuItem(vendor.properties.name));
 
     // If we're in mobile mode, close the left drawer
     if (width === 'xs' || width === 'sm') {
-      toggleLeftDrawer(false);
+      dispatch(toggleLeftDrawer(false));
     }
-
   }
 
-  filterLeftMenuItems = (data) => {
+  const filterLeftMenuItems = (data) => {
     let leftPanelData = [];
     const items = data.features;
     items.forEach((vendor) => {
@@ -83,19 +88,15 @@ class LeftDrawer extends Component {
     return leftPanelData;
   };
 
-  componentDidUpdate() {
-    console.log(`updated state: ${this.props}`)
-  }
-
-  render() {
-    const { classes, polygonData, leftDrawerOptions, width } = this.props;
-    const { anchor, open } = leftDrawerOptions;
-    const menuItems = this.filterLeftMenuItems(polygonData);
-    // On large screens, make the left drawer permanently open
-    const drawerVariant = (width === 'md' || width === 'lg' || width === 'xl') ? 'permanent' : 'temporary';
+  const { classes, polygonData, leftDrawerOptions, width } = state;
+  const { anchor, open } = leftDrawerOptions;
+  const menuItems = filterLeftMenuItems(polygonData);
+  // On large screens, make the left drawer permanently open
+  const drawerVariant = (width === 'md' || width === 'lg' || width === 'xl') ? 'permanent' : 'temporary';
 
     return (
       <SwipeableDrawer
+        sx={styles}
         variant={drawerVariant}
         anchor={anchor}
         open={open}
@@ -196,23 +197,5 @@ class LeftDrawer extends Component {
       </SwipeableDrawer>
     );
   }
-}
 
-LeftDrawer.propTypes = {
-  classes: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired,
-  polygonData: PropTypes.object.isRequired,
-  leftDrawerOptions: PropTypes.object.isRequired,
-  map: PropTypes.object.isRequired
-};
-
-function mapStateToProps(state) {
-  return {
-    polygonData: state.polygonData,
-    active: state.active,
-    leftDrawerOptions: state.leftDrawerOptions,
-    map: state.map
-  };
-}
-
-export default connect(mapStateToProps)((withStyles(styles, { withTheme: true })(LeftDrawer)));
+export default LeftDrawer;

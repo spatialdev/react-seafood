@@ -65,27 +65,26 @@ const styles = theme => ({
   }
 });
 
-const dispatch = useDispatch()
-
-const resetView = () => {
-  dispatch(toggleLeftDrawer(false));
-  dispatch(toggleRightDrawer(false));
-  dispatch(toggleBottomDrawer(false));
-}
-
 const Main = () => {
-
-  useEffect(() =>  {
-    console.log(`updated state: ${this.props}`)
-  }, []);
-  
+  const dispatch = useDispatch()
   const state = useSelector(state => state)
+
+  useEffect(() => {
+    console.log(`updated state: ${state}`)
+  }, []);
+
   console.log(state)
 
-  map.flyTo({
-    center: [-122.38473415374757, 47.668667600018416],
-    zoom: 18
-  })
+  const resetView = () => {
+    dispatch(toggleLeftDrawer(false));
+    dispatch(toggleRightDrawer(false));
+    dispatch(toggleBottomDrawer(false));
+
+    state.map.flyTo({
+      center: [-122.38473415374757, 47.668667600018416],
+      zoom: 18
+    })
+  }
 
   return (
     <div className={styles.root}>
