@@ -1,5 +1,6 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef} from 'react';
 import { useSelector, useDispatch } from 'react-redux'
+import { useTheme } from '@mui/material/styles';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import './map.scss';
@@ -14,37 +15,48 @@ import { config } from '../../config';
 
 mapboxgl.accessToken = config.map.accessToken;
 
-const styles = theme => ({
-  map: {
-    [theme.breakpoints.down('sm')]: {
-      position: 'relative',
-      // toolbar height
-      top: '56px',
-      height: `calc(100% - 56px)`,
-    },
-    [theme.breakpoints.up('md')]: {
-      position: 'relative',
-      // 65 = toolbar height
-      top: '65px',
-      // 280 = left drawer width
-      left: '280px',
-      height: `calc(100% - 65px)`,
-      width: `calc(100% - 280px)`
-    },
-    [theme.breakpoints.up('lg')]: {
-      position: 'relative'
-    },
-  },
-});
-
 const Map = () => {
+
+  const theme = useTheme()
+
+  const styles = {
+    map: {
+      [theme.breakpoints.down('sm')]: {
+        position: 'relative',
+        // toolbar height
+        top: '56px',
+        height: `calc(100% - 56px)`,
+      },
+      [theme.breakpoints.up('md')]: {
+        position: 'relative',
+        // 65 = toolbar height
+        top: '65px',
+        // 280 = left drawer width
+        left: '280px',
+        height: `calc(100% - 65px)`,
+        width: `calc(100% - 280px)`
+      },
+      [theme.breakpoints.up('lg')]: {
+        position: 'relative'
+      },
+    },
+  };
+
   const dispatch = useDispatch()
   const state = useSelector(state => state)
   let map = state.map
+  const mapContainer = useRef(null)
+
+  const geoLocate = new mapboxgl.GeolocateControl({
+    positionOptions: {
+      enableHighAccuracy: true
+    },
+    trackUserLocation: true
+  });
 
   useEffect(() => {
     map = new mapboxgl.Map({
-      container: this.mapContainer,
+      container: mapContainer.current,
       style: config.map.style,
       center: config.map.centroid,
       zoom: 18})
@@ -56,7 +68,8 @@ const Map = () => {
     // geoLocate._updateCamera = handleGeolocation;
 
     // Catch GeolocateControl errors
-    geoLocate.on('error', handleGeolocationError());
+    console.log(geoLocate)
+    geoLocate.on('error', handleGeolocationError);
 
     map.on('load', () => {});
 
@@ -65,7 +78,7 @@ const Map = () => {
     });
 
     // Set Map object in global state
-    dispatch(setMap(map));
+    setMap(map);
   }, []);
 
 
@@ -73,10 +86,10 @@ const Map = () => {
   const displayFeatureInfo = (e, features) => {
     const data = features[0].properties;
 
-    dispatch(setBottomDrawerData(data));
-    dispatch(toggleBottomDrawer(true));
+    setBottomDrawerData(data);
+    toggleBottomDrawer(true);
     // Record feature selection on google analytics
-    dispatch(selectMapItem(data.name));
+    selectMapItem(data.name);
 
     map.setFilter('vendor pins highlight',
       ["all",
@@ -93,13 +106,6 @@ const Map = () => {
     map.setLayoutProperty('vendor pins highlight', 'visibility', 'visible');
   }
 
-  const geoLocate = new mapboxgl.GeolocateControl({
-    positionOptions: {
-      enableHighAccuracy: true
-    },
-    trackUserLocation: true
-  });
-
     /**
    * Overwrite the GeolocateControl _updateCamera function
    * // TODO Don't track user location if out of bounds. Consider going back to custom implementation
@@ -113,7 +119,7 @@ const Map = () => {
     // "Long,Lat"
     let formattedLocation = [location.lng, location.lat].join(",");
     // Report "select" action to google analytics
-    dispatch(findMyLocation({type: FIND_MY_LOCATION_SELECT, payload: null}));
+    findMyLocation({type: FIND_MY_LOCATION_SELECT, payload: null});
 
     if (bounds) {
       // if geolocation is within maxBounds
@@ -123,13 +129,13 @@ const Map = () => {
         && location.lat <= bounds.getNorth()) {
 
         // Report "success" action to google analytics
-        dispatch(findMyLocation({type: FIND_MY_LOCATION_SUCCESS, payload: formattedLocation}));
+        findMyLocation({type: FIND_MY_LOCATION_SUCCESS, payload: formattedLocation});
         // Zoom into user's location
-        this.map.fitBounds(location.toBounds(position.coords.accuracy));
+        map.fitBounds(location.toBounds(position.coords.accuracy));
 
       } else {
         // Report "out of bounds" action to google analytics
-        dispatch(findMyLocation({type: FIND_MY_LOCATION_OUT_OF_BOUNDS, payload: formattedLocation}));
+        findMyLocation({type: FIND_MY_LOCATION_OUT_OF_BOUNDS, payload: formattedLocation});
         // TODO display a helpful message about being outside of bounds
       }
     }
@@ -141,6 +147,7 @@ const Map = () => {
    * @param error
    */
   const handleGeolocationError = (error) => {
+    console.log(error)
 
     let message;
     switch (error.code) {
@@ -183,8 +190,8 @@ const Map = () => {
   }
 
   return (
-    <div className={classes.map} sx={styles}>
-      <div ref={el => this.mapContainer = el} className="GL-Map"/>
+    <div className={styles.map}>
+      <div ref={mapContainer} className="GL-Map"/>
     </div>
   );
 }

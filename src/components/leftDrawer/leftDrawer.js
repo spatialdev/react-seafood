@@ -1,7 +1,7 @@
 import React, { useEffect, Component } from 'react';
 import { connect, useDispatch, useSelector } from 'react-redux'
 import PropTypes from 'prop-types';
-import { alpha } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
@@ -23,38 +23,41 @@ import imgIconMisc from '../../images/icons/svg_misc_2019.svg'
 import imgKidsActivities from '../../images/icons/svg_kids_2022.svg';
 
 
-const styles = theme => ({
-  root: {
-    flexGrow: 1,
-  },
-  flex: {
-    flex: 1,
-  },
-  menuButton: {
-    marginLeft: 12,
-    marginRight: 20,
-  },
-  drawerPaper: {
-    width: drawerWidth,
-    height: '100%',
-  },
-  list: {
-    [theme.breakpoints.down('sm')]: {
-      marginBottom: '10px'
-    }
-  }
-});
-
 const LeftDrawer = () => {
+
+  const theme = useTheme()
+  
+  const styles = {
+    root: {
+      flexGrow: 1,
+    },
+    flex: {
+      flex: 1,
+    },
+    menuButton: {
+      marginLeft: 12,
+      marginRight: 20,
+    },
+    drawerPaper: {
+      width: drawerWidth,
+      height: '100%',
+    },
+    list: {
+      [theme.breakpoints.down('sm')]: {
+        marginBottom: '10px'
+      }
+    }
+  };
+
   const dispatch = useDispatch()
   const state = useSelector(state => state)
 
   useEffect(() => {
-    console.log(`updated state: ${this.props}`)
+    console.log(`updated state: ${state}`)
   }, [])
 
   const handleItemSelection = (vendor) => {
-    const { map, width } = this.props;
+    const { map, width } = state;
     // Get polygon/point center
     const bbox = turfCenter(vendor);
 
@@ -65,15 +68,15 @@ const LeftDrawer = () => {
     });
 
     // Set bottom drawer data
-    dispatch(setBottomDrawerData(vendor.properties));
+    setBottomDrawerData(vendor.properties);
     // Open bottom drawer
-    dispatch(toggleBottomDrawer(true));
+    toggleBottomDrawer(true);
     // Record selection on google analytics
-    dispatch(selectLeftMenuItem(vendor.properties.name));
+    selectLeftMenuItem(vendor.properties.name);
 
     // If we're in mobile mode, close the left drawer
     if (width === 'xs' || width === 'sm') {
-      dispatch(toggleLeftDrawer(false));
+      toggleLeftDrawer(false);
     }
   }
 
@@ -88,7 +91,7 @@ const LeftDrawer = () => {
     return leftPanelData;
   };
 
-  const { classes, polygonData, leftDrawerOptions, width } = state;
+  const { polygonData, leftDrawerOptions, width } = state;
   const { anchor, open } = leftDrawerOptions;
   const menuItems = filterLeftMenuItems(polygonData);
   // On large screens, make the left drawer permanently open
@@ -96,14 +99,13 @@ const LeftDrawer = () => {
 
     return (
       <SwipeableDrawer
-        sx={styles}
         variant={drawerVariant}
         anchor={anchor}
         open={open}
         onClose={()=>{toggleLeftDrawer(false)}}
         onOpen={()=>{toggleLeftDrawer(true)}}
         classes={{
-          paper: classes.drawerPaper
+          paper: styles.drawerPaper
         }}
       >
         {/* Drawer Flier Image */}
@@ -181,7 +183,7 @@ const LeftDrawer = () => {
             return (
               <div key={item.properties.id}>
                 {/* {index === menuItems.length - 1 ? (<Divider/>) : null} */}
-                <ListItem className="list-item-wrapper" button onClick={() => this.handleItemSelection(item)}>
+                <ListItem className="list-item-wrapper" button onClick={() => handleItemSelection(item)}>
                   <ListItemText disableTypography={true} classes={{root: 'list-item-text'}} primary={item.properties.name}/>
               </ListItem>
               </div>);
@@ -189,7 +191,7 @@ const LeftDrawer = () => {
           <Divider/>
           {/*  Go to seafoodfest.org */}
           <a className="list-link" href="https://seafoodfest.org/" target="_blank" rel="noopener noreferrer">
-            <ListItem classes={{root: classes.list }} className="list-item-wrapper" button>
+            <ListItem classes={{root: styles.list }} className="list-item-wrapper" button>
               <ListItemText disableTypography={true} classes={{root: 'list-item-text'}} primary="Seafood Fest Org"/>
             </ListItem>
           </a>

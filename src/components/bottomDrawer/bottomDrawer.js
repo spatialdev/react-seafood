@@ -29,7 +29,7 @@ import PurpleSlide from './purpleSlide/purpleSlide';
 import CrabShack from './crabShack/crabShack';
 import Lutefisk from './lutefisk/lutefisk';
 
-const styles = (theme) => ({
+const styles = () => ({
   sheet: {},
   list: {
     width: 250,
@@ -198,7 +198,7 @@ const BottomSheet = () => {
                         anchor={anchor}
                         open={open}
                         onClose={() => {
-                          dispatch(toggleBottomDrawer(false));
+                          toggleBottomDrawer(false);
                           // Clear highlight filter
                           map.setFilter('vendor pins highlight',
                             ["all",
@@ -206,7 +206,7 @@ const BottomSheet = () => {
                             ]);
                         }}
                         onOpen={() => {
-                          dispatch(toggleBottomDrawer(true))
+                          toggleBottomDrawer(true)
                         }}
                         disableBackdropTransition={true}
                         disableSwipeToOpen={true}
@@ -214,7 +214,7 @@ const BottomSheet = () => {
         <div className="wrapperText">
           {header}
 
-          <Close onClick={()=>{dispatch(toggleBottomDrawer(false))}} className={classes.icon}>
+          <Close onClick={()=>{toggleBottomDrawer(false)}} className={styles.icon}>
             close
           </Close>
 

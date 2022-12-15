@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { connect, useDispatch, useSelector } from 'react-redux'
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { withStyles } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
@@ -16,56 +16,60 @@ import { drawerWidth } from '../../redux/constants';
 import './main.scss'
 import imgNavLogo from '../../images/logo-header.svg'
 
-const styles = theme => ({
-  toolbar: {
-    "font-family": `'Open Sans', sans-serif  !important`,
-    marginLeft: drawerWidth,
-    [theme.breakpoints.up('md')]: {
-      width: `calc(100% - ${drawerWidth}px)`,
-    },
-  },
-  root: {
-    flexGrow: 1,
-  },
-  flex: {
-    flex: 1,
-    [theme.breakpoints.up('md')]: {
-      marginLeft: `40px`,
-    }
-  },
-  menuButton: {
-    marginLeft: 12,
-    marginRight: 5,
-    color: "#fff"
-  },
-  hide: {
-    display: 'none',
-  },
-  drawerPaper: {
-    width: drawerWidth,
-  },
-  drawerHeader: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-    padding: '0 8px',
-    ...theme.mixins.toolbar,
-  },
-  content: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.default,
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-  },
-  navLogo: {
-    height: '40px',
-    cursor: 'pointer'
-  }
-});
 
 const Main = () => {
+  
+  const theme = useTheme()
+
+  const styles = {
+    toolbar: {
+      "font-family": `'Open Sans', sans-serif  !important`,
+      marginLeft: drawerWidth,
+      [theme.breakpoints.up('md')]: {
+        width: `calc(100% - ${drawerWidth}px)`,
+      },
+    },
+    root: {
+      flexGrow: 1,
+    },
+    flex: {
+      flex: 1,
+      [theme.breakpoints.up('md')]: {
+        marginLeft: `40px`,
+      }
+    },
+    menuButton: {
+      marginLeft: 12,
+      marginRight: 5,
+      color: "#fff"
+    },
+    hide: {
+      display: 'none',
+    },
+    drawerPaper: {
+      width: drawerWidth,
+    },
+    drawerHeader: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'flex-end',
+      padding: '0 8px',
+      ...theme.mixins.toolbar,
+    },
+    content: {
+      flexGrow: 1,
+      backgroundColor: theme.palette.background.default,
+      transition: theme.transitions.create('margin', {
+        easing: theme.transitions.easing.sharp,
+        duration: theme.transitions.duration.leavingScreen,
+      }),
+    },
+    navLogo: {
+      height: '40px',
+      cursor: 'pointer'
+    }
+  };
+
   const dispatch = useDispatch()
   const state = useSelector(state => state)
 
@@ -76,9 +80,9 @@ const Main = () => {
   console.log(state)
 
   const resetView = () => {
-    dispatch(toggleLeftDrawer(false));
-    dispatch(toggleRightDrawer(false));
-    dispatch(toggleBottomDrawer(false));
+    toggleLeftDrawer(false);
+    toggleRightDrawer(false);
+    toggleBottomDrawer(false);
 
     state.map.flyTo({
       center: [-122.38473415374757, 47.668667600018416],
@@ -94,7 +98,7 @@ const Main = () => {
             <Hidden mdUp>
             <IconButton
               aria-label="open drawer"
-              onClick={()=>{dispatch(toggleLeftDrawer(true))}}
+              onClick={()=>{toggleLeftDrawer(true)}}
               className={classNames(styles.menuButton)}>
               <MenuIcon/>
             </IconButton>
@@ -102,7 +106,7 @@ const Main = () => {
             <div className={styles.flex}>
               <img alt="Reset application" onClick={()=>{resetView}} className={styles.navLogo} src={imgNavLogo} />
             </div>
-            <Button  onClick={()=>{dispatch(toggleRightDrawer(true))}} id="vendorButton" className="vendorButton">Vendor List</Button>
+            <Button  onClick={()=>{toggleRightDrawer(true)}} id="vendorButton" className="vendorButton">Vendor List</Button>
           </Toolbar>
         </AppBar>
         <LeftDrawer/>

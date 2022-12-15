@@ -15,7 +15,7 @@ import {
 import './rightDrawer.scss';
 import turfCenter from "@turf/center";
 
-const styles = theme => ({
+const styles = () => ({
   tabsRoot: {
     borderBottom: '1px solid #e8e8e8',
   },
@@ -54,7 +54,7 @@ const RightMenu = () => {
     const bbox = turfCenter(vendor);
 
     // Highlight vendor pin
-    this.highlightVendorPin(vendor);
+    highlightVendorPin(vendor);
 
     // Zoom to vendor center
     map.flyTo({
@@ -63,7 +63,7 @@ const RightMenu = () => {
     });
 
     // Set bottom drawer data
-    dispatch(setBottomDrawerData(vendor.properties));
+    setBottomDrawerData(vendor.properties);
     // Open bottom drawer
     toggleBottomDrawer(true);
     // Record action on google analytics
@@ -71,13 +71,13 @@ const RightMenu = () => {
 
     // If we're in mobile mode, close the left drawer
     if (width === 'xs' || width === 'sm') {
-      dispatch(toggleRightDrawer(false));
+      toggleRightDrawer(false);
     }
   }
 
   const highlightVendorPin = (vendor) => {
 
-    const { map } = this.props;
+    const { map } = state;
 
     map.setFilter('vendor pins highlight',
       ["all",
@@ -104,15 +104,14 @@ const RightMenu = () => {
   return (
     <div className="RightMenu">
       <SwipeableDrawer
-        sx={(styles.drawerPaper)}
         classes={{
           paper: styles.drawerPaper
         }}
         className="RightMenuDrawer"
         anchor={anchor}
         open={open}
-        onClose={() => dispatch(toggleRightDrawer(false))}
-        onOpen={() => dispatch(toggleRightDrawer(true))}
+        onClose={() => toggleRightDrawer(false)}
+        onOpen={() => toggleRightDrawer(true)}
       >
 
         <Tabs
@@ -132,8 +131,8 @@ const RightMenu = () => {
         <List
           className="ListWrapper"
           role="button"
-          onClick={() => dispatch(toggleRightDrawer(false))}
-          onKeyDown={() => dispatch(toggleRightDrawer(false))}
+          onClick={() => toggleRightDrawer(false)}
+          onKeyDown={() => toggleRightDrawer(false)}
         >
           {activeItems.map((item) => {
             return (
