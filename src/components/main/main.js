@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import { connect, useDispatch, useSelector } from 'react-redux'
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { useTheme } from '@mui/material/styles';
+import { ThemeProvider, css } from '@emotion/react'
+import { SxProps, useTheme, Box  } from '@mui/material'
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
@@ -16,14 +17,15 @@ import { drawerWidth } from '../../redux/constants';
 import './main.scss'
 import imgNavLogo from '../../images/logo-header.svg'
 
-
 const Main = () => {
-  
+
   const theme = useTheme()
 
-  const styles = {
+  const styles = (theme) => {
+    console.log(theme);
+    return ({
     toolbar: {
-      "font-family": `'Open Sans', sans-serif  !important`,
+      "fontFamily": `'Open Sans', sans-serif  !important`,
       marginLeft: drawerWidth,
       [theme.breakpoints.up('md')]: {
         width: `calc(100% - ${drawerWidth}px)`,
@@ -67,8 +69,12 @@ const Main = () => {
     navLogo: {
       height: '40px',
       cursor: 'pointer'
-    }
+    }});
   };
+
+
+
+  //const styles = useStyles(theme)
 
   const dispatch = useDispatch()
   const state = useSelector(state => state)
@@ -91,28 +97,28 @@ const Main = () => {
   }
 
   return (
-    <div className={styles.root}>
+    <Box sx={styles(theme).root}>
       <div>
-        <AppBar className={styles.toolbar + ` toolbar`}>
+        <AppBar sx={styles(theme).toolbar} className='toolbar' >
           <Toolbar disableGutters={true}>
             <Hidden mdUp>
             <IconButton
               aria-label="open drawer"
               onClick={()=>{toggleLeftDrawer(true)}}
-              className={classNames(styles.menuButton)}>
+              className={classNames(styles(theme).menuButton)}>
               <MenuIcon/>
             </IconButton>
             </Hidden>
-            <div className={styles.flex}>
-              <img alt="Reset application" onClick={()=>{resetView}} className={styles.navLogo} src={imgNavLogo} />
-            </div>
-            <Button  onClick={()=>{toggleRightDrawer(true)}} id="vendorButton" className="vendorButton">Vendor List</Button>
+            <Box sx={styles(theme).flex}>
+              <img alt="Reset application" onClick={()=>{resetView}} style={styles(theme).navLogo} src={imgNavLogo} />
+            </Box>
+            <Button  onClick={()=>{toggleRightDrawer(true)}} className="vendorButton">Vendor List</Button>
           </Toolbar>
         </AppBar>
         <LeftDrawer/>
-        <RightDrawer className="rightDrawer" id="rightDrawer"/>
+        <RightDrawer/>
       </div>
-    </div>
+    </Box>
   );
 }
 

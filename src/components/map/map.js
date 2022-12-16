@@ -1,6 +1,8 @@
 import React, {useEffect, useRef} from 'react';
 import { useSelector, useDispatch } from 'react-redux'
-import { useTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@emotion/react';
+import { useTheme, Box } from '@mui/material'
+import { styled } from '@mui/system';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import './map.scss';
@@ -15,37 +17,38 @@ import { config } from '../../config';
 
 mapboxgl.accessToken = config.map.accessToken;
 
+
 const Map = () => {
 
   const theme = useTheme()
 
-  const styles = {
+  const styles = ( theme ) => ({
     map: {
-      [theme.breakpoints.down('sm')]: {
-        position: 'relative',
-        // toolbar height
-        top: '56px',
-        height: `calc(100% - 56px)`,
-      },
-      [theme.breakpoints.up('md')]: {
-        position: 'relative',
-        // 65 = toolbar height
-        top: '65px',
-        // 280 = left drawer width
-        left: '280px',
-        height: `calc(100% - 65px)`,
-        width: `calc(100% - 280px)`
-      },
-      [theme.breakpoints.up('lg')]: {
-        position: 'relative'
-      },
+    [theme.breakpoints.down('sm')]: {
+      position: 'relative',
+      // toolbar height
+      top: '56px',
+      height: `calc(100% - 56px)`,
     },
-  };
+    [theme.breakpoints.up('md')]: {
+      position: 'relative',
+      // 65 = toolbar height
+      top: '65px',
+      // 280 = left drawer width
+      left: '280px',
+      height: `calc(100% - 65px)`,
+      width: `calc(100% - 280px)`
+    },
+    [theme.breakpoints.up('lg')]: {
+      position: 'relative'
+    }
+  }}
+  );
 
   const dispatch = useDispatch()
   const state = useSelector(state => state)
-  let map = state.map
   const mapContainer = useRef(null)
+  let map = state.map
 
   const geoLocate = new mapboxgl.GeolocateControl({
     positionOptions: {
@@ -68,7 +71,7 @@ const Map = () => {
     // geoLocate._updateCamera = handleGeolocation;
 
     // Catch GeolocateControl errors
-    console.log(geoLocate)
+    console.log(styles(theme).map)
     geoLocate.on('error', handleGeolocationError);
 
     map.on('load', () => {});
@@ -190,9 +193,15 @@ const Map = () => {
   }
 
   return (
-    <div className={styles.map}>
-      <div ref={mapContainer} className="GL-Map"/>
-    </div>
+    <Box sx={{
+      position: 'relative',
+      top: {sm: '56px', md: '65px'},
+      height: {sm: 'calc(100% - 56px)', md: 'calc(100% - 65px)'},
+      width: {md: 'calc(100% - 280px)'},
+      left: {md: '280px'}}}
+      >
+      <div ref={el => (mapContainer.current = el)} className="GL-Map"/>
+    </Box>
   );
 }
 

@@ -1,7 +1,8 @@
 import React, { useEffect, Component } from 'react';
 import { connect, useDispatch, useSelector } from 'react-redux'
 import PropTypes from 'prop-types';
-import { useTheme } from '@mui/material/styles';
+import { useTheme, useMediaQuery } from '@mui/material';
+import { ThemeProvider } from '@emotion/react'
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
@@ -27,7 +28,7 @@ const LeftDrawer = () => {
 
   const theme = useTheme()
   
-  const styles = {
+  const styles = (theme) => ({
     root: {
       flexGrow: 1,
     },
@@ -47,7 +48,7 @@ const LeftDrawer = () => {
         marginBottom: '10px'
       }
     }
-  };
+  });
 
   const dispatch = useDispatch()
   const state = useSelector(state => state)
@@ -91,22 +92,24 @@ const LeftDrawer = () => {
     return leftPanelData;
   };
 
+
+
   const { polygonData, leftDrawerOptions, width } = state;
   const { anchor, open } = leftDrawerOptions;
   const menuItems = filterLeftMenuItems(polygonData);
   // On large screens, make the left drawer permanently open
-  const drawerVariant = (width === 'md' || width === 'lg' || width === 'xl') ? 'permanent' : 'temporary';
+
+  const drawerVariant = useMediaQuery(theme.breakpoints.up("sm")) ? 'permanent' : 'temporary';
 
     return (
+      <ThemeProvider theme={theme}>
       <SwipeableDrawer
         variant={drawerVariant}
         anchor={anchor}
         open={open}
         onClose={()=>{toggleLeftDrawer(false)}}
         onOpen={()=>{toggleLeftDrawer(true)}}
-        classes={{
-          paper: styles.drawerPaper
-        }}
+        classes={{paper: styles(theme).drawerPaper}}
       >
         {/* Drawer Flier Image */}
         <img alt="Official Seafood Fest Flier" className="Flier" src={imgFlier}/>
@@ -191,12 +194,13 @@ const LeftDrawer = () => {
           <Divider/>
           {/*  Go to seafoodfest.org */}
           <a className="list-link" href="https://seafoodfest.org/" target="_blank" rel="noopener noreferrer">
-            <ListItem classes={{root: styles.list }} className="list-item-wrapper" button>
+            <ListItem classes={{root: styles(theme).list }} className="list-item-wrapper" button>
               <ListItemText disableTypography={true} classes={{root: 'list-item-text'}} primary="Seafood Fest Org"/>
             </ListItem>
           </a>
         </List>
       </SwipeableDrawer>
+      </ThemeProvider>
     );
   }
 

@@ -15,7 +15,7 @@ import {
 import './rightDrawer.scss';
 import turfCenter from "@turf/center";
 
-const styles = () => ({
+const styles = {
   tabsRoot: {
     borderBottom: '1px solid #e8e8e8',
   },
@@ -26,7 +26,7 @@ const styles = () => ({
   drawerPaper: {
     height: '100%'
   }
-});
+};
 
 const filters = [
   "All",
