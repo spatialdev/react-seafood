@@ -58,7 +58,7 @@ const LeftDrawer = () => {
   }, [])
 
   const handleItemSelection = (vendor) => {
-    const { map, width } = state;
+    const { map } = state;
     // Get polygon/point center
     const bbox = turfCenter(vendor);
 
@@ -76,7 +76,7 @@ const LeftDrawer = () => {
     selectLeftMenuItem(vendor.properties.name);
 
     // If we're in mobile mode, close the left drawer
-    if (width === 'xs' || width === 'sm') {
+    if (useMediaQuery(theme.breakpoints.down("sm"))) {
       toggleLeftDrawer(false);
     }
   }
@@ -94,7 +94,7 @@ const LeftDrawer = () => {
 
 
 
-  const { polygonData, leftDrawerOptions, width } = state;
+  const { polygonData, leftDrawerOptions } = state;
   const { anchor, open } = leftDrawerOptions;
   const menuItems = filterLeftMenuItems(polygonData);
   // On large screens, make the left drawer permanently open

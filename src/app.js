@@ -6,11 +6,14 @@ import Map from './components/map/map.js';
 import BottomSheet from './components/bottomDrawer/bottomDrawer'
 import Main from './components/main/main';
 import { config } from './config';
+import { useTheme, ThemeProvider } from '@mui/material'
 
 import './app.scss';
 
 const App = () => {
   const [state, setState] = useState({ clickedMenuItem: null, polygonData: null });
+
+  const theme = useTheme()
 
   useEffect(() => {
     // Initialize Google Analytics
@@ -29,13 +32,15 @@ const App = () => {
   };
 
   return (
-    <Provider store={store}>
-      <div className="App">
-        <Main id='main' clickedMenuItem={ handleMenuData } />
-        <Map/>
-        <BottomSheet/>
-      </div>
-    </Provider>
+    <ThemeProvider theme={theme}>
+        <Provider store={store}>
+          <div className="App">
+            <Main id='main' clickedMenuItem={ handleMenuData } />
+            <Map/>
+            <BottomSheet/>
+          </div>
+      </Provider>
+    </ThemeProvider>
   );
 }
 
