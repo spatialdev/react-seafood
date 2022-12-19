@@ -193,13 +193,7 @@ const Map = () => {
   }
 
   return (
-    <Box sx={{
-      position: 'relative',
-      top: {sm: '56px', md: '65px'},
-      height: {sm: 'calc(100% - 56px)', md: 'calc(100% - 65px)'},
-      width: {md: 'calc(100% - 280px)'},
-      left: {md: '280px'}}}
-      >
+    <Box sx={styles(theme).map}>
       <div ref={el => (mapContainer.current = el)} className="GL-Map"/>
     </Box>
   );

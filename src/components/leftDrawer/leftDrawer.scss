@@ -2,7 +2,7 @@
 
 .Flier {
     width: 100%;
-    height: 280px;
+    height: 235px;
     background-color: $light-blue;
 }
 
@@ -48,14 +48,14 @@
     height: 15px;
 }
 
-.legend-box {
+.legend-box { 
     padding: 4px;
     margin: 0 10px 0 0;
 }
 
 .list-item-wrapper {
     padding-left: 16px !important;
-    padding-right: 16px !important;
+    padding-right: 1px !important;
 }
 
 .list-item-text {
