@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect, Component } from 'react';
 import ReactGA from 'react-ga';
 import { Provider } from 'react-redux';
 import { store } from './redux/store'
@@ -6,17 +6,16 @@ import Map from './components/map/map.js';
 import BottomSheet from './components/bottomDrawer/bottomDrawer'
 import Main from './components/main/main';
 import { config } from './config';
+import { useTheme, ThemeProvider } from '@mui/material'
 
 import './app.scss';
 
-class App extends Component {
-  state = {
-    clickedMenuItem: null,
-    polygonData: null,
-  };
+const App = () => {
+  const [state, setState] = useState({ clickedMenuItem: null, polygonData: null });
 
-  componentDidMount() {
+  const theme = useTheme()
 
+  useEffect(() => {
     // Initialize Google Analytics
     const { ga } = config;
     ReactGA.initialize(ga.id,{
@@ -24,25 +23,25 @@ class App extends Component {
       titleCase: false
     });
     ReactGA.pageview(window.location.pathname + window.location.search);
-  }
+  }, []);
 
-  handleMenuData = (itemId) => {
-    this.setState({ clickedMenuItem: itemId }, () => {
-      console.log(this.state);
+  const handleMenuData = (itemId) => {
+    setState({ clickedMenuItem: itemId }, () => {
+      console.log(state);
     });
   };
 
-  render() {
-    return (
-      <Provider store={store}>
-        <div className="App">
-          <Main clickedMenuItem={this.handleMenuData} />
-          <Map/>
-          <BottomSheet/>
-        </div>
+  return (
+    <ThemeProvider theme={theme}>
+        <Provider store={store}>
+          <div className="App">
+            <Main id='main' clickedMenuItem={ handleMenuData } />
+            <Map/>
+            <BottomSheet/>
+          </div>
       </Provider>
-    );
-  }
+    </ThemeProvider>
+  );
 }
 
 export default App;
