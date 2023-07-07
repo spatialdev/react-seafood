@@ -37,7 +37,7 @@ const initialState = {
   map: {}
 };
 
-function reducer(state = initialState, action) {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_POLYGON_DATA:
       return {

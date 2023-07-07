@@ -1,7 +1,8 @@
-import React, {Component} from 'react';
-import { connect } from 'react-redux'
-import { withStyles } from '@material-ui/core/styles';
-import withWidth from "@material-ui/core/withWidth/index";
+import React, {useEffect, useRef} from 'react';
+import { useSelector, useDispatch } from 'react-redux'
+import { ThemeProvider } from '@emotion/react';
+import { useTheme, Box } from '@mui/material'
+import { styled } from '@mui/system';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import './map.scss';
@@ -16,8 +17,13 @@ import { config } from '../../config';
 
 mapboxgl.accessToken = config.map.accessToken;
 
-const styles = theme => ({
-  map: {
+
+const Map = () => {
+
+  const theme = useTheme()
+
+  const styles = ( theme ) => ({
+    map: {
     [theme.breakpoints.down('sm')]: {
       position: 'relative',
       // toolbar height
@@ -35,64 +41,53 @@ const styles = theme => ({
     },
     [theme.breakpoints.up('lg')]: {
       position: 'relative'
-    },
-  },
-});
+    }
+  }}
+  );
 
-class Map extends Component {
+  const dispatch = useDispatch()
+  const state = useSelector(state => state)
+  const mapContainer = useRef(null)
+  let map = state.map
 
-  geoLocate = new mapboxgl.GeolocateControl({
+  const geoLocate = new mapboxgl.GeolocateControl({
     positionOptions: {
       enableHighAccuracy: true
     },
     trackUserLocation: true
   });
 
-
-  componentDidMount() {
-
-    const map = new mapboxgl.Map({
-      container: this.mapContainer,
+  useEffect(() => {
+    map = new mapboxgl.Map({
+      container: mapContainer.current,
       style: config.map.style,
       center: config.map.centroid,
-      zoom: 18
-    });
+      zoom: 18})
 
-    map.addControl(this.geoLocate);
+    map.addControl(geoLocate);
 
     // Replace GeolocateControl's _updateCamera function
     // see: https://github.com/mapbox/mapbox-gl-js/issues/6789
-    // this.geoLocate._updateCamera = this.handleGeolocation;
+    // geoLocate._updateCamera = handleGeolocation;
 
     // Catch GeolocateControl errors
-    this.geoLocate.on('error', this.handleGeolocationError);
+    console.log(styles(theme).map)
+    geoLocate.on('error', handleGeolocationError);
 
     map.on('load', () => {});
 
     map.on('click', (e) => {
-      this.handleMapClick(e);
+      handleMapClick(e, map);
     });
 
     // Set Map object in global state
     setMap(map);
+  }, []);
 
-  }
-
-  render() {
-
-    const { classes } = this.props;
-
-    return (
-      <div className={classes.map}>
-        <div ref={el => this.mapContainer = el} className="GL-Map"/>
-      </div>
-    );
-  }
 
   // Display feature info in bottom panel
-  displayFeatureInfo(e, features) {
+  const displayFeatureInfo = (e, features) => {
     const data = features[0].properties;
-    const { map } = this.props;
 
     setBottomDrawerData(data);
     toggleBottomDrawer(true);
@@ -114,16 +109,16 @@ class Map extends Component {
     map.setLayoutProperty('vendor pins highlight', 'visibility', 'visible');
   }
 
-  /**
+    /**
    * Overwrite the GeolocateControl _updateCamera function
    * // TODO Don't track user location if out of bounds. Consider going back to custom implementation
    * @param position
    */
-  handleGeolocation = (position) => {
+  const handleGeolocation = (position) => {
 
     // get geolocation
     const location = new mapboxgl.LngLat(position.coords.longitude, position.coords.latitude);
-    const bounds = this.map.getMaxBounds();
+    const bounds = map.getMaxBounds();
     // "Long,Lat"
     let formattedLocation = [location.lng, location.lat].join(",");
     // Report "select" action to google analytics
@@ -139,7 +134,7 @@ class Map extends Component {
         // Report "success" action to google analytics
         findMyLocation({type: FIND_MY_LOCATION_SUCCESS, payload: formattedLocation});
         // Zoom into user's location
-        this.map.fitBounds(location.toBounds(position.coords.accuracy));
+        map.fitBounds(location.toBounds(position.coords.accuracy));
 
       } else {
         // Report "out of bounds" action to google analytics
@@ -154,7 +149,8 @@ class Map extends Component {
    * see https://developer.mozilla.org/en-US/docs/Web/API/PositionError
    * @param error
    */
-  handleGeolocationError = (error) => {
+  const handleGeolocationError = (error) => {
+    console.log(error)
 
     let message;
     switch (error.code) {
@@ -175,9 +171,7 @@ class Map extends Component {
 
   }
 
-  handleMapClick = (e) => {
-
-    const { map } = this.props;
+  const handleMapClick = (e) => {
 
     // Fetch map feature from specified layer list.
     // TODO grab this layer list from a configuration
@@ -194,18 +188,15 @@ class Map extends Component {
     });
 
     if (features.length > 0) {
-      this.displayFeatureInfo(e, features);
+      displayFeatureInfo(e, features);
     }
   }
+
+  return (
+    <Box sx={styles(theme).map}>
+      <div ref={el => (mapContainer.current = el)} className="GL-Map"/>
+    </Box>
+  );
 }
 
-function mapStateToProps(state) {
-  return {
-    polygonData: state.polygonData,
-    active: state.active,
-    leftDrawerOptions: state.leftDrawerOptions,
-    map: state.map
-  };
-}
-
-export default connect(mapStateToProps)(withWidth()(withStyles(styles, { withTheme: true })(Map)));
+export default Map;

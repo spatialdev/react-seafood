@@ -1,13 +1,13 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux'
+import React, {useEffect, Component} from 'react';
+import {connect, useDispatch, useSelector} from 'react-redux'
 import PropTypes from 'prop-types';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import {withStyles} from '@material-ui/core/styles';
-import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import {withStyles} from '@mui/material/styles';
+import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import {
   toggleRightDrawer, setTabValue, toggleBottomDrawer,
   setBottomDrawerData, selectRightMenuItem
@@ -15,7 +15,7 @@ import {
 import './rightDrawer.scss';
 import turfCenter from "@turf/center";
 
-const styles = theme => ({
+const styles = {
   tabsRoot: {
     borderBottom: '1px solid #e8e8e8',
   },
@@ -26,7 +26,7 @@ const styles = theme => ({
   drawerPaper: {
     height: '100%'
   }
-});
+};
 
 const filters = [
   "All",
@@ -38,21 +38,23 @@ const filters = [
   "Sponsor"
 ]
 
-class RightMenu extends Component {
+const RightMenu = () => {
+  const dispatch = useDispatch()
+  const state = useSelector(state => state)
 
   // Update global state with tab index & selection
-  handleTabChange = (event, value) => {
+  const handleTabChange = (event, value) => {
     setTabValue({index:value, name: filters[value]})
   };
 
-  handleItemSelection = (vendor) => {
+  const handleItemSelection = (vendor) => {
 
-    const { map, width } = this.props;
+    const { map, width } = state;
     // Get center of point/polygon
     const bbox = turfCenter(vendor);
 
     // Highlight vendor pin
-    this.highlightVendorPin(vendor);
+    highlightVendorPin(vendor);
 
     // Zoom to vendor center
     map.flyTo({
@@ -73,15 +75,9 @@ class RightMenu extends Component {
     }
   }
 
-  componentDidUpdate() {
-  }
+  const highlightVendorPin = (vendor) => {
 
-  componentDidMount() {
-  }
-
-  highlightVendorPin(vendor) {
-
-    const { map } = this.props;
+    const { map } = state;
 
     map.setFilter('vendor pins highlight',
       ["all",
@@ -98,75 +94,57 @@ class RightMenu extends Component {
     map.setLayoutProperty('vendor pins highlight', 'visibility', 'visible');
   }
 
-  render() {
-
-    const { rightDrawerOptions, polygonData, classes } = this.props;
+    const { rightDrawerOptions, polygonData } = state;
     const { open, anchor, tabs } = rightDrawerOptions;
 
     let activeItems = polygonData.features.filter((item) => {
       return tabs.index !== 0 ? filters.indexOf(item.properties.type) === tabs.index : (filters.includes(item.properties.type));
     })
 
-    return (
-      <div className="RightMenu">
-        <SwipeableDrawer
-          classes={{
-            paper: classes.drawerPaper
-          }}
-          className="RightMenuDrawer"
-          anchor={anchor}
-          open={open}
-          onClose={() => toggleRightDrawer(false)}
-          onOpen={() => toggleRightDrawer(true)}
+  return (
+    <div className="RightMenu">
+      <SwipeableDrawer
+        classes={{
+          paper: styles.drawerPaper
+        }}
+        className="RightMenuDrawer"
+        anchor={anchor}
+        open={open}
+        onClose={() => toggleRightDrawer(false)}
+        onOpen={() => toggleRightDrawer(true)}
+      >
+
+        <Tabs
+          value={tabs.index}
+          onChange={handleTabChange}
+          indicatorColor="primary"
+          classes={{root: styles.tabsRoot}}
+          textColor="primary"
+          fullwidth="true"
         >
+          <Tab classes={{root: styles.tabRoot}} label="All" />
+          <Tab classes={{root: styles.tabRoot}} label="Food" />
+          <Tab classes={{root: styles.tabRoot}} label={<span>Arts <br/>& Crafts</span>} />
+          <Tab classes={{root: styles.tabRoot}} label="Kids Activities" />
+        </Tabs>
 
-          <Tabs
-            value={tabs.index}
-            onChange={this.handleTabChange}
-            indicatorColor="primary"
-            classes={{root: classes.tabsRoot}}
-            textColor="primary"
-            fullwidth="true"
-          >
-            <Tab classes={{root: classes.tabRoot}} label="All" />
-            <Tab classes={{root: classes.tabRoot}} label="Food" />
-            <Tab classes={{root: classes.tabRoot}} label={<span>Arts <br/>& Crafts</span>} />
-            <Tab classes={{root: classes.tabRoot}} label="Kids Activities" />
-          </Tabs>
-
-          <List
-            className="ListWrapper"
-            role="button"
-            onClick={() => toggleRightDrawer(false)}
-            onKeyDown={() => toggleRightDrawer(false)}
-          >
-            {activeItems.map((item) => {
-              return (
-                <ListItem onClick={() => this.handleItemSelection(item)} button key={item.properties.id}>
-                  <ListItemText primary={item.properties.name}/>
-                </ListItem>
-              );
-            })}
-          </List>
-        </SwipeableDrawer>
-      </div>
-    );
-  }
-
+        <List
+          className="ListWrapper"
+          role="button"
+          onClick={() => toggleRightDrawer(false)}
+          onKeyDown={() => toggleRightDrawer(false)}
+        >
+          {activeItems.map((item) => {
+            return (
+              <ListItem onClick={() => handleItemSelection(item)} button key={item.properties.id}>
+                <ListItemText primary={item.properties.name}/>
+              </ListItem>
+            );
+          })}
+        </List>
+      </SwipeableDrawer>
+    </div>
+  );
 }
 
-RightMenu.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-function mapStateToProps(state) {
-  return {
-    polygonData: state.polygonData,
-    active: state.active,
-    leftDrawerOptions: state.leftDrawerOptions,
-    rightDrawerOptions: state.rightDrawerOptions,
-    map: state.map
-  };
-}
-
-export default connect(mapStateToProps)(withStyles(styles)(RightMenu));
+export default RightMenu;
