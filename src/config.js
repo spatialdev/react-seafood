@@ -42,7 +42,7 @@ const config = {
   },
   // Mapbox GL
   map: {
-    style: 'mapbox://styles/spatialdev/cl5a874rl008b15sbutn54qks',
+    style: 'mapbox://styles/spatialdev/cljt3cphn007901q03v12aapd',
     accessToken: "pk.eyJ1Ijoic3BhdGlhbGRldiIsImEiOiJjamxuN2kydGIxZzhsM3BwbmNrYmhpaWRkIn0.51uF3UCh8Vpb2M3Y-glu2g",
     centroid: [-122.38473415374757, 47.668667600018416],
     bounds: [

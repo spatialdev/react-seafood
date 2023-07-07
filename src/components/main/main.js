@@ -82,9 +82,8 @@ const Main = () => {
 
   useEffect(() => {
     console.log(`updated state: ${state}`)
-  }, []);
 
-  console.log(state)
+  }, []);
 
   const resetView = () => {
     toggleLeftDrawer(false);
