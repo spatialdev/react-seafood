@@ -43,7 +43,8 @@ const Main = () => {
     menuButton: {
       marginLeft: 12,
       marginRight: 5,
-      color: "#fff"
+      color: "#fff",
+      fill: 'white'
     },
     hide: {
       display: 'none',
@@ -106,11 +107,11 @@ const Main = () => {
               aria-label="open drawer"
               onClick={()=>{toggleLeftDrawer(true)}}
               className={classNames(styles(theme).menuButton)}>
-              <MenuIcon/>
+              <MenuIcon htmlColor="white"/>
             </IconButton>
             </Hidden>
             <Box sx={styles(theme).flex}>
-              <img alt="Reset application" onClick={()=>{resetView}} style={styles(theme).navLogo} src={imgNavLogo} />
+              <img alt="Reset application" onClick={()=>{resetView()}} style={styles(theme).navLogo} src={imgNavLogo} />
             </Box>
             <Button  onClick={()=>{toggleRightDrawer(true)}} className="vendorButton">Vendor List</Button>
           </Toolbar>

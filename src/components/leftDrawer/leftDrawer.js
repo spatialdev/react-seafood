@@ -1,7 +1,7 @@
 import React, { useEffect, Component } from 'react';
 import { connect, useDispatch, useSelector } from 'react-redux'
 import PropTypes from 'prop-types';
-import { useTheme, useMediaQuery } from '@mui/material';
+import { useTheme, useMediaQuery, withTheme } from '@mui/material';
 import { ThemeProvider } from '@emotion/react'
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import List from '@mui/material/List';
@@ -38,6 +38,8 @@ const LeftDrawer = () => {
     menuButton: {
       marginLeft: 12,
       marginRight: 20,
+      color: 'white',
+      fill: 'white',
     },
     drawerPaper: {
       width: drawerWidth,
@@ -56,6 +58,8 @@ const LeftDrawer = () => {
   useEffect(() => {
     console.log(`updated state: ${state}`)
   }, [])
+
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   const handleItemSelection = (vendor) => {
     const { map } = state;
@@ -76,7 +80,7 @@ const LeftDrawer = () => {
     selectLeftMenuItem(vendor.properties.name);
 
     // If we're in mobile mode, close the left drawer
-    if (useMediaQuery(theme.breakpoints.down("sm"))) {
+    if (isMobile) {
       toggleLeftDrawer(false);
     }
   }
